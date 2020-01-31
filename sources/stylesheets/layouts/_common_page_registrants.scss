@@ -1,0 +1,22 @@
+.common-page .registrants {
+  table {
+    width: 100%;
+  }
+
+  td.name {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  tr.details.hidden {
+    display: none;
+  }
+
+  tr.details {
+    height: 40px;
+  }
+
+  tr.details p {
+    margin-left: 30px;
+  }
+}

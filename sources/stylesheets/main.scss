@@ -1,0 +1,47 @@
+/* MAIN STYLESHEET */
+// Uncomment the partials you want to use in your template and comment out those
+// that you don't need.
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'modules/_mixins';
+@import 'modules/_variables';
+
+@import 'general/_fonts';
+@import 'general/_base';
+
+@import 'components/_buttons';
+
+@import 'modules/_slick.scss';
+
+@import 'components/_site-header';
+@import 'components/_site-footer';
+@import 'components/_pagehead';
+@import 'components/_steps-block';
+@import 'components/_anchor-block';
+@import 'components/_article';
+@import 'components/_help-topics';
+@import 'components/_faq-block';
+@import 'components/_buttons';
+@import 'components/_accordion';
+@import 'components/_section';
+@import 'components/_search-block';
+@import 'components/_domain-search';
+@import 'components/_table';
+@import 'components/_modal';
+@import 'components/_flatpickr';
+@import 'components/_tabs';
+@import 'components/_pagination';
+@import 'components/_settings-form';
+@import 'components/_anchors';
+
+@import 'layouts/_front_page.scss';
+@import 'layouts/_common_page_about';
+@import 'layouts/_page-domain-search';
+@import 'layouts/_page';
+@import 'layouts/_blog';
+@import 'layouts/_page_search';
+@import 'layouts/_common_page_procurements';
+@import 'layouts/_registrars';
+@import 'layouts/_page_help';
+@import 'layouts/_page';
+@import 'layouts/_page_jobs';
+@import 'layouts/_domain-auctions.scss';

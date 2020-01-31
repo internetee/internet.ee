@@ -1,0 +1,1577 @@
+{
+  "description": "New design",
+  "name": "New design",
+  "preview_medium": "",
+  "preview_small": "",
+  "author": "",
+  "layouts": [
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__steps__k_lgmen____accordion__failid__element.tpl",
+      "layout_name": "page_default",
+      "title": "Sisuleht (Steps, külgmenüü, accordion, failid) element"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_failid__element.tpl",
+      "layout_name": "page_default",
+      "title": "Sisuleht (akkordion, failid) element"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/avaleht___ra_kasuta_.tpl",
+      "layout_name": "page_default",
+      "title": "Avaleht (Ära kasuta)"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/avaleht__avalik_.tpl",
+      "layout_name": "page_default",
+      "title": "Avaleht (Avalik)"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/statistika.tpl",
+      "layout_name": "statistika",
+      "title": "Statistika"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_k_lgmen__ga__element.tpl",
+      "layout_name": "page_default",
+      "title": "Sisuleht (akkordion külgmenüüga) element"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/avaleht__avalik__element.tpl",
+      "layout_name": "page_default",
+      "title": "Avaleht (Avalik) element"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/redirect.tpl",
+      "layout_name": "redirect",
+      "title": "Redirect"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_failid_.tpl",
+      "layout_name": "page_default",
+      "title": "Sisuleht (akkordion, failid)"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/registripidajad.tpl",
+      "layout_name": "page_default",
+      "title": "Registripidajad"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht.tpl",
+      "layout_name": "sisuleht",
+      "title": "Sisuleht"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/avalehe___ra_kasuta__element.tpl",
+      "layout_name": "page_default",
+      "title": "Avalehe (Ära kasuta) element"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page_with_custom_form.tpl",
+      "layout_name": "common_page_with_custom_form",
+      "title": "Common page with custom form"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/domeenioksjonid.tpl",
+      "layout_name": "page_default",
+      "title": "Domeenioksjonid"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/ajalugu.tpl",
+      "layout_name": "page_default",
+      "title": "Ajalugu"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__steps__k_lgmen____accordion__failid_.tpl",
+      "layout_name": "page_default",
+      "title": "Sisuleht (Steps, külgmenüü, accordion, failid)"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/ajalugu_element.tpl",
+      "layout_name": "page_default",
+      "title": "Ajalugu element"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/avaleht.tpl",
+      "layout_name": "page_default",
+      "title": "Avaleht"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_k_lgmen__ga_.tpl",
+      "layout_name": "page_default",
+      "title": "Sisuleht (akkordion külgmenüüga)"
+    },
+    {
+      "content_type": "blog",
+      "component": false,
+      "file": "layouts/riigihanked.tpl",
+      "layout_name": "riigihanked",
+      "title": "Riigihanked"
+    },
+    {
+      "content_type": "blog",
+      "component": false,
+      "file": "layouts/blogi_uudised__filtriga_.tpl",
+      "layout_name": "blogi_uudised__filtriga_",
+      "title": "Blogi/Uudised (filtriga)"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/riigihankete_detailvaade.tpl",
+      "layout_name": "riigihankete_detailvaade",
+      "title": "Riigihankete detailvaade"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/blogi_uudised_detailvaade.tpl",
+      "layout_name": "blogi_uudised_detailvaade",
+      "title": "Blogi/Uudised detailvaade"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_.tpl",
+      "layout_name": "sisuleht__akkordion_",
+      "title": "Sisuleht (akkordion)"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/avaleht__registripidaja_.tpl",
+      "layout_name": "avaleht__registripidaja_",
+      "title": "Avaleht (registripidaja)"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/s_naraamat.tpl",
+      "layout_name": "s_naraamat",
+      "title": "Sõnaraamat"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/sisuleht__steps__accordion__failid_.tpl",
+      "layout_name": "sisuleht__steps__accordion__failid_",
+      "title": "Sisuleht (Steps, accordion, failid)"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/eis.tpl",
+      "layout_name": "eis",
+      "title": "EIS"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/kiirlingid.tpl",
+      "layout_name": "kiirlingid",
+      "title": "Kiirlingid"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/t__pakkumised.tpl",
+      "layout_name": "t__pakkumised",
+      "title": "Tööpakkumised"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/kkk.tpl",
+      "layout_name": "kkk",
+      "title": "KKK"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/domeeniotsing.tpl",
+      "layout_name": "domeeniotsing",
+      "title": "Domeeniotsing"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/ikooniplokid.tpl",
+      "layout_name": "ikooniplokid",
+      "title": "Ikooniplokid"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/abi___info_leht.tpl",
+      "layout_name": "abi___info_leht",
+      "title": "Abi & info leht"
+    },
+    {
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/cookie_modal_elements.tpl",
+      "layout_name": "cookie_modal_elements",
+      "title": "cookie modal elements"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/domeeniotsing_element.tpl",
+      "layout_name": "domeeniotsing_element",
+      "title": "Domeeniotsing element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/avalehe_element.tpl",
+      "layout_name": "avalehe_element",
+      "title": "Avalehe element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/kiirlingid_element.tpl",
+      "layout_name": "kiirlingid_element",
+      "title": "Kiirlingid element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/avaleht__registripidaja__element.tpl",
+      "layout_name": "avaleht__registripidaja__element",
+      "title": "Avaleht (registripidaja) element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/ikooniplokid_element.tpl",
+      "layout_name": "ikooniplokid_element",
+      "title": "Ikooniplokid element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/s_naraamatu_element.tpl",
+      "layout_name": "s_naraamatu_element",
+      "title": "Sõnaraamatu element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/kkk_element.tpl",
+      "layout_name": "kkk_element",
+      "title": "KKK element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion__element.tpl",
+      "layout_name": "sisuleht__akkordion__element",
+      "title": "Sisuleht (akkordion) element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/eis_element.tpl",
+      "layout_name": "eis_element",
+      "title": "EIS element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/sisuleht__steps__accordion__failid__element.tpl",
+      "layout_name": "sisuleht__steps__accordion__failid__element",
+      "title": "Sisuleht (Steps, accordion, failid) element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/t__pakkumised_element.tpl",
+      "layout_name": "t__pakkumised_element",
+      "title": "Tööpakkumised element"
+    },
+    {
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/abi___info_leht_element.tpl",
+      "layout_name": "abi___info_leht_element",
+      "title": "Abi & info leht element"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools-styles.tpl",
+      "layout_name": "voog-tools-styles",
+      "title": "voog-tools-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/open-graph.tpl",
+      "layout_name": "open-graph",
+      "title": "open-graph"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools.tpl",
+      "layout_name": "voog-tools",
+      "title": "voog-tools"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-translations.tpl",
+      "layout_name": "site-translations",
+      "title": "site-translations"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/domain-search.tpl",
+      "layout_name": "domain-search",
+      "title": "domain-search"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-template.tpl",
+      "layout_name": "blog-article-template",
+      "title": "blog-article-template"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools-variables.tpl",
+      "layout_name": "voog-tools-variables",
+      "title": "voog-tools-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-single.tpl",
+      "layout_name": "blog-article-single",
+      "title": "blog-article-single"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/accordion.tpl",
+      "layout_name": "accordion",
+      "title": "accordion"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-footer.tpl",
+      "layout_name": "site-footer",
+      "title": "site-footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/cookie-modal.tpl",
+      "layout_name": "cookie-modal",
+      "title": "cookie-modal"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/footer.tpl",
+      "layout_name": "footer",
+      "title": "footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/domain-search-form.tpl",
+      "layout_name": "domain-search-form",
+      "title": "domain-search-form"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/help-topics.tpl",
+      "layout_name": "help-topics",
+      "title": "help-topics"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/header.tpl",
+      "layout_name": "header",
+      "title": "header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-main.tpl",
+      "layout_name": "menu-main",
+      "title": "menu-main"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/faq-block.tpl",
+      "layout_name": "faq-block",
+      "title": "faq-block"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/front-page-slider.tpl",
+      "layout_name": "front-page-slider",
+      "title": "front-page-slider"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-search.tpl",
+      "layout_name": "site-search",
+      "title": "site-search"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-javascripts.tpl",
+      "layout_name": "site-javascripts",
+      "title": "site-javascripts"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-language.tpl",
+      "layout_name": "menu-language",
+      "title": "menu-language"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/front-page-posts.tpl",
+      "layout_name": "front-page-posts",
+      "title": "front-page-posts"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/steps-block.tpl",
+      "layout_name": "steps-block",
+      "title": "steps-block"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/html-head.tpl",
+      "layout_name": "html-head",
+      "title": "html-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/accordion-anchors.tpl",
+      "layout_name": "accordion-anchors",
+      "title": "accordion-anchors"
+    }
+  ],
+  "assets": [
+    {
+      "content_type": "image/png",
+      "file": "assets/favicon-16x16.png",
+      "kind": "assets",
+      "filename": "favicon-16x16.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-BlackItalic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-BlackItalic.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Light.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Light.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-solid-900.ttf",
+      "kind": "asset",
+      "filename": "fa-solid-900.ttf"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-BoldItalic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-BoldItalic.woff2"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/mstile-310x310.png",
+      "kind": "assets",
+      "filename": "mstile-310x310.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/infotexm-webfont.woff",
+      "kind": "asset",
+      "filename": "infotexm-webfont.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Medium.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Medium.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ExtraBoldItalic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraBoldItalic.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/right-arrow.svg",
+      "kind": "asset",
+      "filename": "right-arrow.svg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/mstile-144x144.png",
+      "kind": "assets",
+      "filename": "mstile-144x144.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-SemiBoldItalic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-SemiBoldItalic.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-regular-400.svg",
+      "kind": "asset",
+      "filename": "fa-regular-400.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/safari-pinned-tab.svg",
+      "kind": "assets",
+      "filename": "safari-pinned-tab.svg"
+    },
+    {
+      "content_type": "image/x-icon",
+      "file": "assets/favicon.ico",
+      "kind": "assets",
+      "filename": "favicon.ico"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalight-webfont.svg",
+      "kind": "asset",
+      "filename": "etelkalight-webfont.svg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/android-chrome-192x192.png",
+      "kind": "assets",
+      "filename": "android-chrome-192x192.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/domain-spider.svg",
+      "kind": "asset",
+      "filename": "domain-spider.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-BlackItalic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-BlackItalic.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/eis-logo.svg",
+      "kind": "asset",
+      "filename": "eis-logo.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-SemiBoldItalic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-SemiBoldItalic.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ExtraBold.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraBold.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightbold-webfont.svg",
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.svg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/apple-touch-icon.png",
+      "kind": "assets",
+      "filename": "apple-touch-icon.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-regular-400.woff2",
+      "kind": "asset",
+      "filename": "fa-regular-400.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/logo-m.svg",
+      "kind": "asset",
+      "filename": "logo-m.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ThinItalic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ThinItalic.woff2"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/android-chrome-256x256.png",
+      "kind": "assets",
+      "filename": "android-chrome-256x256.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-MediumItalic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-MediumItalic.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalight-webfont.woff",
+      "kind": "asset",
+      "filename": "etelkalight-webfont.woff"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/mstile-70x70.png",
+      "kind": "assets",
+      "filename": "mstile-70x70.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ExtraLightItalic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraLightItalic.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/short-url.svg",
+      "kind": "asset",
+      "filename": "short-url.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightitalic-webfont.svg",
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Bold.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Bold.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-solid-900.eot",
+      "kind": "asset",
+      "filename": "fa-solid-900.eot"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/dns.svg",
+      "kind": "asset",
+      "filename": "dns.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/domain-actions-bg.svg",
+      "kind": "assets",
+      "filename": "domain-actions-bg.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Regular.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Regular.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/spider-white-61x50.svg",
+      "kind": "asset",
+      "filename": "spider-white-61x50.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ExtraLight.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraLight.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Thin.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Thin.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/spider.svg",
+      "kind": "asset",
+      "filename": "spider.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/private-person.svg",
+      "kind": "assets",
+      "filename": "private-person.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Thin.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Thin.woff"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Vector Smart Object.svg",
+      "kind": "assets",
+      "filename": "Vector Smart Object.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/eis-logo-white.svg",
+      "kind": "asset",
+      "filename": "eis-logo-white.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/ep2.svg",
+      "kind": "asset",
+      "filename": "ep2.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Medium.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Medium.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ExtraLight.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraLight.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-brands-400.svg",
+      "kind": "asset",
+      "filename": "fa-brands-400.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightitalic-webfont.woff",
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fish.svg",
+      "kind": "asset",
+      "filename": "fish.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightbold-webfont.woff2",
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalight-webfont.ttf",
+      "kind": "asset",
+      "filename": "etelkalight-webfont.ttf"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/mstile-310x150.png",
+      "kind": "assets",
+      "filename": "mstile-310x150.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/marker.svg",
+      "kind": "asset",
+      "filename": "marker.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ExtraLightItalic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraLightItalic.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-SemiBold.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-SemiBold.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/infotexb-webfont.woff",
+      "kind": "asset",
+      "filename": "infotexb-webfont.woff"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/dns-white.svg",
+      "kind": "assets",
+      "filename": "dns-white.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-LightItalic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-LightItalic.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-regular-400.woff",
+      "kind": "asset",
+      "filename": "fa-regular-400.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightbold-webfont.ttf",
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.ttf"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-brands-400.eot",
+      "kind": "asset",
+      "filename": "fa-brands-400.eot"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/android-chrome-512x512.png",
+      "kind": "assets",
+      "filename": "android-chrome-512x512.png"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/site.webmanifest",
+      "kind": "assets",
+      "filename": "site.webmanifest"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fish-white-200x61.svg",
+      "kind": "asset",
+      "filename": "fish-white-200x61.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Black.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Black.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightitalic-webfont.eot",
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.eot"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Light.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Light.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Regular.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Regular.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-solid-900.svg",
+      "kind": "asset",
+      "filename": "fa-solid-900.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-SemiBold.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-SemiBold.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fish-white-100x31.svg",
+      "kind": "asset",
+      "filename": "fish-white-100x31.svg"
+    },
+    {
+      "content_type": "image/svg",
+      "file": "assets/eis-logo-et.svg",
+      "kind": "asset",
+      "filename": "eis-logo-et.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ThinItalic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ThinItalic.woff"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/short-url-white.svg",
+      "kind": "assets",
+      "filename": "short-url-white.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-LightItalic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-LightItalic.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-solid-900.woff",
+      "kind": "asset",
+      "filename": "fa-solid-900.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-MediumItalic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-MediumItalic.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-regular-400.ttf",
+      "kind": "asset",
+      "filename": "fa-regular-400.ttf"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-BoldItalic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-BoldItalic.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/rod.svg",
+      "kind": "asset",
+      "filename": "rod.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalight-webfont.eot",
+      "kind": "asset",
+      "filename": "etelkalight-webfont.eot"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-solid-900.woff2",
+      "kind": "asset",
+      "filename": "fa-solid-900.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightbold-webfont.woff",
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.woff"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/mstile-150x150.png",
+      "kind": "assets",
+      "filename": "mstile-150x150.png"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/business.svg",
+      "kind": "assets",
+      "filename": "business.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Bold.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Bold.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ExtraBold.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraBold.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fish-gray-200x61.svg",
+      "kind": "asset",
+      "filename": "fish-gray-200x61.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-brands-400.woff2",
+      "kind": "asset",
+      "filename": "fa-brands-400.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-brands-400.woff",
+      "kind": "asset",
+      "filename": "fa-brands-400.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/logo-m-black.svg",
+      "kind": "asset",
+      "filename": "logo-m-black.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightbold-webfont.eot",
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.eot"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-brands-400.ttf",
+      "kind": "asset",
+      "filename": "fa-brands-400.ttf"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightitalic-webfont.woff2",
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/ep-white.svg",
+      "kind": "asset",
+      "filename": "ep-white.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Italic.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Italic.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-ExtraBoldItalic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraBoldItalic.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalightitalic-webfont.ttf",
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.ttf"
+    },
+    {
+      "content_type": "application/xml",
+      "file": "assets/browserconfig.xml",
+      "kind": "assets",
+      "filename": "browserconfig.xml"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Ring.svg",
+      "kind": "assets",
+      "filename": "Ring.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/etelkalight-webfont.woff2",
+      "kind": "asset",
+      "filename": "etelkalight-webfont.woff2"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Italic.woff",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Italic.woff"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/fa-regular-400.eot",
+      "kind": "asset",
+      "filename": "fa-regular-400.eot"
+    },
+    {
+      "content_type": "image/png",
+      "file": "assets/favicon-32x32.png",
+      "kind": "assets",
+      "filename": "favicon-32x32.png"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/Raleway-v4020-Black.woff2",
+      "kind": "asset",
+      "filename": "Raleway-v4020-Black.woff2"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Vector Smart Object-1.svg",
+      "kind": "assets",
+      "filename": "Vector Smart Object-1.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/domain-fish.svg",
+      "kind": "asset",
+      "filename": "domain-fish.svg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ico-twitter.png",
+      "kind": "image",
+      "filename": "ico-twitter.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/plus.png",
+      "kind": "image",
+      "filename": "plus.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/dnssec.png",
+      "kind": "image",
+      "filename": "dnssec.png"
+    },
+    {
+      "content_type": "image/jpg",
+      "file": "images/body-bg.jpg",
+      "kind": "image",
+      "filename": "body-bg.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/wavecom_logo.png",
+      "kind": "images",
+      "filename": "wavecom_logo.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/arrow-right.png",
+      "kind": "image",
+      "filename": "arrow-right.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/bg-twitter-bird.png",
+      "kind": "image",
+      "filename": "bg-twitter-bird.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/list-image-blue-dot.png",
+      "kind": "image",
+      "filename": "list-image-blue-dot.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/active-menu-arrow.png",
+      "kind": "image",
+      "filename": "active-menu-arrow.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/blue-btn.png",
+      "kind": "image",
+      "filename": "blue-btn.png"
+    },
+    {
+      "content_type": "image/jpg",
+      "file": "images/bg-domain-search-ee.jpg",
+      "kind": "image",
+      "filename": "bg-domain-search-ee.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/orange-btn.png",
+      "kind": "image",
+      "filename": "orange-btn.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/q-mark.png",
+      "kind": "image",
+      "filename": "q-mark.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/edicy.png",
+      "kind": "images",
+      "filename": "edicy.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/domain-auctions-bg.png",
+      "kind": "image",
+      "filename": "domain-auctions-bg.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/arrow-down.png",
+      "kind": "image",
+      "filename": "arrow-down.png"
+    },
+    {
+      "content_type": "image/jpg",
+      "file": "images/placeholder.jpg",
+      "kind": "image",
+      "filename": "placeholder.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ico-info.png",
+      "kind": "image",
+      "filename": "ico-info.png"
+    },
+    {
+      "content_type": "image/jpg",
+      "file": "images/hero-eis.jpg",
+      "kind": "image",
+      "filename": "hero-eis.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/sprite.png",
+      "kind": "image",
+      "filename": "sprite.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/heikidemo.png",
+      "kind": "images",
+      "filename": "heikidemo.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ep.png",
+      "kind": "image",
+      "filename": "ep.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/bg-domain-search-btn.png",
+      "kind": "image",
+      "filename": "bg-domain-search-btn.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/pagehead.png",
+      "kind": "image",
+      "filename": "pagehead.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/active-item-arrow.png",
+      "kind": "image",
+      "filename": "active-item-arrow.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/lines-hor-bottom.png",
+      "kind": "image",
+      "filename": "lines-hor-bottom.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/lyhikesed-16x16.png",
+      "kind": "image",
+      "filename": "lyhikesed-16x16.png"
+    },
+    {
+      "content_type": "image/jpg",
+      "file": "images/bg-stats-shadows.jpg",
+      "kind": "image",
+      "filename": "bg-stats-shadows.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/active-item-arrow-lighter.png",
+      "kind": "image",
+      "filename": "active-item-arrow-lighter.png"
+    },
+    {
+      "content_type": "image/jpg",
+      "file": "images/eis-page-bg.jpg",
+      "kind": "image",
+      "filename": "eis-page-bg.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/bg-domain-search-btn-hover.png",
+      "kind": "image",
+      "filename": "bg-domain-search-btn-hover.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ico-round-search.png",
+      "kind": "image",
+      "filename": "ico-round-search.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/eis-logo-et.png",
+      "kind": "image",
+      "filename": "eis-logo-et.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/btn-close.png",
+      "kind": "image",
+      "filename": "btn-close.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ico-rss.png",
+      "kind": "image",
+      "filename": "ico-rss.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/zone_ee.png",
+      "kind": "images",
+      "filename": "zone_ee.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ico-round-search-clear.png",
+      "kind": "image",
+      "filename": "ico-round-search-clear.png"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/hero-documents.jpg",
+      "kind": "images",
+      "filename": "hero-documents.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/bg-domain-stats-line.png",
+      "kind": "image",
+      "filename": "bg-domain-stats-line.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/html-pattern.png",
+      "kind": "image",
+      "filename": "html-pattern.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/bg-banner-slider.png",
+      "kind": "image",
+      "filename": "bg-banner-slider.png"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/world-map.js",
+      "kind": "javascript",
+      "filename": "world-map.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/jquery-3.3.1.min.js",
+      "kind": "javascript",
+      "filename": "jquery-3.3.1.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/highcharts.min.js",
+      "kind": "javascript",
+      "filename": "highcharts.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/world-map.min.js",
+      "kind": "javascript",
+      "filename": "world-map.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/cookie.min.js",
+      "kind": "javascript",
+      "filename": "cookie.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/modernizr.min.js",
+      "kind": "javascript",
+      "filename": "modernizr.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/main.min.js",
+      "kind": "javascript",
+      "filename": "main.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/charts.js",
+      "kind": "javascript",
+      "filename": "charts.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/statistics.min.js",
+      "kind": "javascript",
+      "filename": "statistics.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/main.js",
+      "kind": "javascript",
+      "filename": "main.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/highcharts.js",
+      "kind": "javascript",
+      "filename": "highcharts.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/owl.carousel.min.js",
+      "kind": "javascript",
+      "filename": "owl.carousel.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/statistics.js",
+      "kind": "javascript",
+      "filename": "statistics.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/custom-form.js",
+      "kind": "javascript",
+      "filename": "custom-form.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/map.min.js",
+      "kind": "javascript",
+      "filename": "map.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/charts.min.js",
+      "kind": "javascript",
+      "filename": "charts.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/jquery-tools.min.js",
+      "kind": "javascript",
+      "filename": "jquery-tools.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/map.js",
+      "kind": "javascript",
+      "filename": "map.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/modernizr.js",
+      "kind": "javascript",
+      "filename": "modernizr.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/slick.min.js",
+      "kind": "javascript",
+      "filename": "slick.min.js"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/print.min.css",
+      "kind": "stylesheet",
+      "filename": "print.min.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/main.min.css",
+      "kind": "stylesheet",
+      "filename": "main.min.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/main.css",
+      "kind": "stylesheet",
+      "filename": "main.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/fontawesome-all.min.css",
+      "kind": "stylesheet",
+      "filename": "fontawesome-all.min.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/print.css",
+      "kind": "stylesheet",
+      "filename": "print.css"
+    }
+  ]
+}

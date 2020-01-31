@@ -1,0 +1,272 @@
+.front-sidebar {
+  .sidebar-text {
+    padding-bottom: 85px;
+    color: $highlight-color;
+    font-weight: 600;
+  }
+
+  .domain-info {
+    table td.label {
+      text-transform: uppercase;
+      color: $highlight-color;
+      font-size: 11px;
+      text-align: right;
+      font-weight: 600;
+    }
+    table td {
+      color: #272f34;
+      padding: 2px;
+
+      a {
+        color: $base-blue;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:last-child {
+        width: 150px;
+      }
+    }
+  }
+  .registrants {
+    position: relative;
+    top: -1px;
+    width: 300px;
+
+    tr.details-condensed {
+      display: none;
+    }
+
+    @include transition(width .6s ease-in-out);
+
+    &.opened {
+      width: 975px;
+
+      td.name .table-ellipsis {
+        display: none;
+      }
+
+      .name span:first-child {
+        max-width: initial !important;
+      }
+    }
+
+    .sidebar-body {
+      margin: 0 -20px;
+    }
+
+    header {
+      display: block;
+      background-color: $base-bg-color;
+      border-top: 1px solid $white;
+
+      h3 {
+        max-width: 140px;
+        width: 100%;
+        color: $base-blue;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 35px 0 0 20px;
+        line-height: 110%;
+        float: left;
+      }
+
+      .extend-btn {
+        width: 130px;
+        background: url(../images/blue-btn.png) center top no-repeat;
+        text-align: center;
+        margin: 35px 0 -20px 0;
+        padding: 8px 0 34px;
+        font-size: 16px;
+        color: #fff;
+        outline: none;
+        text-transform: uppercase;
+        border: 0 none;
+        float: right;
+        font-weight: 600;
+
+        &:hover {
+          background: url(../images/orange-btn.png) center top no-repeat;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .registrants-table {
+      overflow: hidden;
+    }
+
+    .registrants-table thead {
+      background: $base-bg-color;
+      font-family: 'Raleway';
+    }
+
+    .registrants-table table {
+      width: 975px;
+      border-spacing: 0;
+
+      tr:nth-child(odd) {
+        background-color: $sidebar-bg-color;
+      }
+
+      tr:nth-child(even) {
+        background-color: $base-bg-color;
+      }
+
+      tr:hover {
+        background-color: #d6d6d6;
+      }
+
+      th {
+        text-transform: uppercase;
+        color: #272f34;
+        font-size: 12px;
+        text-align: left;
+        padding: 10px 0;
+        font-weight: normal;
+
+        [rel=tooltip] {
+          display: inline-block;
+          width: 6px;
+          height: 12px;
+          background: url(../images/q-mark.png) no-repeat;
+          margin: -2px -8px 0px 0px;
+
+          &:hover {
+            position: relative;
+
+            &:after {
+              display: block;
+              position: absolute;
+              top: 25px;
+              right: 0;
+              border: 2px solid #f69240;
+              padding: 10px;
+              background: #f2f4f5;
+              text-transform: none;
+              border-radius: 3px;
+              width: 150px;
+            }
+          }
+        }
+
+        [rel=tooltip]:after {
+          content: attr(data-text);
+          display: none;
+          animation: fadein .35s;
+        }
+      }
+
+      td {
+        font-size: 12px;
+        padding: 6px 0;
+      }
+
+      th, td {
+        text-align: left;
+        padding-right: 8px;
+      }
+
+      .abc {
+        width: 44px;
+        text-align: center;
+        font-weight: 600;
+        color: $base-blue;
+        vertical-align: middle;
+      }
+
+      td span {
+        padding: 0 4px;
+      }
+
+      td a {
+        font-size: 13px;
+        font-style: italic;
+        color: #5d6064;
+
+        &:hover {
+          color: $base-blue;
+        }
+      }
+
+      .name {
+        width: 246px;
+        text-transform: uppercase;
+        color: #008fd7;
+        font-family: 'Raleway';
+        cursor: pointer;
+
+        span:first-child {
+          word-break: normal;
+          display: inline-block;
+          white-space: nowrap;
+          max-width: 205px;
+          overflow: hidden;
+          float: left;
+        }
+
+        .table-ellipsis {
+          float: right;
+          margin-right: 1em;
+        }
+      }
+
+      tbody .more {
+        text-align: center;
+
+        a {
+          display: inline-block;
+        }
+      }
+
+      .ico {
+        width: 16px;
+        height: 16px;
+        margin: 0 2px;
+        float: left;
+      }
+
+      .ico.info {
+        background: url(../images/ico-info.png) center 50% no-repeat;
+      }
+
+      .ico.dnssec {
+        background: url(../images/dnssec.png) center 50% no-repeat;
+      }
+
+      .ico.ep {
+        background: url(../images/ep.png) center 50% no-repeat;
+      }
+    }
+  }
+}
+
+
+
+@include keyframes(fadein) {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  1% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .front-sidebar .registrants header h3 {
+    color: white !important;
+  }
+  .registrants-table .details-condensed .ico {
+    float: none !important;
+    padding: 0 8px !important;
+  }
+}

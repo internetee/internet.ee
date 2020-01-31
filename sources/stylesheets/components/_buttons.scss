@@ -1,0 +1,145 @@
+.btn-view-more {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  &:hover {
+    i {
+      transform: scale(1.1) translateX(3px);
+    }
+  }
+  span {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  i {
+    margin-left: 5px;
+    width: 20px;
+    flex: 0 0 20px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+  }
+  @include min-screen(1440px) {
+    font-size: 16px;
+  }
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  &:hover {
+    i {
+      transform: scale(1.1) translateX(-3px);
+    }
+  }
+  span {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  i {
+    margin-right: 5px;
+    width: 20px;
+    flex: 0 0 20px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.btn {
+  @include button();
+  transition: all .3s ease-in-out;
+  i {
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &--toggle {
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+      color: $base-blue;
+      i {
+        transform: scale(1.1);
+        transition: all .3s 0s ease-in-out;
+      }
+    }
+    .close,
+    .fa-minus {
+      display: none;
+    }
+    &.active {
+      .open,
+      .fa-plus {
+        display: none;
+      }
+      .close,
+      .fa-minus {
+        display: block;
+      }
+    }
+  }
+  &--primary {
+    @include btn02();
+    text-transform: uppercase;
+  }
+  &--default {
+    @include btn03();
+
+  }
+  &--secondary {
+    @include btn04();
+  }
+  &--white {
+    color: $black;
+    background: #fff;
+  }
+  &--large {
+    padding: 10px;
+    font-size: 14px;
+    min-width: 40px;
+    i {
+      margin-right: 10px;
+    }
+  }
+  &--edit {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+    color: $base-darkblue;
+    text-decoration: none !important;
+    &:hover {
+      i {
+        transform: rotateY(180deg);
+      }
+      span {
+        text-decoration: none;
+      }
+    }
+    i {
+      margin-right: 5px;
+      transition: all .3s ease-in-out;
+    }
+    span {
+      text-decoration: underline;
+    }
+  }
+  @include min-screen(768px) {
+    &--large {
+      padding: 15px;
+      font-size: 18px;
+      min-width: 50px;
+    }
+  }
+  @include min-screen(1025px) {
+    &--large {
+      padding: 20px;
+      font-size: 20px;
+      min-width: 60px;
+    }
+  }
+}

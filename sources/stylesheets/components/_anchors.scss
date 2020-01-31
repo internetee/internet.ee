@@ -1,0 +1,44 @@
+.anchors {
+  background: linear-gradient(to right, #EEEEF0, #FCFCFC);
+  margin: 0 0 20px;
+  padding: 20px 15px 15px 20px;
+  &.js-anchors {
+    display: none;
+  }
+  .keywords-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    a {
+      font-weight: 900;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 12px;
+      margin: 0 5px 5px 0;
+      text-align: center;
+      background: #003D63;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: $base-orange;
+        transform: scale(1.025);
+      }
+    }
+  }
+  @include min-screen(768px) {
+    margin: -20px -20px 40px;
+    padding: 40px 10px 10px 20px;
+    .keywords-list {
+      a {
+        font-size: 14px;
+        padding: 10px 15px;
+        margin: 0 10px 10px 0;
+      }
+    }
+  }
+  @include min-screen(1025px) {
+    margin: -40px -50px 40px;
+    padding: 80px 40px 30px 50px;
+  }
+}

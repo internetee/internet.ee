@@ -1,0 +1,105 @@
+.page--detail {
+  .page--header {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 40px;
+    padding: 100px 20px 40px 20px;
+    color: $white;
+    text-align: center;
+    font-size: 18px;
+    background: $base-darkblue url('../images/pagehead.png') no-repeat 50% 50% / cover;
+    box-shadow: 0 0 40px 0 rgba($black, 0.20);
+    .faq-page &,
+    .blog--main &,
+    .auctions-page & {
+      margin-bottom: 0;
+    }
+    .u-container {
+      width: 880px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .page--content {
+    padding: 0 20px;
+    .page--body {
+      margin-bottom: 40px;
+      &:first-child{
+        margin-bottom: 40px;
+      }
+      &:last-child{
+        margin-top: 40px;
+      }
+    }
+    .page--sidebar {
+      margin-bottom: 40px;
+    }
+    @include min-screen(769px) {
+      padding: 0;
+    }
+    @include min-screen(1024px) {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      padding: 0;
+      width: 1340px;
+      max-width: 100%;
+      margin: 0 auto;
+      .page--body {
+        flex: 1 1 880px;
+        min-width: 1px;
+        max-width: 880px;
+        margin-bottom: 40px;
+        &:first-child {
+          margin: 0 40px 40px 0;
+        }
+        &:last-child {
+          margin: 0 0 40px 40px;
+        }
+        &:only-child {
+          margin: 0 0 40px;
+        }
+      }
+      .page--sidebar {
+        flex: 0 0 280px;
+        width: 280px;
+        min-width: 280px;
+        position: relative;
+      }
+    }
+    @include min-screen(1281px) {
+      .page--sidebar {
+        flex: 0 0 420px;
+        width: 420px;
+        min-width: 420px;
+      }
+    }
+  }
+  @include min-screen(768px) {
+    .page--header {
+      padding: 120px 20px 40px 20px;
+      margin-bottom: 40px;
+      font-size: 18px;
+      h1 {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+  @include min-screen(1280px) {
+    .page--header {
+      padding: 200px 40px 60px 40px;
+      margin-bottom: 80px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.table {
+	width: 100%;
+	tbody {
+		tr {
+			&:first-child {
+				th,
+				td {
+					border-top: 1px solid #EAEBED;
+				}
+			}
+		}
+		th,
+		td {
+			vertical-align: top;
+			padding: 5px;
+			font-size: 14px;
+			line-height: 20px;
+			text-align: left;
+			border-bottom: 1px solid #EAEBED;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+			.u-word-break {
+				word-break: break-all;
+			}
+			a {
+				text-decoration: underline;
+			}
+		}
+		td {
+			font-weight: 900;
+			&.status {
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+	@include min-screen(768px) {
+		tbody {
+			th,
+			td {
+				padding: 10px;
+				font-size: 18px;
+				line-height: 30px;
+			}
+		}
+	}
+}

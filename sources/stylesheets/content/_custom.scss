@@ -1,0 +1,60 @@
+.content-area {
+  &.contacts-info {
+    > h1 {
+      margin: 20px 0 40px;
+    }
+
+    h1 + .contacts-container {
+      background: url(../images/lines-hor-bottom.png) center top repeat-x;
+      padding-top: 40px;
+    }
+
+    > h2 {
+      background: url(../images/lines-hor-bottom.png) center top repeat-x;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 20px 0;
+      margin: 20px 0 0 0;
+    }
+
+    .contacts-container {
+      background: url(../images/lines-hor-bottom.png) center bottom repeat-x;
+      margin: 0 0 20px;
+    }
+
+    .contact-box {
+      float: left;
+      width: 250px;
+      padding: 0;
+      margin: 0 10px 20px 0;
+
+      * {
+        color: #5d6064;
+      }
+
+      h3 {
+        font-size: 13px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      em {
+        display: block;
+        margin: 0 0 12px;
+      }
+
+      .contact {
+        margin: 1px 0;
+        padding: 0 0 0 24px;
+      }
+
+      .email {
+        background: url(../images/sprite.png) left -268px no-repeat;
+      }
+
+      .phone {
+        background: url(../images/sprite.png) left -239px no-repeat;
+      }
+    }
+  }
+}

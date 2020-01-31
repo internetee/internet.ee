@@ -1,0 +1,21 @@
+.page-help{
+  .page-content{
+    .content-inner{
+      padding-bottom: 40px;
+    }
+  }
+  @include min-screen(768px) {
+    .page-content {
+      .content-inner {
+        padding-bottom: 60px;
+      }
+    }
+  }
+  @include min-screen(1025px) {
+    .page-content {
+      .content-inner {
+        padding-bottom: 80px;
+      }
+    }
+  }
+}

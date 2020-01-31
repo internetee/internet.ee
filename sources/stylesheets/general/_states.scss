@@ -1,0 +1,15 @@
+.visible {
+  display: initial;
+}
+
+.hidden {
+  display: none;
+}
+
+.is-untranslated {
+  opacity: .2;
+
+  &:hover {
+    opacity: .4;
+  }
+}

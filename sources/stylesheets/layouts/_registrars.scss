@@ -1,0 +1,154 @@
+.registrar-filter {
+	background: linear-gradient(to right, #EEEEF0, #FCFCFC);
+	padding: 20px 20px 40px;
+	position: relative;
+	@include min-screen(768px){
+		padding: 80px 20px;
+		margin: -40px -20px 0;
+	}
+	@include min-screen(1281px){
+		padding: 80px 50px;
+		margin: -40px -50px 0;
+	}
+}
+.common-registrar-page {
+	position: relative;
+	.page--detail {
+		.page--header{
+			margin-bottom: 0;
+		}
+		.page--content {
+			margin-top: 20px;
+		}
+	}
+	@include min-screen(768px) {
+		.page--detail {
+			.page--content {
+				margin-top: 40px;
+			}
+		}
+	}
+	@include min-screen(1025px) {
+		.page--detail {
+			.page--content {
+				margin-top: 80px;
+			}
+		}
+	}
+}
+
+.registrar-list-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 10px 30px;
+	.page-loading & {
+		display: none;
+	}
+
+	.registrar--item {
+		flex: 0 1 100%;
+		max-width: 100%;
+		padding: 10px;
+		box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+		margin: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		background: #fff;
+		.registrar--services {
+			display: flex;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 2;
+			.item {
+				display: block;
+				height: 24px;
+				width: 24px;
+				background: none no-repeat center/cover;
+				margin-left: 10px;
+			}
+		}
+
+		.registrar--logo {
+			display: block;
+			height: 80px;
+			width: 100%;
+			margin-bottom: 20px;
+			img {
+				display: block;
+				margin: 0 auto;
+				height: 100%;
+				max-width: 100%;
+				object-fit: contain;
+			}
+			i {
+				display: block;
+				color: #EAEBED;
+				font-size: 42px;
+				line-height: 100px;
+				text-align: center;
+			}
+		}
+		h2 {
+			font-size: 24px;
+			line-height: 25px;
+			font-weight: 900;
+			text-align: center;
+		}
+		.registrar--url {
+			color: #212224;
+			font-weight: 500;
+			text-align: center;
+		}
+	}
+	@include min-screen(768px) {
+		padding: 0 0 80px;
+		margin: 0 -10px;
+		.registrar--item {
+			flex: 0 1 50%;
+			flex-basis: calc(50% - 20px);
+			width: calc(50% - 20px);
+			max-width: calc(50% - 20px);
+			padding: 20px;
+			margin: 10px;
+		}
+	}
+	@include min-screen(1025px){
+		padding: 0 0 100px;
+		margin: -60px -20px -20px;
+		.registrar--item {
+			flex: 0 1 33.3333%;
+			flex-basis: calc(33.3333% - 40px);
+			width: calc(33.3333% - 40px);
+			max-width: calc(33.3333% - 40px);
+			margin: 20px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

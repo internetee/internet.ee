@@ -1,0 +1,436 @@
+.front-page {
+  &.page-loading {
+    .countdown {
+      display: none;
+    }
+  }
+}
+
+.info-blocks {
+  .block {
+    padding: 20px;
+    h2 {
+      margin-bottom: 10px;
+      font-size: 30px;
+      line-height: 30px;
+      font-weight: 900;
+    }
+    .domain-auctions-wrap {
+      .page-loading & {
+        display: none;
+      }
+    }
+    &--domain-auctions {
+      color: #fff;
+      background: url('../images/domain-auctions-bg.png') no-repeat 50% 50% / cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 140px;
+        margin-bottom: 20px;
+        .page-loading & {
+          display: none;
+        }
+      }
+      h2 {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        span {
+          margin-top: 10px;
+          display: block;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+      .domain-auctions--status {
+        .counter {
+          font-size: 30px;
+          line-height: 30px;
+          margin: 20px 0 0;
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+      a {
+        color: #fff;
+      }
+      ul {
+        border-top: 1px solid #37A6DF;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          border-bottom: 1px solid #37A6DF;
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          font-size: 16px;
+          flex: 1 1 50%;
+          width: 50%;
+          min-width: 180px;
+          word-break: break-all;
+          &:nth-child(even) {
+            border-left: 1px solid #37A6DF;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            min-width: 80px;
+            i {
+              width: 20px;
+              flex: 0 0 20px;
+              margin-right: 5px;
+              text-align: center;
+            }
+          }
+        }
+      }
+      footer {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        font-size: 14px;
+        a {
+          margin-left: auto;
+        }
+      }
+    }
+    &--text {
+      text-align: center;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+        margin-bottom: 20px;
+        img {
+          display: block;
+        }
+        i {
+          display: block;
+          text-align: center;
+          font-size: 80px;
+          line-height: 140px;
+          color: $base-orange;
+        }
+      }
+      p {
+        margin-top: 10px;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+  .page--detail & {
+    .block {
+      &--text {
+        .icon {
+          height: 80px;
+          margin-bottom: 40px;
+          i {
+            line-height: 80px;
+          }
+        }
+      }
+    }
+  }
+  @include screen(768px, 1024px, $orientation: false) {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: -20px -20px 0 -20px;
+    .block {
+      flex: 1 1 50%;
+      width: 50%;
+      padding: 40px 20px;
+      background-size: cover;
+      &:first-child {
+        flex: 1 0 100%;
+        width: 100%;
+      }
+    }
+  }
+  @include min-screen(1025px) {
+    display: flex;
+    align-items: stretch;
+    margin: -150px 0 0 -50px;
+    .page--detail & {
+      margin: 0 -20px 80px;
+      flex-wrap: wrap;
+      justify-content: center;
+      .block {
+        flex: 0 1 33.3333%;
+        width: 33.3333%;
+        padding: 0 20px 40px;
+      }
+    }
+    .block {
+      flex: 1 1 33.3333%;
+      width: 33.3333%;
+      padding: 190px 0 40px 40px;
+      &--domain-auctions {
+        padding: 190px 40px 40px 50px;
+      }
+    }
+  }
+}
+.page-hero {
+  color: #fff;
+  h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include min-screen(768px) {
+    h2 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+}
+.hero-slider {
+  position: relative;
+  .owl-stage {
+    display: flex;
+    align-items: stretch;
+  }
+  .owl-carousel .owl-stage::after {
+    display: none;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    padding: 80px 20px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    background: $base-blue no-repeat 50% 50% / cover;
+    p {
+      margin: 0 0 20px;
+      &:last-child {
+        margin: 0;
+      }
+      a {
+        color: #fff;
+        text-decoration: underline;
+        margin: 0 10px;
+      }
+    }
+  }
+  .edit-slide {
+    background: #666;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white !important;
+    line-height: 1.2em;
+    position: absolute;
+    right: 40px;
+    &:hover {
+      font-weight: 600;
+    }
+  }
+  .edy-cbtn {
+    position: absolute !important;
+    bottom: 60px !important;
+    right: 40px;
+    top: auto !important;
+    left: auto !important;
+  }
+  .owl-dots {
+    display: none;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    button.owl-dot {
+      @include button();
+      display: block;
+      margin: 0 2px;
+      width: 10px;
+      height: 10px;
+      overflow: hidden;
+      text-indent: -999px;
+      background: rgba(255,255,255,.5);
+      transition: all .3s ease-in-out;
+      border-radius: 5px;
+      &.active {
+        width: 30px;
+      }
+    }
+  }
+  @include screen(768px,1024px) {
+    .slide {
+      padding: 140px 40px;
+      font-size: 18px;
+    }
+  }
+  @include min-screen(1025px) {
+    .slide {
+      padding: 200px 80px 130px;
+      font-size: 18px;
+      p {
+        a {
+          @include btn01();
+          margin: 0 10px;
+          text-decoration: none;
+        }
+      }
+    }
+    .owl-dots {
+      display: flex;
+    }
+  }
+}
+
+
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: auto;
+  overflow-y: scroll;
+  background-color: rgba(0,0,0,.5);
+  z-index: 160;
+
+  a.close {
+    background: url("../images/btn-close.png") no-repeat scroll 0 0 transparent;
+    height: 40px;
+    position: absolute;
+    right: -18px;
+    text-indent: -999em;
+    top: -18px;
+    width: 40px;
+  }
+
+  &.show-extra:not(.incomplete) {
+    .modal-inner {
+      .g-recaptcha,
+      button {
+        display: none;
+      }
+    }
+  }
+
+  &.show-extra {
+    .modal-inner {
+      table .extra {
+        display: table-row;
+      }
+    }
+  }
+
+  .modal-inner {
+    @include box-sizing(border-box);
+    @include transform(translateX(-50%) translateY(-50%));
+    background: #F3F4F6;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.9);
+    color: #000;
+    font-size: 12px;
+    padding: 45px 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    width: 720px;
+    color: #272f34;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .email a {
+      color: #000;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    table {
+      width: 100%;
+    }
+
+    table td {
+      word-break: break-word;
+
+      &:first-child {
+        vertical-align: top;
+      }
+    }
+
+    table td.dnskey {
+      word-break: break-all;
+      width: 75%;
+    }
+
+    table .extra {
+      display: none;
+    }
+
+    .g-recaptcha {
+      display: inline-block;
+    }
+
+    button {
+      background: rgba(0,0,0,.1);
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 7px 20px;
+      outline: none;
+      color: #333;
+      border: 1px solid #CCC;
+      display: inline-block;
+      vertical-align: 30px;
+
+      &:hover {
+        background: rgba(0,0,0,.15);
+      }
+
+      &.disabled {
+        background: rgba(0,0,0,.15);
+        cursor: default;
+        opacity: .8;
+      }
+    }
+  }
+}
+
+.front-page-element {
+  ul.banners li {
+    background: rgba(0,0,0,.25);
+  }
+}
+.section {
+  .articles--list {
+    @include screen(768px, 1024px, $orientation: false) {
+      .article {
+        flex: 0 0 50%;
+        width: 50%;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}

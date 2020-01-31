@@ -1,0 +1,154 @@
+.auctions-page {
+  &.page-loading {
+    .page--content {
+      display: none;
+    }
+  }
+  .page--content {
+    padding: 20px;
+    position: relative;
+    z-index: 5;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba($true-black, 0.10);
+    @include min-screen(1280px) {
+      padding: 40px;
+    }
+  }
+  .pagination {
+    width: 1340px;
+    max-width: 100%;
+    margin: 40px auto 0;
+  }
+}
+
+.domain-auctions-instructions {
+  background: $base-blue url('../images/html-pattern.png') no-repeat 10% -86px / 720px 772px;
+  color: #fff;
+  padding: 20px;
+  a {
+    color: #fff;
+  }
+  .panel-block {
+    position: relative;
+    z-index: 11;
+    padding: 10px 20px;
+    margin: -40px -10px 20px -10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #BDE0F3;
+    background: $base-blue;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,0,0,.2);
+    strong {
+      color: #fff;
+    }
+  }
+  .steps-block {
+    margin-bottom: 20px;
+  }
+  @include min-screen(768px) {
+    margin: -40px -20px;
+    padding: 60px 20px 80px;
+    .panel-block {
+      font-size: 18px;
+      padding: 15px 20px;
+      margin: -40px 20px 20px;
+    }
+    .steps-block {
+      margin-bottom: 40px;
+    }
+  }
+  @include min-screen(1280px) {
+    margin: -40px -50px;
+    padding: 80px 50px 80px;
+    .panel-block {
+      font-size: 24px;
+      line-height: 30px;
+      padding: 25px;
+      margin: -60px 40px 40px;
+    }
+  }
+}
+.auctions-filter {
+  margin-top: 0;
+  .page-loading & {
+    display: none;
+  }
+  .search-block {
+    width: 640px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+.domains-list {
+  position: relative;
+  z-index: 3;
+  background: $true-white;
+  box-shadow: 0 0 20px 0 rgba($true-black, 0.10);
+  display: flex;
+  flex-wrap: wrap;
+  width: 1340px;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  .page-loading & {
+    display: none;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .item {
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    border-bottom: 1px solid $grey;
+    &:nth-child(odd) {
+      border-right: 1px solid $grey;
+    }
+    &:nth-last-child(-n+2) {
+      border-bottom: 0;
+    }
+    a,
+    h3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px 20px 9px 20px;
+      font-weight: 900;
+      font-size: 16px;
+      color: $black;
+      line-height: 20px;
+      width: 100%;
+      flex: 0 0 100%;
+      word-break: break-all;
+      transition: all 200ms ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+  @include max-screen(479px) {
+    display: block;
+    .item {
+      max-width: 100%;
+      border-right: 0 !important;
+      &:nth-last-child(2) {
+        border-bottom: 1px solid $grey;
+      }
+    }
+  }
+  @include min-screen(768px) {
+    margin-bottom: 40px;
+    .item {
+      a,
+      h3 {
+        padding: 20px 20px 19px 20px;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+}

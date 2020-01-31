@@ -1,0 +1,232 @@
+.about-page {
+	.eis-location {
+		position: relative;
+		background: #D8D8D8;
+		z-index: 1;
+		.eis-contacts {
+			padding: 20px;
+			line-height: 20px;
+			background: #fff;
+			box-shadow: 0 0 20px rgba(0,0,0,.1);
+			z-index: 20;
+			h3 {
+				margin-bottom: 10px;
+				font-size: 20px;
+				line-height: 30px;
+				font-weight: 900;
+			}
+		}
+		#location-map {
+			height: 480px;
+			position: relative;
+			z-index: 10;
+		}
+	}
+	@include min-screen(768px) {
+		.eis-location {
+			margin: -40px -20px;
+			.eis-contacts {
+				position: absolute;
+				top: 50%;
+				left: 50px;
+				transform: translateY(-50%);
+				width: 420px;
+				line-height: 25px;
+			}
+		}
+	}
+	@include min-screen(1025px) {
+		.eis-location {
+			margin: -40px -50px;
+		}
+	}
+}
+.contacts {
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	&--list {
+		.item {
+			padding: 0 20px 20px;
+			&--content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				min-height: 100%;
+				padding: 20px;
+				box-shadow: 0 0 20px rgba(0,0,0,.1);
+				background: #fff;
+				&.add {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+			.image {
+				margin: 0 auto 20px;
+				img {
+					display: block;
+					width: 100px;
+					height: auto;
+					margin: 0 auto;
+					border-radius: 50%;
+				}
+			}
+			h3 {
+				font-size: 24px;
+				line-height: 30px;
+				font-weight: 900;
+				a {
+					color: $black;
+					&:hover {
+						color: $base-blue;
+					}
+				}
+			}
+			.occupation {
+				margin-bottom: 10px;
+			}
+			p {
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	@include min-screen(480px) {
+		&--list {
+			display: flex;
+			align-items: stretch;
+			flex-wrap: wrap;
+			margin: 0 10px;
+			.item {
+				flex: 0 0 50%;
+				width: 50%;
+				padding: 0 10px 20px;
+			}
+		}
+	}
+	@include min-screen(768px) {
+		&--list {
+			margin: 0 -10px -40px;
+			.item {
+				flex: 0 0 33.3333%;
+				width: 33.3333%;
+				padding: 0 10px 20px;
+			}
+		}
+	}
+	@include min-screen(1281px) {
+		&--list {
+			margin: 0 -20px -80px;
+			.item {
+				flex: 0 0 25%;
+				width: 25%;
+				padding: 0 20px 40px;
+				&--content {
+					padding: 40px;
+				}
+			}
+		}
+	}
+}
+.quick-nav {
+	position: relative;
+	z-index: 10;
+	padding-top: 20px;
+	.item {
+		padding: 0 20px 20px;
+		position: relative;
+		&--content {
+			padding: 20px;
+			position: relative;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			min-height: 200px;
+			color: #fff;
+			text-align: center;
+			background: url('../images/pagehead.png') no-repeat 50% 50% / cover;
+			transition: all .3s ease-in-out;
+			.editmode & {
+				padding-bottom: 60px;
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				min-height: 150px;
+				height: 100%;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				background: linear-gradient(to top, rgba($base-darkblue,.6), rgba($base-darkblue,0));
+				z-index: 1;
+			}
+			&:hover {
+				transform: scale(1.025);
+				box-shadow: 0 0 20px rgba(0,0,0,.1);
+			}
+			h3 {
+				font-weight: 900;
+				font-size: 24px;
+				line-height: 30px;
+			}
+			h3,
+			p {
+				position: relative;
+				z-index: 2;
+			}
+			&.add {
+				justify-content: center;
+				background: #fff;
+				box-shadow: 0 0 20px rgba(0,0,0,.1);
+				&:after {
+					display: none;
+				}
+			}
+		}
+		.btn--edit {
+			position: absolute;
+			bottom: 60px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 2;
+			color: #fff;
+		}
+	}
+	@include min-screen(768px) {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		padding-top: 0;
+		.item {
+			flex: 0 0 50%;
+			width: 50%;
+			padding: 0 10px 20px;
+			&--content {
+				min-height: 240px;
+			}
+		}
+	}
+	@include min-screen(1025px) {
+		margin: 0 -10px;
+		.item {
+			flex: 0 0 33.3333%;
+			width: 33.3333%;
+			padding: 0 10px 20px;
+			&--content {
+				min-height: 300px;
+			}
+		}
+	}
+	@include min-screen(1281px) {
+		margin: 0 -20px;
+		.item {
+			padding: 0 20px 40px;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.help-topics {
+  &__list {
+    .help-topics{
+      &__item{
+        &+.help-topics__item{
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    .fa {
+      min-width: 40px;
+      text-align: center;
+      line-height: 30px;
+      font-size: 30px;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+    &__body {
+      flex-grow: 1;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    h2 {
+      font-weight: 900;
+      color: $base-blue;
+      font-size: 20px;
+      line-height: 25px;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  @include min-screen(768px) {
+    &__item {
+      &__body {
+        font-size: 18px;
+        line-height: 30px;
+      }
+      h2 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      .fa {
+        min-width: 60px;
+        line-height: 60px;
+        font-size: 42px;
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.pagehead {
+    padding: 200px 40px 60px 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $base-darkblue;
+    color: $true-white;
+    box-shadow: 0 0 40px 0 rgba($true-black,0.20);
+    h1{
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 40px;
+    }
+}

@@ -1,0 +1,44 @@
+// VARIABLES
+// Global variables to use in every .scss files.
+// Comment out the "_variables.scss" partial in the "main.scss" file if not used.
+
+// Fonts
+$base-font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+$base-font-size: 14px;
+$base-line-height: 20px;
+$content-width: 100%;
+$content-padding: 0;
+
+// Basic colors.
+$black: #212224;
+$white: rgba(255,255,255,.9);
+$green: #48A23F;
+$orange: #FF6E00;
+//
+$true-black: #000;
+$true-white: #fff;
+
+// Specific colors.
+$highlight-color: #f69240;
+$base-bg-color: #e9ebed;
+$sidebar-bg-color: #f2f4f5;
+$header-bg-color: #14191F;
+$base-blue: #0085CA;
+$base-darkblue: #003D63;
+$base-orange: #FF6E00;
+$header-blue: #0085CA;
+$common-border-color: #cac7c4;
+$footer-bg-color: #13191e;
+
+$error-color: #cc0000;
+$success-color: #60a740;
+
+$grey: #EAEBED;
+
+// Media query breakpoints.
+$desktop-1: 1600px;
+$tablet-1: 1024px;
+$tablet-2: 768px;
+$tablet-3: 640px;
+$mobile-1: 480px;
+$mobile-2: 320px;

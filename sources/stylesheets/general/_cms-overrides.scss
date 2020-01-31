@@ -1,0 +1,32 @@
+// CMS DEFAULT STYLES OVERRIDES
+.site-footer {
+  .edy-empty-bordered {
+    color: rgba($white,.5);
+    border-color: rgba($white,.5);
+  }
+  .placeholder {
+    color: rgba($white,.5);
+  }
+  .edy-content-element-hover {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba($white,.2);
+  }
+  .edy-texteditor-active {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: rgba($white,.4);
+
+    table td {
+      outline: 1px solid rgba($white, .4) !important;
+    }
+
+    &:hover {
+      outline-color: rgba($white,.63);
+    }
+  }
+}
+
+.menu-language li .edy-menu-langadd {
+  margin-left: 15px !important;
+}

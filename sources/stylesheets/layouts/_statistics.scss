@@ -1,0 +1,87 @@
+#statistics {
+  margin: 20px 0;
+  padding: 14px 0;
+  position: relative;
+  height: 318px;
+  width: 620px;
+  background: url(../images/bg-stats-shadows.jpg) left top no-repeat;
+
+  .graphs {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 3000px;
+
+    li {
+      margin: 0;
+      padding: 0;
+      width: 538px;
+      height: 318px;
+      position: absolute;
+      text-align: center;
+      vertical-align: bottom;
+      top: 0;
+      left: 0;
+      display: none;
+
+      &.active {
+        display: block;
+        z-index: 10;
+      }
+    }
+  }
+
+  .graphs-inner {
+    width: 538px;
+    height: 318px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .stats-graphs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 538px;
+    height: 318px;
+    border: 1px solid #cac7c4;
+    background: $sidebar-bg-color;
+  }
+
+  .graphs-tabs {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 80px;
+    float: right;
+
+    li {
+      width: 80px;
+      margin: 0 0 0 -1px;
+      float: left;
+      overflow: hidden;
+
+      a {
+        display: block;
+        padding: 18px 10px;
+        outline: none;
+        text-align: center;
+        font-size: 8px;
+        line-height: 120%;
+        color: #5d6064;
+        font-family: 'verdana';
+        text-transform: uppercase;
+      }
+
+      &.active {
+        border: 1px solid #cac7c4;
+        border-left: 0 none;
+        background: #f2f4f5;
+
+        a {
+          color: #f69240;
+        }
+      }
+    }
+  }
+}

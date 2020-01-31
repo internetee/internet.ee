@@ -1,0 +1,119 @@
+html.forum {
+  .blog-article {
+    width: 100%;
+  }
+
+  .back-link {
+    position: absolute;
+  }
+
+  .content-inner {
+    padding-left: 40px;
+  }
+}
+
+html.forum {
+  .grid {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .grid-item {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 0 30px 30px 0;
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba(0,0,0,.05);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0,0,0,.075);
+    }
+
+    * { display: inline-block }
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+
+    .center-text {
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
+      width: 100%;
+      display: inline-block;
+      line-height: 1.5em;
+      text-align: center;
+      top: 50%;
+      font-size: 15px;
+
+      > .article-title {
+        display: inline-block;
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        min-width: 100%;
+      }
+
+      .comments-count {
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: 400;
+        display: inline;
+      }
+
+      .comments-time {
+        color: rgba(0,0,0,.5);
+      }
+    }
+  }
+}
+
+html.forum {
+  .article-commentform {
+    .form_field {
+      text-align: left;
+    }
+    .form_field label {
+      width: 140px;
+      text-align: left;
+    }
+    .form_field input,
+    .form_field textarea {
+      width: calc(100% - 140px);
+    }
+  }
+}
+
+@include screen(641px, 1024px) {
+  html.forum {
+    .grid-item {
+      width: calc(50% - 15px);
+      &:nth-child(3n+3) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include max-screen(640px) {
+  html.forum {
+    .grid-item {
+      width: 100%;
+      margin-right: 0;
+
+      &:nth-child(3n+3),
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+  }
+}

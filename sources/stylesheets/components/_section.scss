@@ -1,0 +1,42 @@
+.section {
+	background: linear-gradient(to right, #EEEEF0, #FCFCFC 100%);
+	padding: 20px;
+	&--header {
+		margin-bottom: 20px;
+		h2 {
+			margin: 0 0 10px;
+			font-size: 24px;
+			line-height: 30px;
+			font-weight: 900;
+		}
+	}
+	&--actions {
+		margin-left: auto;
+	}
+	@include min-screen(768px) {
+		margin: 0 -20px;
+		&--header {
+			display: flex;
+			align-items: center;
+			h2 {
+				margin: 0 20px 0 0;
+				font-size: 30px;
+			}
+		}
+	}
+	@include min-screen(1281px) {
+		margin: 0 -50px;
+		padding: 40px 50px;
+		&--header {
+			margin-bottom: 40px;
+		}
+	}
+}
+.page-section {
+	.section--header {
+		justify-content: center;
+	}
+	.section--actions {
+		margin-left: 0;
+	}
+}

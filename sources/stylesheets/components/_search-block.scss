@@ -1,0 +1,292 @@
+.search-block {
+  .filter-item {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .form-item {
+    .btn {
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 5px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 5px;
+      i {
+        display: block;
+        text-align: center;
+        margin: 0;
+        &.fa-spinner {
+          display: none;
+        }
+      }
+      + .btn {
+        right: 40px;
+      }
+    }
+  }
+  .type-search {
+    position: relative;
+    flex: 1 1 auto;
+    input {
+      @include input();
+      padding: 10px 40px 10px 10px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      border-radius: 8px;
+      .blog-filter &,
+      .registrar-filter &{
+        padding-right: 10px;
+      }
+    }
+  }
+  .type-checkbox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px 5px 0;
+    .checkbox {
+      margin: 0 5px 5px 0;
+      &:last-child {
+        margin-right: 0;
+      }
+      input {
+        display: none;
+        &:checked + label {
+          background: $base-blue;
+          color: #fff;
+          &:before {
+            color: $base-blue;
+            border-color: #fff;
+          }
+          .icon-ep {
+            background-image: url(../assets/ep-white.svg);
+          }
+          .icon-dnssec {
+            background-image: url(../assets/dns-white.svg);
+          }
+          .icon-short-periods {
+            background-image: url(../assets/short-url-white.svg);
+          }
+        }
+      }
+      label {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 7px 10px 7px 5px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 16px;
+        background: #fff;
+        border-radius: 6px;
+        transition: all .3s ease-in-out;
+        &::before{
+          content: "\f00c";
+          @include fa();
+          margin-right: 5px;
+          height: 16px;
+          width: 16px;
+          color: transparent;
+          border: 2px solid #A7A8AA;
+          background: #fff;
+          line-height: 12px;
+          text-align: center;
+          border-radius: 5px;
+          transition: all .3s ease-in-out;
+        }
+        .icon-ep,
+        .icon-dnssec,
+        .icon-short-periods {
+          display: block;
+          width: 16px;
+          height: 16px;
+          margin-right: 5px;
+          background: url(../assets/ep2.svg) no-repeat 50% 50% / cover;
+          transition: all .3s ease-in-out;
+        }
+        .icon-ep {
+          background-image: url(../assets/ep2.svg);
+        }
+        .icon-dnssec {
+          background-image: url(../assets/dns.svg);
+        }
+        .icon-short-periods {
+          background-image: url(../assets/short-url.svg);
+        }
+        i {
+          transition: all .3s ease-in-out;
+          &:last-child {
+            margin-left: 5px;
+          }
+          &:hover {
+            transform: scale(1.11);
+          }
+        }
+      }
+    }
+  }
+  .type-date-range {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    .sep {
+      flex: 0 0 20px;
+      min-width: 20px;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+  .type-datepicker {
+    position: relative;
+    input {
+      @include input();
+      -webkit-appearance: none;
+      appearance: none;
+      padding: 10px 40px 10px 10px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      width: 130px;
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.05);
+      border: none;
+      border-radius: 8px;
+    }
+  }
+  .form-actions {
+    display: flex;
+    align-items: flex-start;
+    .btn {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &.u-loading {
+    .form-item {
+      .btn-submit {
+        i {
+          &.fa-arrow-right {
+            display: none;
+          }
+          &.fa-spinner {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  @include min-screen(768px) {
+    display: flex;
+    align-items: center;
+    .filter-item {
+      margin: 0 20px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .type-checkbox {
+      .checkbox {
+        label {
+          padding: 10px 20px 10px 10px;
+          font-size: 14px;
+          line-height: 20px;
+          &::before {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            line-height: 16px;
+          }
+          .icon-ep,
+          .icon-dnssec,
+          .icon-short-periods {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+    }
+    .type-search,
+    .type-datepicker {
+      input {
+        padding: 15px 70px 15px 15px;
+        font-size: 20px;
+        line-height: 30px;
+        border-radius: 8px;
+        .blog-filter &,
+        .registrar-filter & {
+          font-size: 14px;
+          line-height: 20px;
+          &[name="search"] {
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+    .type-datepicker {
+      input {
+        width: 180px;
+        padding-right: 50px;
+      }
+    }
+    .form-item {
+      .btn {
+        top: 5px;
+        right: 5px;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        .blog-filter &,
+        .registrar-filter & {
+          width: 40px;
+          height: 40px;
+        }
+        + .btn {
+          right: 60px;
+        }
+      }
+    }
+  }
+  @include min-screen(1025px) {
+    .type-search,
+    .type-datepicker {
+      input {
+        padding: 20px 80px 20px 15px;
+        font-size: 24px;
+        .blog-filter &,
+        .registrar-filter & {
+          font-size: 16px;
+          line-height: 20px;
+          padding-right: 60px;
+        }
+      }
+      .registrar-filter & {
+        max-width: 420px;
+      }
+    }
+    .type-datepicker {
+      input {
+        width: 220px;
+      }
+    }
+    .form-item {
+      .btn {
+        top: 10px;
+        right: 10px;
+        + .btn {
+          right: 70px;
+        }
+      }
+    }
+  }
+}

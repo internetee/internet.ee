@@ -1,0 +1,160 @@
+.pagination {
+  padding: 0 20px;
+  margin-bottom: 40px;
+  .search-page & {
+    margin: 40px 0 0;
+  }
+  .paginate-links {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    .number,
+    .ellipses {
+      margin: 0 2.5px;
+      flex: 1 0 auto;
+      a {
+        display: block;
+        min-width: 30px;
+        height: 40px;
+        padding: 5px;
+        font-size: 14px;
+        line-height: 30px;
+        color: $black;
+        text-align: center;
+        cursor: pointer;
+        background: #EDEEF0;
+        &:hover {
+          color: #fff;
+          background: $base-blue;
+        }
+      }
+      &.active {
+        a {
+          color: #fff;
+          font-weight: 900;
+          background: $base-blue;
+        }
+      }
+    }
+    .left-arrow,
+    .right-arrow {
+      a {
+        display: inline-flex;
+        align-items: center;
+        vertical-align: top;
+        padding: 10px 0;
+        color: $black;
+        cursor: pointer;
+        &:hover {
+          color: $base-blue;
+        }
+        &:before,
+        &:after {
+          @include fa();
+          display: block;
+          width: 20px;
+          text-align: center;
+        }
+      }
+      &.disabled {
+        a {
+          color: #A7A8AA;
+          pointer-events: none;
+        }
+      }
+    }
+    .left-arrow {
+      margin-right: 35px;
+      a {
+        &:before {
+          content: "\f060";
+          margin-right: 10px;
+        }
+      }
+    }
+    .right-arrow {
+      margin-left: 35px;
+      a {
+        &:after {
+          content: "\f061";
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .results-per-page {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    label {
+      margin-right: 20px;
+    }
+    .select {
+      position: relative;
+      select {
+        display: block;
+        padding: 8px 50px 8px 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        border: 2px solid #A7A8AA;
+        background: #fff;
+        line-height: 20px;
+        height: 40px;
+        outline: none;
+        border-radius: 5px;
+        &::-ms-expand {
+          display: none;
+        }
+      }
+      &:after {
+        content: "\f0d7";
+        @include fa();
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 38px;
+        height: 36px;
+        line-height: 36px;
+        color: #A7A8AA;
+        text-align: center;
+        pointer-events: none;
+        border-left: 2px solid #A7A8AA;
+      }
+    }
+  }
+  .page-loading & {
+    display: none;
+  }
+  @include max-screen(767px) {
+    .paginate-links {
+      margin-bottom: 20px;
+      .left-arrow {
+        min-width: 100%;
+        margin: 0 0 10px;
+      }
+      .right-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  @include min-screen(768px) {
+    display: flex;
+    margin: 0 0 80px;
+    padding: 0;
+    .number,
+    .ellipses {
+      margin: 0 5px;
+      a {
+        min-width: 40px;
+      }
+    }
+  }
+  @include min-screen(1025px) {
+    margin: 0 0 120px;
+  }
+}
+

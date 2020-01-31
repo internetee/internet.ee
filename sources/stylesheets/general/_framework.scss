@@ -1,0 +1,6 @@
+// FRAMEWORK
+// Extendable classes for commonly used styling rules for different elements.
+
+.article-content{
+    @include article-content;
+}

@@ -1,0 +1,23 @@
+.page-domain{
+    .steps-block{
+        margin-bottom: 70px;
+    }
+    .article-content{
+        width: 880px;
+        margin: 0 auto;
+        max-width: 100%;
+      .accordion{
+        &__item{
+          &__body{
+            .embed-container{
+              &.edy-positionable-container {
+                margin-left: -115px;
+                margin-right: -115px;
+                max-width: none!important;
+              }
+            }
+          }
+        }
+      }
+    }
+}

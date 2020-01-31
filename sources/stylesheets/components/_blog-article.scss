@@ -1,0 +1,217 @@
+section.blog-articles h1:first-child {
+  margin-top: 20px;
+}
+
+.blog-article {
+  width: 520px;
+  margin-bottom: 30px;
+}
+
+.blog-article time {
+  background: url(../images/lines-hor-bottom.png) center bottom repeat-x;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+  font-size: 10px;
+  text-transform: uppercase;
+  min-height: 2px;
+}
+
+.blog-article header h2 {
+  color: $highlight-color;
+  font-size: 18px;
+  padding: 18px 0 0 0;
+  text-transform: none;
+}
+
+.blog-article header .article-comments-count {
+  margin: 3px 0 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+
+  span {
+    color: $highlight-color;
+  }
+}
+
+.news-items .article-excerpt {
+  font-weight: 600;
+}
+
+.news-article .article-excerpt {
+  font-weight: 600;
+}
+
+.blog-article section {
+  margin-top: 10px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.blog-article .article-meta a {
+  font-weight: 600;
+}
+
+.editmode {
+  .blog-article .article-meta .article-topic {
+    float: none;
+
+    input {
+      background: $base-bg-color;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+  .article-meta + .edy-tageditor {
+    float: none;
+    position: relative;
+    top: 35px;
+  }
+}
+
+.blog-article .article-meta {
+  .article-topic {
+    display: inline;
+  }
+
+  .article-tags {
+    margin-left: 175px;
+  }
+
+  .article-topic {
+    margin-right: 15px;
+    position: absolute;
+  }
+}
+
+.blog-article .article-excerpt {
+  margin-bottom: 10px;
+}
+
+.blog-article .article-excerpt p {
+  font-weight: 600;
+}
+
+.blog-article section p {
+  line-height: 1.5em;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.blog-article-page .article-excerpt {
+  font-weight: 600;
+}
+
+.news-archive {
+  margin-top: 30px;
+
+  ul li {
+    margin: 10px 0;
+    padding: 0 0 0 20px;
+    background: url(../images/list-image-blue-dot.png) 5px 6px no-repeat;
+  }
+
+  time {
+    text-align: left;
+    background: none;
+    padding: 0 12px 0 0;
+    float: left;
+    width: auto;
+  }
+
+  h3 {
+    margin: 3px 0 0 0;
+    font-weight: 600;
+    font-size: 15px;
+    overflow: hidden;
+  }
+}
+
+.blog-article .article-comments,
+.blog-article .article-commentform {
+  h3 {
+    background: url(../images/lines-hor-bottom.png) center bottom repeat-x;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    color: #5d6064;
+    text-transform: uppercase;
+    min-height: 2px;
+  }
+
+  .comment {
+    padding-top: 15px;
+
+    .comment-author strong {
+      color: #5d6064;
+      font-weight: 600;
+    }
+
+    .comment-author span {
+      margin-left: 5px;
+    }
+
+    .comment-author > .edy-btn-removecomment {
+      display: inline-block !important;
+      float: right;
+      position: relative;
+      top: 1px;
+    }
+
+    .comment-body p {
+      margin: 13px 0;
+    }
+  }
+  .comment + .comment {
+    border-top: 1px solid #d7d9da;
+  }
+}
+
+.blog-article .article-commentform {
+  h3 {
+    margin: 15px 0;
+  }
+
+  .form_field_textfield,
+  .form_field_textarea {
+    width: 380px;
+  }
+
+  .form_field {
+    margin-bottom: 10px;
+    text-align: right;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: '*';
+      position: absolute;
+      top: 0;
+      right: -6px;
+    }
+
+    label {
+      float: left;
+    }
+  }
+  .form_submit {
+    margin-left: 140px;
+
+    input {
+      color: #5d6064;
+      font-size: 13px;
+      font-size: 100%;
+      margin: 0;
+      vertical-align: baseline;
+      font-family: 'Raleway', Arial, Helvetica, sans-serif;
+      cursor: pointer;
+      -webkit-appearance: button;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "sites": [
+    {
+      "host": "www.internet.ee",
+      "token": "e1f6b5ef5c827933d1af54957b313bb1",
+      "path": "/Users/Martin/Sites/eis-webpage",
+      "name": "live"
+    },
+    {
+      "host": "www.eis-dev.voog.com",
+      "token": "8fbbb913394e97670559a3f1f0b019d5",
+      "path": "/Users/Martin/Sites/eis-webpage",
+      "name": "dev"
+    }
+  ]
+}

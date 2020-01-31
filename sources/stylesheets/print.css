@@ -1,0 +1,198 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+input,
+select,
+button {
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+body {
+  margin: 0;
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #212224;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility !important;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+.mdl--footer,
+.steps-block,
+.site-header,
+.site-footer,
+.menu-mobile,
+.edy-bar-container,
+.noteBar_container,
+.edy-content-trashcan,
+.domain--extra-actions .btn,
+.mdl--domain .table tbody td a.btn,
+.domain-search-page .page--header,
+.domain-search-page .domain--suggestions,
+.domain-search-page .steps-block,
+.domain-search-page .page--content {
+  display: none !important;
+}
+
+.table {
+  width: 100%
+}
+
+.table tbody td,.table tbody th {
+  vertical-align: top;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  border-bottom: 1px solid #EAEBED
+}
+
+.mdl--container .btn02,.mdl--header .btn--close {
+  border-style: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out
+}
+
+.table tbody td:first-child,.table tbody th:first-child {
+  padding-left: 0
+}
+
+.table tbody td:last-child,.table tbody th:last-child {
+  padding-right: 0
+}
+
+.table tbody td .u-word-break,.table tbody th .u-word-break {
+  word-break: break-all
+}
+
+.table tbody td a,.table tbody th a {
+  text-decoration: underline
+}
+
+.table tbody td {
+  font-weight: 900
+}
+
+.table tbody td.status span {
+  display: block
+}
+
+@media screen and (min-width: 768px) {
+  .table tbody td,.table tbody th {
+    padding:10px;
+    font-size: 18px;
+    line-height: 30px
+  }
+}
+
+.mdl--header h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 900;
+}
+
+.domain--registrant,
+.mdl--header .btn {
+  display: none;
+}
+
+.mdl--domain .table {
+  table-layout: fixed
+}
+
+.mdl--domain .table tbody td a {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.mdl--domain .g-recaptcha {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px -20px
+}
+
+.mdl--domain .g-recaptcha.error>div {
+  box-shadow: 0 0 10px #FF3600
+}
+
+.mdl .print-date {
+  display: block;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .mdl--domain .table tbody th {
+    width:200px
+  }
+  
+  .mdl--domain .g-recaptcha {
+    margin: 20px 0
+  }
+}

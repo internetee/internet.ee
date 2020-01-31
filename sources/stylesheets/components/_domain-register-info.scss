@@ -1,0 +1,62 @@
+.domain-register-info {
+  margin: 0 -20px;
+
+  ol {
+    padding: 0;
+    margin: 0;
+    counter-reset: list-counter;
+    list-style: none;
+
+    li:first-child {
+      border-bottom: 1px solid $common-border-color;
+    }
+
+    li:last-child {
+      border-bottom: 0;
+    }
+
+    li + li {
+      border-top: 1px solid $white;
+      border-bottom: 1px solid $common-border-color;
+    }
+
+    li {
+      padding-left: 10px;
+      height: 58px;
+      line-height: 60px;
+      position: relative;
+
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        width: 250px;
+        font-size: 13px;
+        line-height: 15px;
+        color: #272f34;
+        font-weight: 600;
+        padding: 0;
+
+        &:hover {
+          color: $base-blue;
+        }
+      }
+    }
+
+    li:before {
+      content: counter(list-counter);
+      counter-increment: list-counter;
+      text-align: center;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      font-weight: 600;
+      font-family: "Raleway",Helvetica,Arial,sans-serif;
+      vertical-align: middle;
+      display: inline-block;
+      margin: 16px 12px 20px 0;
+      color: #fff;
+      font-size: 12px;
+      background: url(../images/sprite.png) left -330px no-repeat;
+    }
+  }
+}

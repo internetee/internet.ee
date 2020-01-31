@@ -1,0 +1,46 @@
+.settings-form {
+  .filter-item {
+    margin-bottom: 20px;
+  }
+  .type-checkbox {
+    label {
+      display: flex;
+      align-items: flex-start;
+      font-size: 16px;
+      line-height: 20px;
+      cursor: pointer;
+      input {
+        display: none;
+        &:checked + span {
+          &:before {
+            color: $base-blue;
+            border-color: $base-blue;
+          }
+        }
+      }
+      span {
+        display: block;
+        flex: 0 0 20px;
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+        transition: all .3s ease-in-out;
+        &:before{
+          content: "\f00c";
+          @include fa();
+          vertical-align: top;
+          height: 20px;
+          width: 20px;
+          color: transparent;
+          border: 2px solid #A7A8AA;
+          background: #fff;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          border-radius: 5px;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.content-area {
+  .form_fields {
+  }
+
+  .form_field {
+    &:first-child {
+    }
+
+    label,
+    .form_field_label {
+    }
+
+    .form_field_label {
+    }
+  }
+
+  .form_field_required {
+    .form_field_label:after {
+      content: '* \a';
+    }
+  }
+
+  .form_field_textfield,
+  .form_field_textarea,
+  .form_field_select {
+    @include box-sizing(border-box);
+    max-width: 100%;
+  }
+
+  .form_field_textfield,
+  .form_field_textarea {
+
+    &.form_field_size_small {
+    }
+
+    &.form_field_size_medium {
+    }
+
+    &.form_field_size_large {
+    }
+  }
+
+  .form_field_select {
+    &.form_field_size_small {
+      min-width: auto;
+    }
+
+    &.form_field_size_medium {
+      min-width: 124px;
+    }
+
+    &.form_field_size_large {
+      min-width: 184px;
+    }
+  }
+
+  .form_submit {
+
+    input {
+      &:hover {
+      }
+    }
+  }
+
+  .form_error,
+  .form_field_error {
+    color: rgba($error-color, 1);
+  }
+
+  .form_field_error {
+    font-size: 14px;
+  }
+
+  .form_notice {
+    color: rgba($success-color, 1);
+  }
+  
+}
