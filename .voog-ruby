@@ -1,9 +1,0 @@
-[live]
-  host=www.internet.ee
-  api_token=e1f6b5ef5c827933d1af54957b313bb1
-  protocol=https
-
-[dev]
-  host=eis-dev.voog.com
-  api_token=8fbbb913394e97670559a3f1f0b019d5
-  protocol=https
