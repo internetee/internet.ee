@@ -49,7 +49,7 @@
                       <a href="#" @click.self.prevent="getTopics('{{ topic }}')" data-topic="{{ topic }}"><i class="fas fa-check"></i>{{ topic }}</a>
                   {% endfor %}
                 </div>
-                <a href="#" class="btn" @click.prevent="showAdvOptions = !showAdvOptions">
+                <a href="#" class="btn btn--toggle" @click.prevent="showAdvOptions = !showAdvOptions">
                     <span v-show="!showAdvOptions" class="option">{{ label_more_options }}</span>
                     <span v-show="showAdvOptions" class="option">{{ label_less_options }}</span>
                     <i :class="{ 'fa-rotate-180': showAdvOptions, 'fas': true, 'fa-arrow-down': true }"></i>
@@ -155,11 +155,7 @@
     </section>
 </main>
 {% include "footer" %}
-{% if editmode %}
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-{% else %}
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-{% endif %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.6.0/vue-paginate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.0/flatpickr.min.js"></script>

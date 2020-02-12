@@ -95,8 +95,6 @@
       {% assign abbr_hours = "t" %}
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
-      {% assign open_all_accordions = "Ava kõik" %}
-      {% assign close_all_accordions = "Sulge kõik" %}
     {% comment %}Russian{% endcomment %}
     {% when "ru" %}
       {% assign registrant_link = "Портал для регистрантов" %}
@@ -180,8 +178,6 @@
       {% assign abbr_hours = "h" %}
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
-      {% assign open_all_accordions = "Open all" %}
-      {% assign close_all_accordions = "Close all" %}
       {% comment %}Every other language{% endcomment %}
     {% else %}
       {% assign registrant_link = "registrant's portal" %}
@@ -267,8 +263,6 @@
       {% assign abbr_hours = "h" %}
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
-      {% assign open_all_accordions = "Open all" %}
-      {% assign close_all_accordions = "Close all" %}
   {% endcase %}
 {% endcapture %}
 

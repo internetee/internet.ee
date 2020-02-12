@@ -2,14 +2,6 @@
   {% if editmode %}
     {% addbutton element_type="accordion" %}
   {% endif %}
-  <div class="accordion__actions">
-    <button type="button" class="btn btn--toggle">
-      <i class="fas fa-plus"></i>
-      <i class="fas fa-minus"></i>
-      <span class="open">{{ open_all_accordions }}</span>
-      <span class="close">{{ close_all_accordions }}</span>
-    </button>
-  </div>
   {% for accordion in elements %}
     {% if accordion.model_name == "accordion" %}
       {% assign anchor = accordion.url | split: "/" | last %}

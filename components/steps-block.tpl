@@ -2,9 +2,7 @@
   {% if editmode %}
       {% addbutton element_type="Step" %}
   {% endif %}
-    {% if noTitle %}
-        <h2>{% content name="steps_title" single="plaintext" placeholder="Steps block title" %}</h2>
-    {% endif %}
+  <h2>{% content name="steps_title" single="plaintext" placeholder="Steps block title" %}</h2>    
     
   <div class="steps-block__list">
     {% for step in elements %}
@@ -26,4 +24,5 @@
       {% endif %}
     {% endfor %}
   </div>
+    
 </div>

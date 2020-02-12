@@ -797,21 +797,6 @@
   // <--- START ACCORDION --->
   var initAccordion = function initAccordion() {
     if ($('.accordion').length) {
-      $('.btn--toggle').click(function() {
-        $(this).toggleClass('active');
-        if($(this).hasClass('active')) {
-          showAllAccordionItems();
-        } else {
-          hideAllAccordionItems();
-        }
-      });
-      $(document).keydown(function(event) {
-            if((event.ctrlKey || event.metaKey) && event.which === 70) {
-              showAllAccordionItems();
-              $('.btn--toggle').addClass('active');
-            }
-          }
-      );
       if (window.location.hash) {
         var target = $(window.location.hash);
         if (target.length) {
@@ -955,18 +940,6 @@
     } else if ($('[data-accordion-item="#chart-org"]', item).length) {
       initOrgChart();
     }
-  };
-  
-  var showAllAccordionItems = function showAllAccordionItems() {
-    $('.accordion__item')
-        .addClass('accordion__item--active')
-        .find('.accordion__item__body').slideDown(300);
-  };
-  
-  var hideAllAccordionItems = function hideAllAccordionItems() {
-    $('.accordion__item')
-        .removeClass('accordion__item--active')
-        .find('.accordion__item__body').slideUp(300);
   };
   
   var hideAccordionItem = function hideAccordionItem(item) {
@@ -2041,7 +2014,6 @@
       });
       alert('Salvestatud!');
     });
-    
     $('body').on('change', 'input[name="auctions_link"]', function (event) {
       var value = $(event.target).val();
       pageData.set({
