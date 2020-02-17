@@ -5963,6 +5963,9 @@ span.flatpickr-day.today, span.flatpickr-day.prevMonthDay.today, span.flatpickr-
 .mdl--domain .table {
   table-layout: fixed;
 }
+.mdl--domain .table tbody th {
+  width: 40%;
+}
 .mdl--domain .table tbody td a {
   display: inline-block;
   vertical-align: top;
@@ -5981,7 +5984,7 @@ span.flatpickr-day.today, span.flatpickr-day.prevMonthDay.today, span.flatpickr-
 }
 @media screen and (min-width: 768px) {
   .mdl--domain .table tbody th {
-    width: 200px;
+    width: 180px;
   }
   .mdl--domain .g-recaptcha {
     margin: 20px 0;
@@ -5995,14 +5998,14 @@ span.flatpickr-day.today, span.flatpickr-day.prevMonthDay.today, span.flatpickr-
   margin: 0 -20px -40px;
 }
 .domain--info {
-  width: 570px;
-  flex: 1 1 570px;
+  width: 495px;
+  flex: 1 1 495px;
   max-width: 100%;
   margin: 0 20px 40px;
 }
 .domain--extra-info {
-  width: 420px;
-  flex: 1 1 420px;
+  width: 495px;
+  flex: 1 1 495px;
   max-width: 100%;
   margin: 0 20px 40px;
 }
