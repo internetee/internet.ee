@@ -5618,6 +5618,7 @@ span.flatpickr-day.today, span.flatpickr-day.prevMonthDay.today, span.flatpickr-
   text-align: center;
 }
 .contacts--list .item {
+  overflow: auto;
   padding: 0 20px 20px;
 }
 .contacts--list .item--content {
@@ -5694,7 +5695,7 @@ span.flatpickr-day.today, span.flatpickr-day.prevMonthDay.today, span.flatpickr-
     padding: 0 20px 40px;
   }
   .contacts--list .item--content {
-    padding: 40px;
+    padding: 40px 20px;
   }
 }
 

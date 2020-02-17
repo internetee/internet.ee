@@ -47,6 +47,7 @@
 	text-align: center;
 	&--list {
 		.item {
+			overflow: auto;
 			padding: 0 20px 20px;
 			&--content {
 				display: flex;
@@ -124,7 +125,7 @@
 				width: 25%;
 				padding: 0 20px 40px;
 				&--content {
-					padding: 40px;
+					padding: 40px 20px;
 				}
 			}
 		}
