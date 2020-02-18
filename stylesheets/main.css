@@ -5964,7 +5964,7 @@ span.flatpickr-day.today, span.flatpickr-day.prevMonthDay.today, span.flatpickr-
   table-layout: fixed;
 }
 .mdl--domain .table tbody th {
-  width: 40%;
+  width: 35%;
 }
 .mdl--domain .table tbody td a {
   display: inline-block;
