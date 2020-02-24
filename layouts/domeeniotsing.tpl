@@ -41,6 +41,51 @@
         </div>
       </div>
     </header>
+    <transition name="fadeIn">
+      <div class="suggestions-loader" v-show="loadingSuggestions && !showDomainSuggestions">
+        <i class="fas fa-spinner fa-spin"></i>
+      </div>
+    </transition>
+    <transition name="fadeIn">
+      <article class="domain--suggestions" style="display: none" v-show="showDomainSuggestions">
+        <div class="u-container">
+          <div class="u-content-styles">
+            {% contentblock name="domain_suggestions" publish_default_content="true" %}
+              <h2>Siin on mõned domeeninime soovitused</h2>
+              <p>Vali endale sobiv domeeninimi ja jätka registreerimist registripidaja juures.</p>
+            {% endcontentblock %}
+          </div>
+        </div>
+        <transition name="scale">
+          <div class="domain--suggestions-list">
+            <ul>
+              <li v-for="suggestion in suggestions[0]" v-show="suggestion.length > 0">
+                ${ suggestion }
+              </li>
+            </ul>
+            <ul>
+              <li v-for="suggestion in suggestions[1]" v-show="suggestion.length > 0">
+                ${ suggestion }
+              </li>
+            </ul>
+            <ul>
+              <li v-for="suggestion in suggestions[2]" v-show="suggestion.length > 0">
+                ${ suggestion }
+              </li>
+            </ul>
+            <div class="suggestions-loader" v-show="loadingSuggestions && showDomainSuggestions">
+              <i class="fas fa-spinner fa-spin"></i>
+            </div>
+          </div>
+        </transition>
+        <div class="domain--suggestions-actions" style="display: none;">
+          <button type="button" class="btn btn--primary btn--large" @click.prevent="fetchDomainSuggestions"><i class="fas fa-sync-alt"></i><span>{{ label_regenerate }}</span></button>
+        </div>
+        <span class="spider-61x50"></span>
+        <span class="fish-200x61"></span>
+        <span class="fish-100x31"></span>
+      </article>
+    </transition>
     {% include 'steps-block' %}
     <div class="page--content" data-search-indexing-allowed="true">
       <div class="page--body">
@@ -253,6 +298,7 @@
       showDomainModal: false,
       showDomainInfo: false,
       showExtraDomainInfo: false,
+      showDomainSuggestions: false,
       showHowToFirst: true,
       domain: [],
       message: '',
@@ -268,6 +314,8 @@
         pending_registration: "{{ domain_pending_registration_error }}",
         fail: "{{ domain_query_fail }}"
       },
+      loadingSuggestions: false,
+      suggestions: [],
       printDate: moment(Date.now()).format('DD.MM.Y HH:mm'),
       cachedTitle: document.title
     },
@@ -339,6 +387,17 @@
           domain = query + '.ee';
         } else {
           domain = query;
+        }
+        return domain;
+      },
+      
+      removeDomainEnding: function (query) {
+        var domain,
+            regex = new RegExp(/\.ee/);
+        if (regex.exec(query) === null) {
+          domain = query;
+        } else {
+          domain = query.replace(/\.[^/.]+$/, "");
         }
         return domain;
       },
@@ -445,14 +504,17 @@
               }
               this.loadingDomain = false;
             });
+            this.fetchDomainSuggestions();
           } else {
             this.showDomainMessage('validation', domain);
             this.loadingDomain = false;
+            this.showDomainSuggestions = false;
           }
         } else {
           this.domain = [];
           this.showDomainInfo = false;
           this.loadingDomain = false;
+          this.showDomainSuggestions = false;
           this.message = '';
         }
       },
@@ -502,6 +564,38 @@
           }, function (response) {
             this.loadingDomain = false;
           });
+        }
+      },
+      
+      chunkSuggestions: function (arr, size) {
+        var index = 0;
+        var arrayLength = arr.length;
+        var tempArray = [];
+        for (index = 0; index < arrayLength; index += size) {
+          myChunk = arr.slice(index, index + size);
+          tempArray.push(myChunk);
+        }
+        return tempArray;
+      },
+      
+      fetchDomainSuggestions: function () {
+        if (this.queryString.length > 1) {
+          const domain = this.removeDomainEnding(this.queryString);
+          this.loadingSuggestions = true;
+          var suggestions = [];
+          Promise.all([
+            this.$http.get(this.GEN_HOST + 'm04?q=' + domain + '&min=2&max=64&gen=8&dia=on'),
+            this.$http.get(this.GEN_HOST + 'm07?q=' + domain + '&min=2&max=64&gen=8&dia=on'),
+            this.$http.get(this.GEN_HOST + 'm06?q=' + domain + '&min=2&max=64&gen=8&dia=on')
+          ]).then(function (data) {
+            suggestions = suggestions.concat(data[0].body, data[1].body, data[2].body);
+            for (var i = suggestions.length - 1; i >= 0; i--) {
+              suggestions[i] = suggestions[i].replace(/\s/g, '');
+            }
+            this.suggestions = this.chunkSuggestions(suggestions, Math.round(suggestions.length / 3));
+            this.showDomainSuggestions = true;
+            this.loadingSuggestions = false;
+          }.bind(this));
         }
       },
       
