@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- page__search.tpl -->
-<html class="common-page page-search {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}" data-search-indexing-allowed="false">
+<html class="common-page page-search {% if editmode %}editmode{% else %}public{% endif %}"
+      lang="{{ page.language_code }}" data-search-indexing-allowed="false">
 <head prefix="og: http://ogp.me/ns#">
     {% include "html-head" %}
 </head>
@@ -20,9 +21,12 @@
                     {% endif %}
                     <form class="search-block" @submit.prevent="searchArticles" method="get" id="site-search">
                         <div class="form-item type-search">
-                            <input type="text" name="keys" v-model.lazy="queryString" class="inline-label" id="searchw" value="" placeholder="{{ label_search }}..." autocomplete="off">
-                            <button class="btn btn--default" type="reset" @click="resetForm" title="{{ label_reset }}" aria-label="{{ label_reset }}"><i class="fas fa-sync"></i></button>
-                            <button class="btn btn--primary" type="submit" aria-label="{{ label_search }}" title="{{ label_search }}">
+                            <input type="text" name="keys" v-model.lazy="queryString" class="inline-label" id="searchw"
+                                   value="" placeholder="{{ label_search }}..." autocomplete="off">
+                            <button class="btn btn--default" type="reset" @click="resetForm" title="{{ label_reset }}"
+                                    aria-label="{{ label_reset }}"><i class="fas fa-sync"></i></button>
+                            <button class="btn btn--primary" type="submit" aria-label="{{ label_search }}"
+                                    title="{{ label_search }}">
                                 <i class="fas fa-arrow-right"></i>
                                 <i class="fas fa-spinner fa-spin"></i>
                             </button>
@@ -45,7 +49,9 @@
                     <div class="page--body u-content-styles">
                         {% contentblock name="noresults_block" publish_default_content="true" %}
                             <h2>Otsingule vastavaid tulemusi ei leitud</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque consectetur consequuntur cum doloribus et facilis, fugiat hic modi nam optio perspiciatis, possimus, provident quam quas quisquam vero. Autem, minus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque consectetur
+                                consequuntur cum doloribus et facilis, fugiat hic modi nam optio perspiciatis, possimus,
+                                provident quam quas quisquam vero. Autem, minus.</p>
                         {% endcontentblock %}
                     </div>
                 </div>
@@ -59,8 +65,9 @@
                                 <div class="suggestions-loader" v-show="loading">
                                     <i class="fas fa-spinner fa-spin"></i>
                                 </div>
-                                <article class="item" v-for="(result,index) in articles" :key="index" v-show="showResults && !loading">
-                                    <a :href="result.path">
+                                <article class="item" v-for="(result,index) in articles" :key="index"
+                                         v-show="showResults && !loading">
+                                    <a :href="result.path + '?mark-keys=' + stripHtml(result.description)">
                                         <h3 v-html="result.title"></h3>
                                         <p v-html="result.description"></p>
                                     </a>
@@ -69,7 +76,9 @@
                         </div>
                     </transition>
                     <div class="pagination" v-if="showResults && !loading">
-                        <paginate-links :async="true" :show-step-links="true" :limit="5" :step-links="{ next: 'Järgmised', prev: 'Eelmised' }" :hide-single-page="true" @change="pageChange" for="resultsPagination"></paginate-links>
+                        <paginate-links :async="true" :show-step-links="true" :limit="5"
+                                        :step-links="{ next: 'Järgmised', prev: 'Eelmised' }" :hide-single-page="true"
+                                        @change="pageChange" for="resultsPagination"></paginate-links>
                     </div>
                 </div>
                 <transition name="fadeIn">
@@ -120,25 +129,26 @@
                 per_page: 8
             }
         },
-        created: function() {
+        created: function () {
             function getUrlParameter(name) {
                 name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
                 const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
                 const results = regex.exec(location.search);
                 return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
             }
+
             if (getUrlParameter('keys')) {
                 this.queryString = getUrlParameter('keys');
                 this.searchArticles();
             }
         },
         computed: {
-            showResults: function() {
+            showResults: function () {
                 if (this.words.length === 0 && this.totalEntries === 0) {
                     return false;
                 } else return this.words.length > 0 || this.totalEntries > 0;
             },
-            noResults: function() {
+            noResults: function () {
                 if (this.words.length === 0 && this.totalEntries === 0) {
                     return true;
                 } else if (this.words.length > 0 || this.totalEntries > 0) {
@@ -153,7 +163,7 @@
                 $(event.target).parents('.item').find('.item--content').slideToggle(200);
                 $(event.target).parents('.item').toggleClass('u-active');
             },
-            resetForm: function() {
+            resetForm: function () {
                 this.queryString = '';
                 this.words = [];
                 this.articles = [];
@@ -165,14 +175,14 @@
                 if (this.queryString) {
                     if (this.cachedQueryString !== this.queryString) {
                         this.words = [];
-                        this.pages= [];
+                        this.pages = [];
                         this.articles = [];
                         this.totalEntries = 0;
                         this.articlesParameters.page = 1;
                         if (this.$refs.paginator && this.$refs.paginator.lastPage !== 0) {
                             this.$refs.paginator.goToPage(1);
                         }
-                        window.history.replaceState( {} , 'searchKey', window.location.pathname + '?keys=' + this.queryString);
+                        window.history.replaceState({}, 'searchKey', window.location.pathname + '?keys=' + this.queryString);
                     }
                     this.cachedQueryString = this.queryString;
                     this.loading = true;
@@ -192,7 +202,7 @@
                     });
 
                     this.$http.get('/admin/api/elements?include_values=true&q.page.node_id=2133814&q.element.title.$matches=' + this.queryString)
-                        .then(function(response) {
+                        .then(function (response) {
                             this.words = response.body;
                         });
                 }
@@ -201,6 +211,11 @@
                 this.articlesParameters.page = toPage;
                 this.searchArticles();
                 $("html, body").animate({scrollTop: $('.search-page').offset().top}, 500);
+            },
+            stripHtml: function (string) {
+              string = string.replace(/(?:\r\n|\r|\n)/g, '~');
+              const doc = new DOMParser().parseFromString(string, 'text/html');
+              return doc.body.textContent || '';
             }
         }
     });

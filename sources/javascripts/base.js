@@ -1,12 +1,12 @@
 ;(function ($) {
   'use strict';
-  
+
   var COUNT_HOST = '//data.internet.ee/';
-  
+
   $.fn.andSelf = function() {
     return this.addBack.apply(this, arguments);
   }
-  
+
   var initMain = function initMain() {
     const originalTitle = document.title;
     if ($('.u-content-styles form').length) {
@@ -21,7 +21,7 @@
         }
       });
     }
-    
+
     if ($('.js-anchors').length) {
       var showAnchors = false,
           anchors = $('.article--body a[href^="#"],.page--body a[href^="#"]'),
@@ -39,47 +39,47 @@
         $('.js-anchors').fadeIn(100);
       }
     }
-    
+
     $('.anchors').on('click', '.keyword[href^="#"]', function () {
       $('html, body').animate({
         scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
       }, 500);
       return false;
     });
-    
+
     $('[data-close-modal]').click(function (e) {
       e.preventDefault();
       $('.mdl.u-open').removeClass('u-open');
     });
-    
+
     $(document).keyup(function (e) {
       if (e.keyCode == 27) {
         document.title = originalTitle;
         $('.mdl.u-open').removeClass('u-open');
       }
     });
-    
+
     $('.type-checkbox label').on('click', '*', function (e) {
       e.stopImmediatePropagation();
     });
-    
+
     $('body').on('click', '[data-open-modal]', function (e) {
       e.preventDefault();
       var modal = $(this).data('open-modal');
       $('body').addClass('u-modal-open');
       $('[data-modal=' + modal + ']').addClass('u-open');
     });
-    
+
     $('body').on('click', '[data-search-toggle]', function (e) {
       e.preventDefault();
       $('body').toggleClass('u-site-search-open');
     });
-    
+
     $('body').on('click', '[data-menu-toggle]', function (e) {
       e.preventDefault();
       $('body').toggleClass('u-menu-open');
     });
-    
+
     $('body').on('click', '[data-submenu-toggle]', function (e) {
       e.preventDefault();
       $(this).parent().toggleClass('u-submenu-open');
@@ -89,14 +89,14 @@
         $(this).next('ul').slideUp(200);
       }
     });
-    
+
     if ($('.u-content-styles iframe').length && !$('.u-content-styles iframe').parent('.video-container,.edy-padding-resizer-wrapper').length) {
       $('.u-content-styles iframe').wrap('<div class="video-container" />');
     }
     if ($('.u-content-styles table').length && !$('.u-content-styles table').parent('.table-container').length) {
       $('.u-content-styles table').wrap('<div class="table-container" />');
     }
-    
+
     if ($('.file-col ul li a').length) {
       $.each($('.file-col ul li a'), function (index, item) {
         var url = $(item).attr('href');
@@ -231,8 +231,57 @@
         });
       }
     }
+
+    const pageSearchParams = (new URL(document.location)).searchParams;
+    if (pageSearchParams.get('mark-keys')) {
+      const pageContent = document.querySelector('main.page-content');
+
+      let searchKeys = [];
+      (function() {
+        const array = pageSearchParams.get('mark-keys').split(/[~]|  +/).filter(Boolean);
+        array.forEach(e => {
+          e = e.trim();
+          if (e.length > 1){
+            searchKeys.push(e)
+          }
+        });
+      })();
+
+      function selectMarkResults() {
+        const markResults = pageContent.querySelectorAll('mark');
+        if (markResults.length) {
+          jumpToMark(markResults[0]);
+        }
+      }
+
+      function jumpToMark(firstResult) {
+        const accordionItem = firstResult.closest('[data-accordion-item]');
+        if (accordionItem) {
+          const item = $($(this).data('accordion-item'));
+          showAccordionItem(item);
+        } else if ($('.accordion__item')) {
+          showAllAccordionItems();
+        }
+
+        window.setTimeout(function () {
+          const position = firstResult.getBoundingClientRect().top - 100;
+          window.scrollTo(0, position);
+        }, 300);
+      }
+
+      const markInstance = new Mark(pageContent);
+      markInstance.mark(searchKeys, {
+        "separateWordSearch": false,
+        "acrossElements": true,
+        "exclude": [".btn *"],
+        "done": function () {
+          selectMarkResults();
+        }
+      });
+    }
+
   };
-  
+
   var initResponsive = function initResponsive() {
     var mPortal = $('.menu-portal'),
         mLanguage = $('.menu-language'),
@@ -259,7 +308,7 @@
       }
     }
   };
-  
+
   // <--- START ACCORDION --->
   var initAccordion = function initAccordion() {
     if ($('.accordion').length) {
@@ -298,14 +347,14 @@
           }
         }
       });
-      
+
       var aLink = $('[data-accordion-item]');
       aLink.on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         var urlHash = encodeURI($(this).attr('href'));
         var item = $($(this).data('accordion-item'));
-        
+
         if ($(item).hasClass('accordion__item--active')) {
           e.preventDefault();
           hideAccordionItem(item);
@@ -337,7 +386,7 @@
             return item;
           }
         });
-    
+
     menuItems.click(function (e) {
       e.preventDefault();
       var href = $(this).attr("href"),
@@ -390,17 +439,17 @@
       }
     });
   };
-  
+
   var isScrolledIntoView = function isScrolledIntoView(elem) {
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
-    
+
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
-    
+
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   };
-  
+
   var showAccordionItem = function showAccordionItem(item) {
     $(item)
         .addClass('accordion__item--active')
@@ -422,27 +471,27 @@
       initOrgChart();
     }
   };
-  
+
   var showAllAccordionItems = function showAllAccordionItems() {
     $('.accordion__item')
         .addClass('accordion__item--active')
         .find('.accordion__item__body').slideDown(300);
   };
-  
+
   var hideAllAccordionItems = function hideAllAccordionItems() {
     $('.accordion__item')
         .removeClass('accordion__item--active')
         .find('.accordion__item__body').slideUp(300);
   };
-  
+
   var hideAccordionItem = function hideAccordionItem(item) {
     $(item)
         .removeClass('accordion__item--active')
         .find('.accordion__item__body').slideUp(300);
   };
-  
+
   var DATA_HOST = '//data.internet.ee';
-  
+
   var initSexChart = function () {
     var sexChartData = [{
       "y": 0,
@@ -491,7 +540,7 @@
           womenYearData = data[1].drilldown.data,
           i,
           dataLen = data.length;
-      
+
       for (i = 0; i < dataLen; i += 1) {
         sexData.push({
           name: data[i].drilldown.name,
@@ -589,7 +638,7 @@
             color: '#FF6E00',
             tooltip: {
               pointFormat: '{series.name}: {point.y}<br/>' + window.translations.sex_chart.total + ': {point.stackTotal}'
-              
+
             },
           },
           {
@@ -610,7 +659,7 @@
       });
     });
   };
-  
+
   var totalGraphData;
   var initTotalChart = function () {
     $.when(
@@ -688,7 +737,7 @@
           title: "",
           min: 0,
           showLastLabel: true,
-          
+
           labels: {
             formatter: function () {
               if (this.value === 30000) {
@@ -753,10 +802,10 @@
       });
     });
   };
-  
+
   var initMixChart = function () {
     var registerGraphData, extendGraphData, deletionGraphData;
-    
+
     $.when.apply($, [
       $.ajax({type: 'GET', url: DATA_HOST + '/data_create.json', dataType: 'text'}).done(function (response) {
         registerGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
@@ -846,7 +895,7 @@
         },
         plotOptions: {
           line: {
-            
+
             marker: {
               radius: 2,
               enabled: false
@@ -891,10 +940,10 @@
       });
     });
   };
-  
+
   var initIdnChart = function () {
     var idnGraphData;
-    
+
     $.when(
         $.ajax({type: 'GET', url: DATA_HOST + '/data_idn.json', dataType: 'text'}).done(function (response) {
           idnGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
@@ -943,7 +992,7 @@
           title: {
             text: null
           },
-          
+
           endOnTick: false,
           showFirstLabel: true,
           startOnTick: false,
@@ -973,11 +1022,11 @@
         },
         plotOptions: {
           line: {
-            
+
             marker: {
               radius: 2,
               enabled: false
-              
+
             },
             lineWidth: 2,
             states: {
@@ -988,7 +1037,7 @@
             threshold: null
           }
         },
-        
+
         legend: {
           enabled: false
         },
@@ -1001,10 +1050,10 @@
       });
     });
   };
-  
+
   var initDnsChart = function () {
     var dnssecGraphData;
-    
+
     $.when(
         $.ajax({type: 'GET', url: DATA_HOST + '/data_dnssec.json', dataType: 'text'}).done(function (response) {
           dnssecGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
@@ -1082,7 +1131,7 @@
         },
         plotOptions: {
           line: {
-            
+
             marker: {
               radius: 2,
               enabled: false
@@ -1096,25 +1145,25 @@
             threshold: null
           }
         },
-        
+
         legend: {
           enabled: false
         },
         series: [{
-          
+
           //pointInterval:12 * 3600 * 100,
           pointInterval: 24 * 3600 * 1000,
           name: "Koormus",
-          
+
           data: dnssecGraphData
         }]
       });
     });
   };
-  
+
   var initCountryChart = function () {
     var mapGraphData;
-    
+
     $.when(
         $.get(DATA_HOST + '/country_count.json', function (response) {
           mapGraphData = response;
@@ -1122,11 +1171,11 @@
     ).done(function () {
       // Initiate the chart
       $('#countrychart').highcharts('Map', {
-        
+
         title: {
           text: null
         },
-        
+
         mapNavigation: {
           enabled: true,
           buttonOptions: {
@@ -1139,7 +1188,7 @@
         legend: {
           layout: 'horizontal',
           floating: true
-          
+
         },
         colorAxis: {
           min: 1,
@@ -1160,7 +1209,7 @@
               }
             }
           }
-          
+
         },
         chart: {
           backgroundColor: '#fff',
@@ -1203,7 +1252,7 @@
       });
     });
   };
-  
+
   var initTextChart = function () {
     var textChartData = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     $.when(
@@ -1449,9 +1498,9 @@
       });
     });
   };
-  
+
   // <--- END ACCORDION --->
-  
+
   var initArticlePage = function initArticlePage() {
     $('body').on('change', 'input[name="article[topic]"]', function (event) {
       var value = $(event.target).val();
@@ -1473,7 +1522,7 @@
       }
     });
   };
-  
+
   var loadDomainData = function loadDomainData() {
     var url = COUNT_HOST + 'count.json';
     $.get(url, function (response) {
@@ -1481,7 +1530,7 @@
       $('.domain-stats .today > span').text(response.total_today);
     });
   };
-  
+
   var initFrontPage = function initFrontPage() {
     loadDomainData();
     $('.hero-slider-slides').owlCarousel({
@@ -1493,13 +1542,13 @@
       animateOut: 'fadeOut',
       animateIn: 'fadeIn',
     });
-    
+
     $('#domain-search').on('submit', function (e) {
       var val = $('#searchw').val();
       var action = $(e.target).attr('action');
       $(e.target).attr('action', action + val);
     });
-    
+
     $('body').on('change', 'input[name="statistics_link"]', function (event) {
       var value = $(event.target).val();
       pageData.set({
@@ -1507,7 +1556,7 @@
       });
       alert('Salvestatud!');
     });
-    
+
     $('body').on('change', 'input[name="auctions_link"]', function (event) {
       var value = $(event.target).val();
       pageData.set({
@@ -1516,7 +1565,7 @@
       alert('Salvestatud!');
     });
   };
-  
+
   var initTabs = function initTabs() {
     if ($('.content-tabs').length) {
       $('.content-tabs--nav .item').click(function (e) {
@@ -1534,11 +1583,11 @@
       });
     }
   };
-  
+
   $(window).resize(function () {
     initResponsive();
   });
-  
+
   // Enables the usage of the initiations outside this file.
   window.site = $.extend(window.site || {}, {
     initMain: initMain,
