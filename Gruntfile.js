@@ -17,6 +17,14 @@ module.exports = function(grunt) {
       }
     },
 
+    // Copies the javascript source files to the javascripts folder.
+    copy: {
+      main: {
+        src: 'sources/javascripts/statistics.js',
+        dest: 'javascripts/statistics.js'
+      }
+    },
+
     // Concatenates the javascript source files to the javascripts folder.
     concat: {
       build: {
@@ -64,7 +72,8 @@ module.exports = function(grunt) {
           cwd: 'javascripts/',
           src: [
             'charts.js',
-            'modernizr.js'
+            'modernizr.js',
+            'statistics.js'
           ],
           dest: 'javascripts/',
           ext: '.min.js'
@@ -202,6 +211,7 @@ module.exports = function(grunt) {
     },
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -211,7 +221,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-modernizr');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['modernizr', 'concat', 'uglify', 'sass', 'cssmin']);
+  grunt.registerTask('default', ['modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     var tasks = ['voog'];

@@ -16,18 +16,18 @@ $(document).ready(function() {
     var totalchart = new Highcharts.Chart({
       chart: {
         renderTo: 'totalchart',
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f4f5',
         zoomType: 'x',
         marginBottom: 120,
         marginTop: 50,
-        width: 100%
+        width: 540
       },
       exporting: {
         enabled: false
       },
-      colors: ['#FF6E00'],
+      colors: ['#ffae31'],
       title: "",
-      subtitle: "Registreeritud domeenide arv",
+      subtitle: "",
       xAxis: {
         type: 'datetime',
         minRange: 14 * 24 * 3600000, // fourteen days

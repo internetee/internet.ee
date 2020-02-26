@@ -236,10 +236,10 @@
     if (pageSearchParams.get('mark-keys')) {
       const pageContent = document.querySelector('main.page-content');
 
-      let searchKeys = [];
+      var searchKeys = [];
       (function() {
         const array = pageSearchParams.get('mark-keys').split(/[~]|  +/).filter(Boolean);
-        array.forEach(e => {
+        array.forEach( function(e){
           e = e.trim();
           if (e.length > 1){
             searchKeys.push(e)
