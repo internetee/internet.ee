@@ -43,6 +43,7 @@ module.exports = function(grunt) {
           'sources/javascripts/highcharts.js',
           'sources/javascripts/map.js',
           'sources/javascripts/data.js',
+          'sources/javascripts/highcharts-options.js',
           'sources/javascripts/world-map.js'
         ],
         dest: 'javascripts/charts.js'

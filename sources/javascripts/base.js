@@ -666,7 +666,7 @@
         $.ajax({type: 'GET', url: DATA_HOST + '/data_domains.json', dataType: 'text'}).done(function (response) {
           totalGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
           $.each(totalGraphData, function (i, array) {
-            array[0] = parseInt(array[0] + '000', 10);
+            array[0] = parseInt(array[0] - 79199 + '000', 10);
           });
         })
     ).then(function () {
@@ -810,19 +810,19 @@
       $.ajax({type: 'GET', url: DATA_HOST + '/data_create.json', dataType: 'text'}).done(function (response) {
         registerGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
         $.each(registerGraphData, function (i, array) {
-          array[0] = parseInt(array[0] + '000', 10);
+          array[0] = parseInt(array[0] - 79199 + '000', 10);
         });
       }),
       $.ajax({type: 'GET', url: DATA_HOST + '/data_renew.json', dataType: 'text'}).done(function (response) {
         extendGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
         $.each(extendGraphData, function (i, array) {
-          array[0] = parseInt(array[0] + '000', 10);
+          array[0] = parseInt(array[0] - 79199 + '000', 10);
         });
       }),
       $.ajax({type: 'GET', url: DATA_HOST + '/data_delete.json', dataType: 'text'}).done(function (response) {
         deletionGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
         $.each(deletionGraphData, function (i, array) {
-          array[0] = parseInt(array[0] + '000', 10);
+          array[0] = parseInt(array[0] - 79199 + '000', 10);
         });
       })
     ]).then(function () {
@@ -948,7 +948,7 @@
         $.ajax({type: 'GET', url: DATA_HOST + '/data_idn.json', dataType: 'text'}).done(function (response) {
           idnGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
           $.each(idnGraphData, function (i, array) {
-            array[0] = parseInt(array[0] + '000', 10);
+            array[0] = parseInt(array[0] - 79199 + '000', 10);
           });
         })
     ).then(function () {
@@ -1058,7 +1058,7 @@
         $.ajax({type: 'GET', url: DATA_HOST + '/data_dnssec.json', dataType: 'text'}).done(function (response) {
           dnssecGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
           $.each(dnssecGraphData, function (i, array) {
-            array[0] = parseInt(array[0] + '000', 10);
+            array[0] = parseInt(array[0] - 79199 + '000', 10);
           });
         })
     ).then(function () {
