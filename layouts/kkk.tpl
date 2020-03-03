@@ -51,6 +51,7 @@
                     {% addbutton element_type="FAQ" %}
                 {% endif %}
                 {% grouped sections by section in elements %}
+                    {% assign currentIndex = 1 %}
                     {% for section in sections %}
                         {% for element in section %}
                             {% if element.model_name == "FAQ" %}
@@ -67,7 +68,7 @@
                                         <h3>
                                             <{% if editmode %}span{% else %}a href="#{{ anchor }}"{% endif %} class="title"
                                                                                                               data-accordion-item="#{{ anchor }}">
-                                              <span class="label">{% editable element.title %}</span>
+                                              <span class="label">{{ currentIndex }}{% assign currentIndex = currentIndex | plus:1 %}. {% editable element.title %}</span>
                                             </{% if editmode %}span{% else %}a{% endif %}>
                                         </h3>
                                     </header>
