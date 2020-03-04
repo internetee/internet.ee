@@ -1003,6 +1003,8 @@
       initTextChart();
     } else if ($('[data-accordion-item="#chart-org"]', item).length) {
       initOrgChart();
+    } else if ($('[data-accordion-item="#chart-renew"]', item).length) {
+      initRenewChart();
     }
   };
 
@@ -1586,16 +1588,37 @@
   };
 
   var initDnsChart = function () {
-    var dnssecGraphData;
+    var dnssecGraphData,
+        totalGraphData,
+        dnssecCompositionData = [];
 
-    $.when(
-        $.ajax({type: 'GET', url: DATA_HOST + '/data_dnssec.json', dataType: 'text'}).done(function (response) {
-          dnssecGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
-          $.each(dnssecGraphData, function (i, array) {
-            array[0] = parseInt(array[0] - 79199 + '000', 10);
-          });
-        })
-    ).then(function () {
+    $.when.apply($, [
+      $.ajax({type: 'GET', url: DATA_HOST + '/data_dnssec.json', dataType: 'text'}).done(function (response) {
+        dnssecGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
+        $.each(dnssecGraphData, function (i, array) {
+          array[0] = parseInt(array[0] - 79199 + '000', 10);
+        });
+      }),
+      $.ajax({type: 'GET', url: DATA_HOST + '/data_domains.json', dataType: 'text'}).done(function (response) {
+        totalGraphData = JSON.parse(response.replace(/\][\w\n]*,[\w\n]*\]/, "]]"));
+        $.each(totalGraphData, function (i, array) {
+          array[0] = parseInt(array[0] - 79199 + '000', 10);
+        });
+      })
+    ]).then(function () {
+      dnssecCompositionData = [
+        {
+          name: window.translations.dnssec_chart.dnssec_domains,
+          y: dnssecGraphData[dnssecGraphData.length - 1][1],
+          color: "#48A23F"
+        },
+        {
+          name: window.translations.dnssec_chart.regular_domains,
+          y: totalGraphData[totalGraphData.length -1][1] - dnssecGraphData[dnssecGraphData.length - 1][1],
+          color: "#FF6E00"
+        }
+      ];
+
       var dnssecchart = new Highcharts.Chart({
         chart: {
           renderTo: 'dnssecchart',
@@ -1621,6 +1644,15 @@
         colors: ['#ffae31'],
         title: "",
         subtitle: "",
+        labels: {
+          items: [{
+            html: window.translations.dnssec_chart.dnssec_proportion,
+            style: {
+              left: '50px',
+              top: '18px'
+            }
+          }]
+        },
         xAxis: {
           type: 'datetime',
           minRange: 14 * 24 * 3600000, // fourteen days
@@ -1639,33 +1671,14 @@
           endOnTick: false,
           showFirstLabel: true,
           startOnTick: false,
-          //tickPixelInterval: 70
         },
         yAxis: {
           title: "",
           min: 0,
           showLastLabel: true,
-          //endOnTick: false,
-          //plotLines: [{
-          //  value: 0,
-          //width: 1,
-          // color: '#808080'
-          // }]
-        },
-        tooltip: {
-          backgroundColor: '#fff',
-          borderRadius: 0,
-          borderWidth: 0,
-          style: {
-            color: '#212224'
-          },
-          formatter: function () {
-            return '<b style="color:' + this.series.color + '">' + this.y + '<br>' + Highcharts.dateFormat('%e.%m.%Y', this.x);
-          }
         },
         plotOptions: {
           line: {
-
             marker: {
               radius: 2,
               enabled: false
@@ -1679,17 +1692,33 @@
             threshold: null
           }
         },
-
         legend: {
           enabled: false
         },
         series: [{
-
           //pointInterval:12 * 3600 * 100,
           pointInterval: 24 * 3600 * 1000,
-          name: "Koormus",
-
-          data: dnssecGraphData
+          name: window.translations.dnssec_chart.dnssec_total_domains,
+          data: dnssecGraphData,
+          tooltip: {
+            xDateFormat: '%e.%m.%Y'
+          },
+        },
+        {
+          type: 'pie',
+          name: window.translations.dnssec_chart.total_domains,
+          data: dnssecCompositionData,
+          center: [100, 80],
+          size: 100,
+          showInLegend: false,
+          dataLabels: {
+            formatter: function () {
+              console.log(this.point);
+              return this.y > 5 ? Number(this.point.percentage).toFixed(2) + '% ' + this.point.name : null;
+            },
+            color: '#ffffff',
+            distance: -30
+          }
         }]
       });
     });
@@ -2029,6 +2058,178 @@
               color: '#FF6E00'
             }],
           }]
+      });
+    });
+  };
+
+  var initRenewChart = function () {
+    var renewGraphData = {
+      categories: [],
+      y: {
+        '3': [],
+        '6': [],
+        '9': [],
+        '12': [],
+        '24': [],
+        '36': [],
+        '48': [],
+        '60': [],
+        '72': [],
+        '84': [],
+        '96': [],
+        '108': [],
+        '120': []
+      }
+    };
+
+    $.when(
+      $.ajax({type: 'GET', url: DATA_HOST + '/dump-create-renew-hist.json', dataType: 'JSON'}).done(function (response) {
+        $.each(response, function (date, data){
+          renewGraphData['categories'].push(date);
+          $.each(data, function(key, value){
+            if (!renewGraphData['y'].hasOwnProperty(key)){
+              return
+            }
+            renewGraphData['y'][key].push(value);
+          })
+        });
+      })
+    ).then(function () {
+      var renewchart = new Highcharts.Chart({
+        chart: {
+          renderTo: 'renewchart',
+          backgroundColor: '#fff',
+          zoomType: 'x',
+          marginBottom: 120,
+          marginTop: 70,
+          spacingRight: 40,
+          spacingBottom: 40,
+          spacingLeft: 40,
+          height: 600,
+          style: {
+            fontFamily: 'Raleway',
+            color: '#212224',
+            fontSize: 14
+          },
+          resetZoomButton: {
+            relativeTo: 'chart',
+            position: {
+              x: -1,
+              y: 60
+            },
+          }
+        },
+        exporting: {
+          enabled: false
+        },
+        colors: [
+          '#0085CA',
+          '#48A23F',
+          '#ECAC56',
+          '#00BDF2',
+          '#A7A8AA',
+          '#003D63',
+          '#3EB54C',
+          '#00BABE',
+          '#FBAA19',
+          '#FF6E00',
+          '#447BBF',
+          '#3A3794',
+          '#009DE1'
+        ],
+        title: "",
+        subtitle: "",
+        xAxis: {
+          categories: renewGraphData['categories'],
+          tickmarkPlacement: 'on'
+        },
+        yAxis: {
+          title: {
+            text: window.translations.renew_chart.y_axis
+          },
+          min: 0,
+          showLastLabel: true,
+        },
+        plotOptions: {
+          line: {
+            marker: {
+              radius: 2,
+              enabled: false
+            },
+            lineWidth: 2,
+            states: {
+              hover: {
+                lineWidth: 2
+              }
+            },
+            threshold: null
+          }
+        },
+        legend: {
+          enabled: true,
+          floating: true,
+          align: 'center',
+          verticalAlign: 'top',
+          borderWidth: 0,
+          itemStyle: {
+            fontWeight: 'bold',
+          },
+          itemMarginBottom: 8,
+        },
+        series: [
+          {
+            name: '3 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['3']
+          },
+          {
+            name: '6 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['6']
+          },
+          {
+            name: '9 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['9']
+          },
+          {
+            name: '12 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['12']
+          },
+          {
+            name: '24 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['24']
+          },
+          {
+            name: '36 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['36']
+          },
+          {
+            name: '48 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['48']
+          },
+          {
+            name: '60 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['60']
+          },
+          {
+            name: '72 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['72']
+          },
+          {
+            name: '84 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['84']
+          },
+          {
+            name: '96 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['96']
+          },
+          {
+            name: '108 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['108']
+          },
+          {
+            name: '120 ' + window.translations.renew_chart.months,
+            data: renewGraphData['y']['120']
+          }
+        ]
       });
     });
   };

@@ -271,6 +271,35 @@
                                 </div>
                               </div>
                             </article>
+                            <article class="accordion__item" id="chart-renew">
+                                <header class="accordion__item__head">
+                                    <h2>
+                                        {% if editmode %}
+                                            <span class="title" data-accordion-item="#chart-renew">
+                                                {% contentblock name="accordion-title-8" publish_default_content="true" single="plaintext" %}
+                                                    Pikendamiste ja registreerimiste graafik registreerimise perioodi pikkuse järgi
+                                                {% endcontentblock %}
+                                            </span>
+                                        {% else %}
+                                            <a class="title" href="#chart-renew" data-accordion-item="#chart-renew">
+                                                {% contentblock name="accordion-title-8" publish_default_content="true" single="plaintext" %}
+                                                    Täpitähtedega domeenid (koguarv)
+                                                {% endcontentblock %}
+                                            </a>
+                                        {% endif %}
+                                    </h2>
+                                </header>
+                                <div class="accordion__item__body u-content-styles">
+                                    <div class="chart-item" id="renewchart"></div>
+                                    <div class="content-block">
+                                        {% contentblock name="accordion-body-8" publish_default_content="true" %}
+                                            <p>Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non
+                                                commodo luctus,
+                                                nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                                        {% endcontentblock %}
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>

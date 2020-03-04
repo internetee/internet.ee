@@ -304,6 +304,13 @@
       't8': 'MTÜ',
       't9': 'SA',
     },
+    'dnssec_chart': {
+      'dnssec_proportion': 'DNSSEC domeenide osakaal',
+      'dnssec_domains': 'kaitstud',
+      'regular_domains': 'kaitsmata',
+      'total_domains': 'Domeene kokku',
+      'dnssec_total_domains': 'DNSSEC-iga kaitstud domeene'
+    },
     'sex_chart': {
       'men': 'Mehed',
       'women': 'Naised',
@@ -313,6 +320,10 @@
       'age_group': 'Vanuseline koosseis',
       'total_domains': 'Domeene kokku',
       'total': 'Kokku'
+    },
+    'renew_chart': {
+      'y_axis': 'Pikendamiste ja registreerimiste arv',
+      'months': 'kuud'
     },
     'months': [
       'jaanuar',
@@ -419,6 +430,13 @@
       't8': 'MTÜ',
       't9': 'SA',
     },
+    'dnssec_chart': {
+      'dnssec_proportion': 'DNSSEC domain share',
+      'dnssec_domains': 'protected',
+      'regular_domains': 'unprotected',
+      'total_domains': 'Total number of domains',
+      'dnssec_total_domains': 'DNSSEC protected domains'
+    },
     'sex_chart': {
       'men': 'Men',
       'women': 'Women',
@@ -428,6 +446,10 @@
       'age_group': 'year born',
       'total_domains': 'Total of domains',
       'total': 'Total'
+    },
+    'renew_chart': {
+      'y_axis': 'Number of renewals and registrations',
+      'months': 'months'
     },
     'months': [
       'Январь',
@@ -534,6 +556,13 @@
       't8': 'MTÜ',
       't9': 'SA',
     },
+    'dnssec_chart': {
+      'dnssec_proportion': 'DNSSEC domain share',
+      'dnssec_domains': 'protected',
+      'regular_domains': 'unprotected',
+      'total_domains': 'Total number of domains',
+      'dnssec_total_domains': 'DNSSEC protected domains'
+    },
     'sex_chart': {
       'men': 'Men',
       'women': 'Women',
@@ -543,6 +572,10 @@
       'age_group': 'year born',
       'total_domains': 'Total of domains',
       'total': 'Total'
+    },
+    'renew_chart': {
+      'y_axis': 'Number of renewals and registrations',
+      'months': 'months'
     },
     'months': [
       'january',
