@@ -1381,6 +1381,23 @@ ul, ol {
     display: block;
   }
 }
+.btn--back-to-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+.btn--back-to-top:hover {
+  cursor: pointer;
+}
+.btn--back-to-top.show-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
 .site-footer {
   position: relative;
   z-index: 10;

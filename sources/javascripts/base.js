@@ -232,6 +232,7 @@
       }
     }
 
+    // START Mark search results
     const pageSearchParams = (new URL(document.location)).searchParams;
     if (pageSearchParams.get('mark-keys')) {
       const pageContent = document.querySelector('main.page-content');
@@ -279,6 +280,24 @@
         }
       });
     }
+    // END Mark search results
+
+    // START Back to Top Button
+    var backToTopButton = $('#js-back-to-top');
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 1000) {
+        backToTopButton.addClass('show-btn');
+      } else {
+        backToTopButton.removeClass('show-btn');
+      }
+    });
+
+    backToTopButton.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+    });
+    // END Back to Top Button
 
   };
 

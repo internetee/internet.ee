@@ -591,3 +591,19 @@
     }
   }
 }
+.btn--back-to-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  &:hover {
+    cursor: pointer;
+  }
+  &.show-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+}

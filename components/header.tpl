@@ -4,6 +4,10 @@
     </button>
 </div>
 
+<button id="js-back-to-top" class="btn btn--primary btn--back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
 <div class="wrap {% if page.node_id == 2133844 %}rgr-portal{% endif %}">
 <header class="site-header">
     {% assign rgr_portal = false %}
