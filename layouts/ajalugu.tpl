@@ -68,7 +68,7 @@
                     {% addbutton element_type="Ajalugu" %}
                 {% endif %}
                 {% grouped element_years by year in elements %}
-                    {% for year in element_years %}
+                    {% for year in element_years reversed %}
                       {% for element in year %}
                           {% assign yearAnchor = element.year | strip | replace:' ','_' | replace: ',','_' | replace: '?','_' | replace: '.','_' | replace: 'ö','o' | replace: 'ä','a' | replace: 'ü','u' | replace: 'õ','o' | replace: 'š','s' | replace: 'ž','z' | replace: '(','_' | replace: ')','_' %}
                           {% if forloop.first %}
