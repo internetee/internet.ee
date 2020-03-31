@@ -23,7 +23,7 @@
                   <ul>
                     {% reorder elements by year %}
                     {% grouped element_years by year in elements %}
-                      {% for year in element_years %}
+                      {% for year in element_years reversed %}
                       {% assign isFirst = forloop.first %}
                         <li class="anchor-block__item u-no-flex">
                           {% for element in year %}
