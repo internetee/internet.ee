@@ -1628,6 +1628,18 @@
     },
     {
       "content_type": "text/javascript",
+      "file": "javascripts/highcharts.js",
+      "kind": "javascript",
+      "filename": "highcharts.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/highcharts.min.js",
+      "kind": "javascript",
+      "filename": "highcharts.min.js"
+    },
+    {
+      "content_type": "text/javascript",
       "file": "javascripts/jquery-3.3.1.min.js",
       "kind": "javascript",
       "filename": "jquery-3.3.1.min.js"
@@ -1649,6 +1661,24 @@
       "file": "javascripts/main.min.js",
       "kind": "javascript",
       "filename": "main.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/map.js",
+      "kind": "javascript",
+      "filename": "map.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/map.min.js",
+      "kind": "javascript",
+      "filename": "map.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/mark.min.js",
+      "kind": "javascript",
+      "filename": "mark.min.js"
     },
     {
       "content_type": "text/javascript",
@@ -1709,6 +1739,18 @@
       "file": "javascripts/wattie.min.js",
       "kind": "javascript",
       "filename": "wattie.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/world-map.js",
+      "kind": "javascript",
+      "filename": "world-map.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/world-map.min.js",
+      "kind": "javascript",
+      "filename": "world-map.min.js"
     },
     {
       "content_type": "text/css",
