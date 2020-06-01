@@ -21,7 +21,7 @@
             <div class="page--sidebar">
                 <nav class="anchor-block">
                   <ul>
-                    {% reorder elements by year %}
+                    
                     {% grouped element_years by year in elements %}
                       {% for year in element_years reversed %}
                       {% assign isFirst = forloop.first %}
