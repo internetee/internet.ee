@@ -118,15 +118,19 @@
                     </span>
                   </td>
                 </tr>
-                <tr>
+                <tr v-if="domain.registration_deadline">
+                  <th>{{ domain_registration_deadline }}:</th>
+                  <td class="registration_deadline">${ domain.registration_deadline }</td>
+                </tr>
+                <tr v-if="domain.registered">
                   <th>{{ domain_registered_at }}:</th>
                   <td class="registered_at">${ domain.registered }</td>
                 </tr>
-                <tr>
+                <tr v-if="domain.changed">
                   <th>{{ domain_changed_at }}:</th>
                   <td class="changed_at">${ domain.changed }</td>
                 </tr>
-                <tr>
+                <tr v-if="domain.expire">
                   <th>{{ domain_expire }}:</th>
                   <td class="expire">${ domain.expire }</td>
                 </tr>
@@ -138,7 +142,7 @@
                   <th>{{ domain_delete }}:</th>
                   <td class="delete">${ domain.delete }</td>
                 </tr>
-                <tr>
+                <tr v-if="domain.nameservers">
                   <th>{{ domain_nservers }}:</th>
                   <td class="nservers">
                     <template v-for="nameserver in domain.nameservers">
@@ -146,7 +150,7 @@
                     </template>
                   </td>
                 </tr>
-                <tr>
+                <tr v-if="domain.dnssec_keys">
                   <th>{{ domain_dnssec }}:</th>
                   <td class="dnssec">
                     ${ signedLabel }
@@ -161,7 +165,7 @@
                     </p>
                   </td>
                 </tr>
-                <tr v-show="!showExtraDomainInfo">
+                <tr v-if="domain.registrar" v-show="!showExtraDomainInfo">
                   <th>{{ domain_registrar }}:</th>
                   <td>
                     ${ domain.registrar }<br>
@@ -240,7 +244,7 @@
             </transition>
             <transition name="fadeIn">
               <div class="domain--extra-info" v-show="!showExtraDomainInfo">
-                <div class="domain--registrant">
+                <div class="domain--registrant" v-show="!pendingRegistrationStatus">
                   <div class="registrant-type">
                     <img v-if="domain.registrant_kind === 'org'" src="{{ assets_path }}/business.svg" alt="">
                     <img v-if="domain.registrant_kind === 'priv'" src="{{ assets_path }}/private-person.svg" alt="">
@@ -300,6 +304,7 @@
       showExtraDomainInfo: false,
       showDomainSuggestions: false,
       showHowToFirst: true,
+      pendingRegistrationStatus: false,
       domain: [],
       message: '',
       messages: {
@@ -367,6 +372,7 @@
             "serverForceDelete",
             "pendingUpdate",
             "pendingDelete",
+            "PendingRegistration",
             "serverManualInzone",
             "Blocked",
             "Reserved",
@@ -451,6 +457,11 @@
               try {
                 this.domain = response.body;
                 this.showExtraDomainInfo = false;
+                if (this.domain.status.includes('PendingRegistration')) {
+                  this.pendingRegistrationStatus = true;
+                } else {
+                  this.pendingRegistrationStatus = false;
+                }
                 if (this.domain.name) {
                   if (this.domain.hasOwnProperty('dnssec_keys')) {
                     this.signedStatus = !!this.domain.dnssec_keys.length;
@@ -470,6 +481,9 @@
                   }
                   if (this.domain.hasOwnProperty('delete') && this.domain.delete) {
                     this.domain.delete = moment(this.domain.delete).format('DD.MM.Y');
+                  }
+                  if (this.domain.hasOwnProperty('registration_deadline') && this.domain.registration_deadline) {
+                    this.domain.registration_deadline = moment(this.domain.registration_deadline).format('DD.MM.Y HH:mm');
                   }
                   this.showDomainMessage(this.domain.status, domain);
                   this.domain.status.forEach(function(element,i) {

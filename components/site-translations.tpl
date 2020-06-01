@@ -13,6 +13,7 @@
       {% assign identification_methods = "Isikutuvastuse viisid" %}
       {% assign customer_service = "Klienditeenindus" %}
       {% assign domain_status = "Staatus" %}
+      {% assign domain_registration_deadline = "Registreerimise tähtaeg" %}
       {% assign domain_registered_at = "Registreeritud" %}
       {% assign domain_registrant = "Registreerija" %}
       {% assign domain_expire = "Aegub" %}
@@ -103,6 +104,7 @@
       {% assign search_placeholder = "Поиск" %}
       {% assign customer_service = "Customer service" %}
       {% assign domain_status = "Status" %}
+      {% assign domain_registration_deadline = "Registration deadline" %}
       {% assign domain_registered_at = "Registered" %}
       {% assign domain_registrant = "Registrant" %}
       {% assign domain_expire = "Expiry" %}
@@ -187,6 +189,7 @@
       {% assign search_placeholder = "site search" %}
       {% assign customer_service = "Customer service" %}
       {% assign domain_status = "Status" %}
+      {% assign domain_registration_deadline = "Registration deadline" %}
       {% assign domain_registered_at = "Registered" %}
       {% assign domain_registrant = "Registrant" %}
       {% assign domain_expire = "Expiry" %}
@@ -379,6 +382,7 @@
       "serverUpdateProhibited": 'Andmete muutmine keelatud',
       "serverDeleteProhibited": 'Kustutamine keelatud',
       "serverForceDelete": 'Domeen kustutatakse',
+      "PendingRegistration": 'Registreering on ootel',
       "pendingUpdate": 'Domeeni muudatused ootel',
       "pendingDelete": 'Domeen ootab kustutamist',
       "serverManualInzone": 'Domeeni hoitakse tsoonis',
@@ -505,6 +509,7 @@
       "serverUpdateProhibited": 'Update Prohibited',
       "serverDeleteProhibited": 'Delete Prohibited',
       "serverForceDelete": 'Forced to Delete',
+      "PendingRegistration": 'Pending registration',
       "pendingUpdate": 'Pending Update',
       "pendingDelete": 'Pending Delete',
       "serverManualInzone": 'Kept in Zone',
@@ -631,6 +636,7 @@
       "serverUpdateProhibited": 'Update Prohibited',
       "serverDeleteProhibited": 'Delete Prohibited',
       "serverForceDelete": 'Forced to Delete',
+      "PendingRegistration": 'Pending registration',
       "pendingUpdate": 'Pending Update',
       "pendingDelete": 'Pending Delete',
       "serverManualInzone": 'Kept in Zone',
