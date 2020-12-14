@@ -463,7 +463,7 @@
                   this.pendingRegistrationStatus = false;
                 }
                 if (this.domain.name) {
-                  if (this.domain.hasOwnProperty('dnssec_keys')) {
+                  if (this.domain.hasOwnProperty('dnssec_keys') && this.domain.dnssec_keys != null) {
                     this.signedStatus = !!this.domain.dnssec_keys.length;
                     this.signedLabel = this.domain.dnssec_keys.length ? window.translations.domains.dnssec_signed : window.translations.domains.dnssec_unsigned;
                   }
