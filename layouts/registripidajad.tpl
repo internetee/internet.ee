@@ -40,11 +40,11 @@
                         </label>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" id="ipv6" @change="getServices" value="icon3">
-                        <label for="ipv6">
+                        <input type="checkbox" id="short_url" @change="getServices" value="short_url">
+                        <label for="short_url">
                             <span class="icon-short-periods"></span>
                             {{ label_short_periods }}
-                            <i class="fas fa-question-circle" data-open-modal="ipv6"></i>
+                            <i class="fas fa-question-circle" data-open-modal="short_url"></i>
                         </label>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                         <div class="registrar--services">
                             <span v-if="result.values.dnssec" class="item" title="DNSSEC" style="background-image:url({{ assets_path }}/dns.svg)"></span>
                             <span v-if="result.values.ep" class="item" title="Elite Partner" style="background-image:url({{ assets_path }}/ep2.svg)"></span>
-                            <span v-if="result.values.icon3" class="item" title="Short URL" style="background-image:url({{ assets_path }}/short-url.svg)"></span>
+                            <span v-if="result.values.short_url" class="item" title="Short URL" style="background-image:url({{ assets_path }}/short-url.svg)"></span>
                         </div>
                         <a :href="result.website" class="registrar--logo">
                             <i v-if="typeof result.values.logo === 'undefined'" class="fas fa-certificate"></i>
@@ -145,7 +145,7 @@
         </div>
     </div>
 </div>
-<div class="mdl mdl--registrar" data-modal="ipv6">
+<div class="mdl mdl--registrar" data-modal="short_url">
     <div class="mdl--container">
         <header class="mdl--header">
             <h2>{{ label_short_periods }}</h2>
@@ -155,7 +155,7 @@
         </header>
         <div class="mdl--content">
             <article class="u-content-styles">
-                {% contentblock name="ipv6-desc" publish_default_content="true" %}
+                {% contentblock name="short_url-desc" publish_default_content="true" %}
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu tortor, ac
                         lobortis metus luctus ac. Donec ornare mi a orci consectetur.</p>
                 {% endcontentblock %}
@@ -222,8 +222,8 @@
                         if (typeof item.values.ep !== 'undefined' && item.values.ep) {
                             services.push('ep');
                         }
-                        if (typeof item.values.icon3 !== 'undefined' && item.values.icon3) {
-                            services.push('icon3');
+                        if (typeof item.values.short_url !== 'undefined' && item.values.short_url) {
+                            services.push('short_url');
                         }
                         return this.queryServices.every(function (v) {
                             return services.indexOf(v) >= 0;
