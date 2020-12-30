@@ -18,11 +18,11 @@
 <meta name="theme-color" content="#ffffff">
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
-<script src="{{ javascripts_path }}/modernizr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous"></script>
 
 {% comment %}STYLESHEETS{% endcomment %}
 {% stylesheet_link "fontawesome-all.min.css" %}
-{% stylesheet_link "main.min.css" %}
+{% stylesheet_link "main.css" %}
 
 <link rel="stylesheet" type="text/css" media="print" href="{{ stylesheets_path }}/print.min.css" />
 

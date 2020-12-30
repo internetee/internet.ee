@@ -308,6 +308,6 @@
     </main>
 {% include "footer" %}
 {% include "site-javascripts" %}
-<script src="{{ javascripts_path }}/charts.min.js?1"></script>
+<script src="{{ javascripts_path }}/charts.js"></script>
 </body>
 </html>
