@@ -27,7 +27,7 @@
             {% endfor %}
         {% else %}
             {% for item in site.visible_menuitems %}
-                {% unless item.page.node_id == 2133844 or item.page.node_id == 2142515 or item.page.node_id == 2223713 or item.translated? == false %}
+                {% unless item.page.node_id == 2133844 or item.page.node_id == 2142515 or item.page.node_id == 2223713 or item.page.node_id == 2684256 or item.translated? == false %}
                     <li class="{% if item.selected? %}selected{% endif %}">
                         <a href="{{ item.url }}" class="{% unless item.translated? %}untranslated{% endunless %}">{{ item.title }}</a>
                         {% if item.children? %}

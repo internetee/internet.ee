@@ -19,7 +19,7 @@
             {% assign portals = "2133844,2142515"|split:"," %}
             <a href="{{ site.root_item.url }}" {% unless rgr_portal %}class="u-active"{% endunless %}>{{ label_public_portal }}</a>
             {% for item in site.menuitems %}
-                {% if item.page.node_id == 2223713 %}
+                {% if item.page.node_id == 2223713 or item.page.node_id == 2684256 %}
                     <a href="{{ item.url }}">{{ item.title }}</a>
                 {% endif %}
                 {% if item.page.node_id == 2133844 or item.page.node_id == 2142515 %}
