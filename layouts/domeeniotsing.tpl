@@ -314,6 +314,7 @@
         reserved: "{{ domain_reserved_error }}",
         deleted: "{{ domain_deleted_error }}",
         blocked: "{{ domain_blocked_error }}",
+        disputed: "{{ domain_disputed_error }}",
         technical: "{{ domain_technical_error }}",
         auction: "{{ domain_auction_error }}",
         pending_registration: "{{ domain_pending_registration_error }}",

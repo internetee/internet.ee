@@ -13,7 +13,7 @@
       {% assign identification_methods = "Isikutuvastuse viisid" %}
       {% assign customer_service = "Klienditeenindus" %}
       {% assign domain_status = "Staatus" %}
-      {% assign domain_registration_deadline = "Registreerimise tähtaeg" %}
+      {% assign _registration_deadline = "Registreerimise tähtaeg" %}
       {% assign domain_registered_at = "Registreeritud" %}
       {% assign domain_registrant = "Registreerija" %}
       {% assign domain_expire = "Aegub" %}
@@ -47,6 +47,7 @@
       {% assign domain_blocked_error = "on blokeeritud" %}
       {% assign domain_reserved_error = "on reserveeritud" %}
       {% assign domain_deleted_error = "on kustutamisel" %}
+      {% assign domain_disputed_error = "on vaidlustatud" %}
       {% assign domain_technical_error = "Tehniline probleem, palun proovige hiljem uuesti" %}
       {% assign domain_auction_error = "on oksjonil" %}
       {% assign domain_pending_registration_error = "registreering on ootel" %}
@@ -219,6 +220,7 @@
       {% assign domain_blocked_error = "is blocked" %}
       {% assign domain_reserved_error = "is reserved" %}
       {% assign domain_deleted_error = "is being deleted" %}
+      {% assign domain_disputed_error = "is disputed" %}
       {% assign domain_technical_error = "Technical error, please try again later" %}
       {% assign domain_auction_error = "is at auction" %}
       {% assign domain_pending_registration_error = "pending registration" %}
