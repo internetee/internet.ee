@@ -209,6 +209,9 @@
       &:nth-child(4) {
         background: $green;
       }
+      &:last-child {
+        background: $base-blue;
+      }
     }
   }
   @include min-screen(1025px) {
