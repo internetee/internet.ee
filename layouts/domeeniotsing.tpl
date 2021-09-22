@@ -356,7 +356,9 @@
             this.message = name + ' ' + this.messages.auction;
         } else if (Array.isArray(type) && type.includes('PendingRegistration')) {
             this.message = name + ' ' + this.messages.pending_registration;
-        } else {
+        } else if (Array.isArray(type) && type.includes('disputed')) {
+          this.message = name + ' ' + this.messages.disputed;
+        }  else {
           this.message = name + ' ' + "{{ domain_registered_error }}";
         }
         if (Array.isArray(type) && type.some(function(item) {
