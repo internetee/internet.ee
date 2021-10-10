@@ -377,6 +377,8 @@
             "pendingDelete",
             "PendingRegistration",
             "serverManualInzone",
+            "serverObjUpdateProhibited",
+            "serverExtensionUpdateProhibited",
             "Blocked",
             "Reserved",
             "inactive",
