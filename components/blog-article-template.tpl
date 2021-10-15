@@ -11,6 +11,14 @@
         {% endif %}
         {% editable article.body %}
         <div class="columns">
+            <div class="col">
+                {% if editmode %}
+                <h2>Galerii</h2>
+                {% endif %}
+                {% content name="gallery_block" bind="Article" %}
+            </div>
+        </div>
+        <div class="columns">
             <div class="col file-col">
                 {% content name="files" %}
             </div>
