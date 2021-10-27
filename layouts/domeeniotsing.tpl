@@ -314,6 +314,7 @@
         reserved: "{{ domain_reserved_error }}",
         deleted: "{{ domain_deleted_error }}",
         blocked: "{{ domain_blocked_error }}",
+        disputed: "{{ domain_disputed_error }}",
         technical: "{{ domain_technical_error }}",
         auction: "{{ domain_auction_error }}",
         pending_registration: "{{ domain_pending_registration_error }}",
@@ -355,7 +356,9 @@
             this.message = name + ' ' + this.messages.auction;
         } else if (Array.isArray(type) && type.includes('PendingRegistration')) {
             this.message = name + ' ' + this.messages.pending_registration;
-        } else {
+        } else if (Array.isArray(type) && type.includes('disputed')) {
+          this.message = name + ' ' + this.messages.disputed;
+        }  else {
           this.message = name + ' ' + "{{ domain_registered_error }}";
         }
         if (Array.isArray(type) && type.some(function(item) {
@@ -374,6 +377,8 @@
             "pendingDelete",
             "PendingRegistration",
             "serverManualInzone",
+            "serverObjUpdateProhibited",
+            "serverExtensionUpdateProhibited",
             "Blocked",
             "Reserved",
             "inactive",
