@@ -385,7 +385,8 @@
             "Blocked",
             "Reserved",
             "inactive",
-            "deleteCandidate"
+            "deleteCandidate",
+            "serverReleaseProhibited"
           ].includes(item);
         })) {
           this.showDomainInfo = !(type.length === 1 && (type.includes('Blocked') || type.includes('Reserved')));
