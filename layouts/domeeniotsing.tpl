@@ -250,7 +250,6 @@
                 <div class="domain--registrant" v-show="!pendingRegistrationStatus">
                   <div class="registrant-type">
                     <img v-if="domain.registrant_kind === 'org'" src="{{ assets_path }}/business.svg" alt="">
-                    <img v-if="domain.registrant_kind === 'priv'" src="{{ assets_path }}/private-person.svg" alt="">
                     <img v-if="domain.registrant === 'Private Person'" src="{{ assets_path }}/private-person.svg" alt="">
                   </div>
                   <h3>{{ domain_registrant }}</h3>
