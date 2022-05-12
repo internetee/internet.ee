@@ -393,7 +393,8 @@
       "Blocked": 'Domeen blokeeritud',
       "Reserved": 'Domeen reserveeritud',
       "inactive": 'Domeen ei ole tsooni lisatud',
-      "deleteCandidate": 'Domeen kustutatakse'
+      "deleteCandidate": 'Domeen kustutatakse',
+      "serverReleaseProhibited": 'Domeeni vabastamine peatatud'
     },
     'search': {
       'pages': 'Leheküljed',
@@ -522,7 +523,8 @@
       "Blocked": 'Blocked',
       "Reserved": 'Reserved',
       "inactive": 'Inactive',
-      "deleteCandidate": 'Will be Deleted'
+      "deleteCandidate": 'Will be Deleted',
+      "serverReleaseProhibited": 'Domain release prohibited'
     },
     'search': {
       'pages': 'Leheküljed',
@@ -651,7 +653,8 @@
       "Blocked": 'Blocked',
       "Reserved": 'Reserved',
       "inactive": 'Inactive',
-      "deleteCandidate": 'Will be Deleted'
+      "deleteCandidate": 'Will be Deleted',
+      "serverReleaseProhibited": 'Domain release prohibited'
     },
     'search': {
       'pages': 'Pages',
