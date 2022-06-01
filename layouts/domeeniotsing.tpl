@@ -3,19 +3,17 @@
 <html class="domain-search-page common-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
-  <script src="//www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+  
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcvvDoeAAAAAJig46j3KoOMcXDaCYAGvIb9f12v"></script>
   <script type="text/javascript">
-    var onloadCallback = function () {
-      setTimeout(function () {
-        window.captchaID = grecaptcha.render('domain-recaptcha', {
-          'sitekey': '6Ld-ARETAAAAAPN1pcTy9oYsUrbKm9_c9VDMvl6X'
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LcvvDoeAAAAAJig46j3KoOMcXDaCYAGvIb9f12v', {action: 'check'}).then(function(token) {
+          window.captchaID = token;
         });
         
-      }, 500);
-      
-      
-    };
+      });
   </script>
+  
 </head>
 <body>
 {% include "cookie-modal" %}
@@ -423,11 +421,10 @@
         return !!(regex.exec(domain));
       },
       
-      resetCaptcha: function () {
-        grecaptcha.reset(window.captchaID);
-        setTimeout(function () {
-          console.log($("body > div").last().addClass("newChallengeBox"));
-        }, 1000);
+      resetCaptcha: function () { 
+        grecaptcha.execute('6LcvvDoeAAAAAJig46j3KoOMcXDaCYAGvIb9f12v', {action: 'check'}).then(function(token) {
+          window.captchaID = token;
+        });
       },
       
       updateQueryString: function (key, value) {
@@ -562,13 +559,14 @@
       },
       
       fetchExtraDomainInfo: function () {
-        var g_recaptcha_response = grecaptcha.getResponse(window.captchaID);
+        
+        var g_recaptcha_response = window.captchaID;
         if (g_recaptcha_response === "") {
           $('.g-recaptcha').addClass('error');
         } else {
           $('.g-recaptcha').removeClass('error');
           this.loadingDomain = true;
-          this.$http.get(this.WHOIS_HOST + punycode.toASCII(this.domain.name.split(" ")[0]) + '.json?g-recaptcha-response=' + g_recaptcha_response).then(function (response) {
+          this.$http.get(this.WHOIS_HOST + punycode.toASCII(this.domain.name.split(" ")[0]) + '.json?g-recaptcha-response-data[check]=' + g_recaptcha_response +'&g-recaptcha-response=' + g_recaptcha_response).then(function (response) {
             var data = response.body;
             if (data) {
               this.domain = data;
