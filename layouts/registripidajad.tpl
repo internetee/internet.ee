@@ -170,7 +170,7 @@
 {% if editmode %}
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 {% else %}
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 {% endif %}
 <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 {% include "site-javascripts" %}

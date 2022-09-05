@@ -99,11 +99,9 @@
 </script>
 {% endeditorjsblock %}
 <script>site.initFrontPage();</script>
-{% if editmode %}
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-{% else %}
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-{% endif %}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 <script>
   new Vue({

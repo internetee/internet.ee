@@ -13,7 +13,6 @@
         
       });
   </script>
-  
 </head>
 <body>
 {% include "cookie-modal" %}
@@ -32,7 +31,7 @@
                 <i class="fas fa-arrow-right"></i>
                 <i class="fas fa-spinner fa-spin"></i>
               </button>
-            </div>
+            </div> 
           </form>
         </div>
         <div class="domain-info">
