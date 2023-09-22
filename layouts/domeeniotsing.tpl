@@ -10,7 +10,10 @@
         window.captchaID = grecaptcha.render('domain-recaptcha', {
           'sitekey': '6Ld-ARETAAAAAPN1pcTy9oYsUrbKm9_c9VDMvl6X'
         });
+        
       }, 500);
+      
+      
     };
   </script>
 </head>
@@ -247,7 +250,7 @@
                 <div class="domain--registrant" v-show="!pendingRegistrationStatus">
                   <div class="registrant-type">
                     <img v-if="domain.registrant_kind === 'org'" src="{{ assets_path }}/business.svg" alt="">
-                    <img v-if="domain.registrant_kind === 'priv'" src="{{ assets_path }}/private-person.svg" alt="">
+                    <img v-if="domain.registrant === 'Private Person'" src="{{ assets_path }}/private-person.svg" alt="">
                   </div>
                   <h3>{{ domain_registrant }}</h3>
                   <p v-if="domain.registrant === 'Private Person'">
@@ -382,7 +385,8 @@
             "Blocked",
             "Reserved",
             "inactive",
-            "deleteCandidate"
+            "deleteCandidate",
+            "serverReleaseProhibited"
           ].includes(item);
         })) {
           this.showDomainInfo = !(type.length === 1 && (type.includes('Blocked') || type.includes('Reserved')));
@@ -421,6 +425,9 @@
       
       resetCaptcha: function () {
         grecaptcha.reset(window.captchaID);
+        setTimeout(function () {
+          console.log($("body > div").last().addClass("newChallengeBox"));
+        }, 1000);
       },
       
       updateQueryString: function (key, value) {
@@ -550,6 +557,7 @@
           $('body').addClass('u-modal-open');
           $('.mdl--domain').addClass('u-open');
           this.resetCaptcha();
+          
         }
       },
       
@@ -637,5 +645,12 @@
     }
   });
 </script>
+<style>
+@media screen and (max-width: 768px) {
+  .newChallengeBox {
+    left: 0 !important;
+  }
+}
+</style>
 </body>
 </html>
