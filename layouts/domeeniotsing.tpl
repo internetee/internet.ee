@@ -418,7 +418,7 @@
       },
       
       isValid: function (domain) {
-        var pattern = /^[a-zA-Z0-9õöäüšž][a-zA-Z0-9õöäüšž-]{0,61}[a-zA-Z0-9õöäüšž](\.pri\.ee|\.com\.ee|\.fie\.ee|\.med\.ee|\.ee)$/;
+        var pattern = /^[a-zA-Z0-9õöäüšž-]{0,61}[a-zA-Z0-9õöäüšž](\.pri\.ee|\.com\.ee|\.fie\.ee|\.med\.ee|\.ee)$/;
         var regex = new RegExp(pattern);
         return !!(regex.exec(domain));
       },
