@@ -29,7 +29,7 @@
             <div class="form-item type-search">
               <input type="text" name="domain" class="inline-label" id="searchw" value=""
                      placeholder="{{ domain_search }}" autocomplete="off" v-model="queryString"
-                     maxlength="63" minlength="2">
+                     maxlength="63" minlength="1">
               <button class="btn btn--primary btn-submit" type="submit" title="{{ label_search }}" aria-label="{{ label_search }}">
                 <i class="fas fa-arrow-right"></i>
                 <i class="fas fa-spinner fa-spin"></i>
