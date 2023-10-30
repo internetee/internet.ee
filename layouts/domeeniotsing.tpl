@@ -455,7 +455,7 @@
       },
       
       addDomainLookupHandlers: function () {
-        if (this.queryString.length > 1) {
+        if (this.queryString.length > 0) {
           var domain = this.addMissingTld(this.queryString);
           if (domain === this.domain.name) {
             return false;
