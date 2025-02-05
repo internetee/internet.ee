@@ -6,7 +6,6 @@
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main">
     <article class="about-page article--detail" data-search-indexing-allowed="true">
@@ -62,7 +61,9 @@
                     <p><strong>KMKR:</strong> EE000000000</p>
                 {% endcontentblock %}
             </div>
-            <div id="location-map"></div>
+            <div class="map-wrapper-full" id="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.6028115588656!2d24.68455042590353!3d59.42964507277099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929468aa294d6b%3A0x365e4384bab01dea!2sPaldiski%20mnt%2080%2C%2010617%20Tallinn%2C%20Estonia!5e0!3m2!1sen!2sru!4v1712388227377!5m2!1sen!2sru" width="2000" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
         <nav class="quick-nav">
             {% elementscontext edicy_model="Kiirlingid" %}
@@ -161,5 +162,6 @@
 </main>
 {% include "footer" %}
 {% include "site-javascripts" %}
+{% include "footer-scripts" %}
 </body>
 </html>

@@ -7,7 +7,6 @@
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main">
     <section class="page--detail" data-search-indexing-allowed="true" id="app">
@@ -436,5 +435,6 @@
         }
     });
 </script>
+{% include "footer-scripts" %}
 </body>
 </html>

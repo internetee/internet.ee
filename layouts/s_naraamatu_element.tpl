@@ -6,7 +6,6 @@
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main">
     <article class="article--detail">
@@ -45,5 +44,6 @@
 </main>
 {% include "footer" %}
 {% include "site-javascripts" %}
+{% include "footer-scripts" %}
 </body>
 </html>

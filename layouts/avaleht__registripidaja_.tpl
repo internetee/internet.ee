@@ -7,7 +7,6 @@
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% include "header" rgr_portal: true %}
 <main class="page-content" role="main" data-search-indexing-allowed="true">
     <div class="page-hero">
@@ -60,5 +59,6 @@
     </script>
 {% endeditorjsblock %}
 <script>site.initFrontPage();</script>
+{% include "footer-scripts" %}
 </body>
 </html>

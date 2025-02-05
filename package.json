@@ -3,7 +3,7 @@
   "description": "internet.ee",
   "scripts": {
     "start": "gulp watch & kit watch",
-    "dev": "gulp watch & sudo kit watch -s dev",
+    "dev": "gulp watch & kit watch -s dev",
     "deploy": "kit manifest && kit push assets/* && kit push images/* && kit push stylesheets/*.css && kit push javascripts/*.js && kit push layouts/*.tpl && kit push layouts/*.tpl && kit push components/*.tpl"
   },
   "devDependencies": {

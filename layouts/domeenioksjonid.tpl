@@ -6,7 +6,6 @@
     {{ blog.rss_link }}
 </head>
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main">
     <section class="page--detail" data-search-indexing-allowed="true" id="app">
@@ -92,7 +91,7 @@
 {% if editmode %}
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 {% else %}
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 {% endif %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.6.0/vue-paginate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
@@ -181,5 +180,6 @@
         }
     });
 </script>
+{% include "footer-scripts" %}
 </body>
 </html>

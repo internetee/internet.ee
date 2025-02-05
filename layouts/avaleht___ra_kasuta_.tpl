@@ -7,7 +7,6 @@
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main" data-search-indexing-allowed="true">
     <div class="page-hero">
@@ -72,5 +71,6 @@
 {% include "footer" %}
 {% include "site-javascripts" %}
 <script>site.initFrontPage();</script>
+{% include "footer-scripts" %}
 </body>
 </html>

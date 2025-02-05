@@ -6,7 +6,6 @@
   </head>
 
   <body>
-    {% include "cookie-modal" %}
     {% include "header" %}
     <div class="background-image">&nbsp;</div>
     <div class="site-container">
@@ -92,7 +91,8 @@
   {% include "footer" %}
   {% include "site-javascripts" %}
   <script>site.initCommonPage();</script>
-  </body>
+  {% include "footer-scripts" %}
+</body>
 </html>
 
 

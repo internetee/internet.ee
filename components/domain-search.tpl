@@ -2,8 +2,8 @@
   <div class="domain-search-container">
     {% include 'domain-search-form' %}
     <div class="domain-stats">
-        <p class="all">{{ domain_stats_total }}: <span></span>.</p>
-        <p class="today">{{ domain_stats_today }}: <span></span>.</p>
+        <div class="all">{{ domain_stats_total }}: <span></span>.</div>
+        <div class="today">{{ domain_stats_today }}: <span></span>.</div>
         <div class="domain-stats-link">
             {% if editmode %}
                 <input type="text" name="statistics_link" value="{{ page.data.statisticsLink }}" placeholder="Sisesta statistika link">

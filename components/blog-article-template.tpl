@@ -27,9 +27,8 @@
     <div class="article--sidebar">
         <footer class="article--meta">
             {% if editmode %}
-                <div class="author--image" class="cover-image editable-cover-image"
+                <div class="author--image editable-cover-image"
                      data-image="{{ article.data.author_image.url }}">
-
                 </div>
             {% else %}
                 <div class="author--image">
@@ -50,7 +49,7 @@
                         <input type="text" name="article[type]" placeholder="Kirjuta sisu tüüp siia" value="{{ article.data.type }}"/>
                     </div>
                 {% else %}
-                    {% if article.data.type.size > 1 %}
+                    {% if article.data.type.length > 1 %}
                         <a href="{{ article.page.url }}?type={{ article.data.type }}" class="item article--type">{{ article.data.type }}</a>
                     {% endif %}
                 {% endif %}
@@ -59,7 +58,7 @@
                         <input type="text" name="article[topic]" placeholder="Kirjuta teema siia" value="{{ article.data.topic }}"/>
                     </div>
                 {% else %}
-                    {% if article.data.topic.size > 1 %}
+                    {% if article.data.topic.length > 1 %}
                         <a href="{{ article.page.url }}?topic={{ article.data.topic }}" class="item article--topic">{{ article.data.topic }}</a>
                     {% endif %}
                 {% endif %}

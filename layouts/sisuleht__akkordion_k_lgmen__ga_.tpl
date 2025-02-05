@@ -7,7 +7,6 @@
 </head>
 
 <body>
-    {% include "cookie-modal" %}
     {% include "header" %}
     <main class="page-content" role="main">
         <article class="article--detail" data-search-indexing-allowed="true">
@@ -38,6 +37,8 @@
                                 {% content name="file-block2" %}
                             </div>
                         </div>
+
+                        {% include "document-selector" %}
                     </div>
                 </div>
             </div>
@@ -45,5 +46,6 @@
     </main>
     {% include "footer" %}
 {% include "site-javascripts" %}
+{% include "footer-scripts" %}
 </body>
 </html>

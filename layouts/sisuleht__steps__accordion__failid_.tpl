@@ -5,7 +5,6 @@
     {% include "html-head" %}
 </head>
 <body class="page-domain">
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main">
     <article class="article--detail" data-search-indexing-allowed="true">
@@ -35,11 +34,14 @@
                         </div>
                     </div>
                 </div>
+
+                {% include "document-selector" %}
             </div>
         </div>
     </article>
 </main>
 {% include "footer" %}
 {% include "site-javascripts" %}
+{% include "footer-scripts" %}
 </body>
 </html>

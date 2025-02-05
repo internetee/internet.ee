@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <!-- registars.tpl -->
-<html class="page-loading common-page common-registrar-page {% if editmode %}editmode{% else %}public{% endif %}"
+<html class="common-page common-registrar-page {% if editmode %}editmode{% else %}public{% endif %}"
       lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
     {% include "html-head" %}
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
-<main class="page-content" role="main" id="app">
+<main class="page-content" role="main">
     <div class="page--detail">
         <header class="page--header"
                 {% if page.image? %}style="background-image: url({{ page.image.schemeless_url }})"{% endif %}>
@@ -20,11 +19,11 @@
                 {% endif %}
             </div>
         </header>
-        <form action="#" method="GET" class="registrar-filter" @submit.prevent="submitForm">
+        <div class="registrar-filter">
             <div class="search-block">
                 <div class="filter-item type-checkbox">
                     <div class="checkbox">
-                        <input type="checkbox" id="dnssec" @change="getServices" value="dnssec">
+                        <input type="checkbox" id="dnssec" data-filter=".dnssec" class="filter-checkbox" value="dnssec">
                         <label for="dnssec">
                             <span class="icon-dnssec"></span>
                             DNSSEC
@@ -32,7 +31,7 @@
                         </label>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" id="ep" @change="getServices" value="ep">
+                        <input type="checkbox" class="filter-checkbox" id="ep" data-filter=".ep" value="ep">
                         <label for="ep">
                             <span class="icon-ep"></span>
                             Elite partner
@@ -40,7 +39,7 @@
                         </label>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" id="short_url" @change="getServices" value="short_url">
+                        <input type="checkbox" id="short_url" class="filter-checkbox" data-filter=".short_url" value="short_url">
                         <label for="short_url">
                             <span class="icon-short-periods"></span>
                             {{ label_short_periods }}
@@ -49,21 +48,19 @@
                     </div>
                 </div>
                 <div class="filter-item form-item type-search">
-                    <input type="text" name="registrar" class="inline-label" id="searchw" value=""
-                           placeholder="{{ label_search_registrar }}" v-model="queryString">
+                    <input type="text" name="registrar" class="inline-label" id="search-filter" value=""
+                           placeholder="{{ label_search_registrar }}">
                     <button class="btn btn--primary" id="submit" aria-label="{{ label_search }}"><i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
-        </form>
-        <div class="suggestions-loader" v-show="loading">
-            <i class="fas fa-spinner fa-spin"></i>
         </div>
-        <section class="content-inner content-area" data-search-indexing-allowed="true" v-show="filterResults.length > 0 && !loading">
-            <transition-group name="fadeIn" tag="div" class="registrar-list-container">
-                {% elementscontext edicy_model="Registrant" %}
+        <section class="content-inner content-area" data-search-indexing-allowed="true">
+            <div id="filter-container" class="registrar-list-container filter-container">
+                {% elementscontext edicy_all_languages="true" edicy_model="Registrant" edicy_page_path_prefix="registripidaja/akrediteeritud-registripidajad" %}
+
                     {% if editmode %}
-                        <article class="registrar--item" :key="-1">
+                        <article class="registrar--item">
                             <div class="registrar--logo">
                                 <i class="fas fa-plus"></i>
                             </div>
@@ -72,27 +69,58 @@
                             <p>{% addbutton element_type="Registrant" %}</p>
                         </article>
                     {% endif %}
-                    <article class="registrar--item" v-for="(result,index) in filterResults" :key="index">
+                {% for element in elements %}
+                {% assign filter_classes = "" %}
+                    {% if element.dnssec == true %}
+                    {% assign filter_classes = filter_classes | append: " dnssec" %}
+                    {% endif %}
+                    {% if element.ep == true %}
+                {% assign filter_classes = filter_classes | append: " ep" %}
+                    {% endif %}
+                    {% if element.short_url == true %}
+                {% assign filter_classes = filter_classes | append: " short_url" %}
+                    {% endif %}
+                    <article class="registrar--item registrar {{filter_classes}}">
                         <div class="registrar--services">
-                            <span v-if="result.values.dnssec" class="item" title="DNSSEC" style="background-image:url({{ assets_path }}/dns.svg)"></span>
-                            <span v-if="result.values.ep" class="item" title="Elite Partner" style="background-image:url({{ assets_path }}/ep2.svg)"></span>
-                            <span v-if="result.values.short_url" class="item" title="Short URL" style="background-image:url({{ assets_path }}/short-url.svg)"></span>
+                            {% if element.dnssec == true %}
+                                <span class="item" title="DNSSEC" style="background-image:url({{ assets_path }}/dns.svg)"></span>
+                            {% endif %}
+                            {% if element.ep == true %}
+                            <span class="item" title="Elite Partner" style="background-image:url({{ assets_path }}/ep2.svg)"></span>
+                            {% endif %}
+                            {% if element.short_url == true %}
+                            <span class="item" title="Short URL" style="background-image:url({{ assets_path }}/short-url.svg)"></span>
+                            {% endif %}
                         </div>
-                        <a :href="result.website" class="registrar--logo">
-                            <i v-if="typeof result.values.logo === 'undefined'" class="fas fa-certificate"></i>
-                            <img v-else :src="result.values.logo" :alt="result.title">
+                        <a href="{{ element.website }}" target="_blank" class="registrar--logo">
+                            {% if element.logo != "" or element.logo %}
+                            <img src="{{ element.logo }}" alt="{{ element.title }}">
+                            {% else %}
+                            <i class="fas fa-certificate"></i>
+                            {% endif %}
                         </a>
-                        <h2>${ result.title }</h2>
-                        <p><a :href="result.values.website|urlify" class="registrar--url">${ result.values.website }</a></p>
+                        <h2 class="name">
+                            {{ element.title }}
+                        </h2>
+                        <p><a href="{{ element.website }}" target="_blank" class="registrar--url">
+                                {% assign parts_ee = element.website | split: ".ee/" %}
+                                {% assign domain_ee = parts_ee[0] %}
+
+                                {% assign parts_com = domain_ee | split: ".com/" %}
+                                {% assign domain = parts_com[0] %}
+
+                                {{ domain | replace_first: "https://", "" }}
+                            </a></p>
                         {% if editmode %}
-                            <p><a :href="result.public_url" class="btn btn--edit"><i class="fas fa-pencil-alt"></i><span>{{ label_edit }}</span></a></p>
+                            <p><a href="{{ element.url }}" class="btn btn--edit"><i class="fas fa-pencil-alt"></i><span>{{ label_edit }}</span></a></p>
                         {% endif %}
                     </article>
+                {% endfor %}
                 {% endelementscontext %}
-            </transition-group>
+            </div>
         </section>
         <transition name="fadeIn">
-            <div class="page--content" style="display: none;" v-show="!loading && !filterResults.length">
+            <div class="page--content" style="display: none;">
                 <div class="page--body u-content-styles">
                     {% contentblock name="noresults_block" publish_default_content="true" %}
                         <h2>Otsingule vastavaid tulemusi ei leitud</h2>
@@ -103,80 +131,67 @@
         </transition>
     </div>
 </main>
-<div class="mdl mdl--registrar" data-modal="dnssec">
-    <div class="mdl--container">
-        <header class="mdl--header">
-            <h2>DNSSEC</h2>
-            <a href="#" role="button" class="btn btn--close" data-close-modal>
-                <i class="fas fa-times"></i>
-            </a>
-        </header>
-        <div class="mdl--content">
-            <article class="u-content-styles">
-                {% contentblock name="dnssec-desc" publish_default_content="true" %}
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu tortor, ac
-                        lobortis metus luctus ac. Donec ornare mi a orci consectetur.</p>
-                {% endcontentblock %}
-            </article>
-            <div class="mdl--actions">
-                <button class="btn btn--primary" data-close-modal>{{ label_close }}</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="mdl mdl--registrar" data-modal="elite-partner">
-    <div class="mdl--container">
-        <header class="mdl--header">
-            <h2>Elite partner</h2>
-            <a href="#" role="button" class="btn btn--close" data-close-modal>
-                <i class="fas fa-times"></i>
-            </a>
-        </header>
-        <div class="mdl--content">
-            <article class="u-content-styles">
-                {% contentblock name="elite-partner-desc" publish_default_content="true" %}
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu tortor, ac
-                        lobortis metus luctus ac. Donec ornare mi a orci consectetur.</p>
-                {% endcontentblock %}
-            </article>
-            <div class="mdl--actions">
-                <button class="btn btn--primary" data-close-modal>{{ label_close }}</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="mdl mdl--registrar" data-modal="short_url">
-    <div class="mdl--container">
-        <header class="mdl--header">
-            <h2>{{ label_short_periods }}</h2>
-            <a href="#" role="button" class="btn btn--close" data-close-modal>
-                <i class="fas fa-times"></i>
-            </a>
-        </header>
-        <div class="mdl--content">
-            <article class="u-content-styles">
-                {% contentblock name="short_url-desc" publish_default_content="true" %}
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu tortor, ac
-                        lobortis metus luctus ac. Donec ornare mi a orci consectetur.</p>
-                {% endcontentblock %}
-            </article>
-            <div class="mdl--actions">
-                <button class="btn btn--primary" data-close-modal>{{ label_close }}</button>
-            </div>
-        </div>
-    </div>
-</div>
 {% include "footer" %}
-{% if editmode %}
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-{% else %}
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-{% endif %}
-<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
 {% include "site-javascripts" %}
 
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script>
-    var lang = '{{ page.language_code }}';
+    $(document).ready(function(){
+        // Initialize Isotope
+        var $grid = $('#filter-container').isotope({
+            itemSelector: '.registrar',
+            layoutMode: 'fitRows',
+            getSortData: {
+                name: function(itemElem) {
+                    // Get the text content of the element and convert it to lowercase
+                    return $(itemElem).find('.name').text().toLowerCase();
+                },
+                classCount: function(itemElem) {
+                    // Count how many of the specified classes the item has
+                    var badgeClasses = ['dnssec', 'ep', 'short_url']; // List of badge classes
+                    var count = 0;
+                    badgeClasses.forEach(function(cls) {
+                        if ($(itemElem).hasClass(cls)) count++;
+                    });
+                    // Return a negative count to have items with more badges come first
+                    return -count;
+                }
+            },
+
+            sortBy: ['classCount', 'name'] // Sort by class count first, then by name
+        });
+
+
+        // Filtering based on checkboxes
+        $('.filter-checkbox').change(function(){
+            var filters = [];
+            $('.filter-checkbox:checked').each(function(){
+                filters.push($(this).attr('data-filter'));
+            });
+            var filterValue = filters.join(', ');
+            $grid.isotope({ filter: filterValue });
+            $grid.isotope({ sortBy: ['classCount', 'name'] });
+        });
+
+        // Filtering based on search input
+        $('#search-filter').on('input', function() {
+            var searchValue = $(this).val().toLowerCase();
+            $grid.isotope({
+                filter: function() {
+                    return $(this).text().toLowerCase().includes(searchValue);
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+<script>
+    /* var lang = '{{ page.language_code }}';
+    Vue.config.productionTip = false;
     new Vue({
         delimiters: ['${', '}'],
         el: '#app',
@@ -284,7 +299,8 @@
                 });
             }
         }
-    });
+    }); */
 </script>
+{% include "footer-scripts" %}
 </body>
 </html>
