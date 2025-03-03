@@ -22,37 +22,64 @@
         <section class="content-inner content-area" data-search-indexing-allowed="true">
             <div style="margin: 4rem 0 2rem">
                 <div class="registrar-list-container" style="display: flex; justify-content: center">
-                    <article class="registrar--item">
+                    <article class="registrar--item registrar--profile">
                         <div class="registrar--services"><!----></div>
+												{% if editmode %}
                         <a class="registrar--logo" style="height: 180px; display: flex; justify-content: center">
                             {% editable element.logo %}
                         </a>
+												{% else %}
+													{% if element.logo and element.logo != "" %}
+														<div style="height: 180px; display: flex; justify-content: center">
+															<img src="{{ element.logo }}" alt="{{ element.title }}" class="registrar--logo">
+														</div>
+													{% endif %}
+												{% endif %}
                         <h2 style="margin-bottom: 10px">{% editable element.title %}</h2>
-                        <p><a class="registrar--url">{% editable element.website %}</a></p>
+                        <p>
+													{% if editmode %}
+														<a class="registrar--url">{% editable element.website %}</a>
+													{% else %}
+														<a class="registrar--url" href="{{element.website}}" target="_blank">{{ element.website }}</a>
+													{% endif %}
+												</p>
 
                         <div style="margin-top: 1rem">
-                            <div style="display: flex; gap: 1rem;">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
                                 <span title="Elite Partner"
                                       style="display: block; height: 24px; width: 24px; background: none no-repeat 50%/cover; background-image: none; background-image: url(/assets/ep2.svg);"></span>
-                                {% editable element.ep %}
+																{% if editmode %}
+                                	{% editable element.ep %}
+																{% else %}
+																	{% if element.ep %}<i class="fa fa-check text-success"></i>{% else %}<i class="fa fa-times text-error"></i>{% endif %}
+																{% endif %}
+																
                             </div>
                             <div style="margin-top: 1rem">
-                                <div style="display: flex; gap: 1rem;">
+                                <div style="display: flex; gap: 1rem; align-items: center;">
                                     <span title="DNSSEC" class="item"
                                           style="display: block; height: 24px; width: 24px; background: none no-repeat 50%/cover; background-image: url('/assets/dns.svg');"></span>
-                                    {% editable element.dnssec %}
+																		{% if editmode %}
+	                                    {% editable element.dnssec %}
+																		{% else %}
+																			{% if element.dnssec %}<i class="fa fa-check text-success"></i>{% else %}<i class="fa fa-times text-error"></i>{% endif %}
+																		{% endif %}
                                 </div>
                             </div>
                             <div style="margin-top: 1rem">
-                                <div style="display: flex; gap: 1rem;">
+                                <div style="display: flex; gap: 1rem; align-items: center;">
                                     <span title="DNSSEC" class="item"
                                           style="display: block; height: 24px; width: 24px; background: none no-repeat 50%/cover; background-image: url('/assets/short-url.svg');"></span>
-                                    {% editable element.short_url %}
+																		{% if editmode %}
+	                                    {% editable element.short_url %}
+																		{% else %}
+																			{% if element.short_url %}<i class="fa fa-check text-success"></i>{% else %}<i class="fa fa-times text-error"></i>{% endif %}
+																		{% endif %}
                                 </div>
                             </div>
 
                             <div style="margin-top: 2rem">
-                                <label style="font-weight: bold;" for="">Customer service:</label>
+                                <label style="font-weight: bold;" for="">{{ customer_service }}:</label>
                                 {% editable element.customer_service %}
                             </div>
                             <div style="margin-top: 1rem">
@@ -60,15 +87,15 @@
                                 {% editable element.phone %}
                             </div>
                             <div style="margin-top: 1rem">
-                                <label style="font-weight: bold;" for="">Customer service:</label>
+                                <label style="font-weight: bold;" for="">{{ customer_service }}:</label>
                                 {% editable element.email %}
                             </div>
                             <div style="margin-top: 1rem">
-                                <label style="font-weight: bold;" for="">Languages:<br> <small>Seperate with comma: ENG, EST</small></label>
+                                <label style="font-weight: bold;" for="">{{ label_languages }}: {% if editmode %}<br> <small>Seperate with comma: ENG, EST</small>{% endif %}</label>
                                 {% editable element.languages %}
                             </div>
                             <div style="margin-top: 1rem">
-                                <label style="font-weight: bold;" for="">Identification Methods:</label>
+                                <label style="font-weight: bold;" for="">{{ identification_methods }}:</label>
                                 {% editable element.identification_methods %}
                             </div>
                         </div>

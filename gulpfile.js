@@ -70,6 +70,9 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.charts = charts;
 exports.print = print;
-exports.watch = () =>
-  watch([paths.styles, paths.scripts], styles, scripts, charts);
+exports.watch = () => {
+  watch(paths.styles, styles);
+  watch(paths.scripts, scripts);
+  watch(paths.js.charts, charts);
+};
 exports.default = series(styles, scripts, charts, print);

@@ -57,7 +57,7 @@
         </div>
         <section class="content-inner content-area" data-search-indexing-allowed="true">
             <div id="filter-container" class="registrar-list-container filter-container">
-                {% elementscontext edicy_all_languages="true" edicy_model="Registrant" edicy_page_path_prefix="registripidaja/akrediteeritud-registripidajad" %}
+                {% elementscontext edicy_all_languages="false" edicy_model="Registrant" edicy_page_path_prefix=page.path %}
 
                     {% if editmode %}
                         <article class="registrar--item">
@@ -92,7 +92,7 @@
                             <span class="item" title="Short URL" style="background-image:url({{ assets_path }}/short-url.svg)"></span>
                             {% endif %}
                         </div>
-                        <a href="{{ element.website }}" target="_blank" class="registrar--logo">
+                        <a href="{{ element.url }}" class="registrar--logo">
                             {% if element.logo != "" or element.logo %}
                             <img src="{{ element.logo }}" alt="{{ element.title }}">
                             {% else %}
@@ -102,7 +102,7 @@
                         <h2 class="name">
                             {{ element.title }}
                         </h2>
-                        <p><a href="{{ element.website }}" target="_blank" class="registrar--url">
+                        <p><a href="{{ element.url }}" class="registrar--url">
                                 {% assign parts_ee = element.website | split: ".ee/" %}
                                 {% assign domain_ee = parts_ee[0] %}
 

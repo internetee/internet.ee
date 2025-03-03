@@ -5,18 +5,32 @@
             {% editable article.excerpt %}
         </div>
         {% if article.image %}
-        <div class="article--image">
-            <img src="{{ article.image.for-width-1024.schemeless_url }}" alt="{{ article.title }}">
-        </div>
+        <figure class="article--image">
+						<img src="{{ article.image.for-width-1024.schemeless_url }}" alt="{{ article.title }}">
+
+						{% if editmode %}
+							<figcaption>{% content name="article-image-description" bind="Article" single="text" placeholder="Image title" %}</figcaption>
+						{% else %}
+							{% capture figcaption %}{% content name="article-image-description" bind="Article" single="text" %}{% endcapture %}
+							{% if figcaption != '' %}
+								<figcaption class="mt-5">{{ figcaption }}</figcaption>
+							{% endif %}
+						{% endif %}
+        </figure>
         {% endif %}
         {% editable article.body %}
+				<div>
+					{% content name="article_additional_content" bind="Article" %}
+				</div>
         <div class="columns">
-            <div class="col">
-                {% if editmode %}
-                <h2>Galerii</h2>
-                {% endif %}
-                {% content name="gallery_block" bind="Article" %}
-            </div>
+					<div class="col">
+						{% if editmode %}
+						<h2>Galerii</h2>
+						{% endif %}
+						{% content name="gallery_block" bind="Article" %}
+					</div>
+
+					
         </div>
         <div class="columns">
             <div class="col file-col">
@@ -46,7 +60,16 @@
             <div class="article--data">
                 {% if editmode %}
                     <div class="item article--type">
+											{% include "blog-post-types" %}
+											<select name="article[type]" id="article-type">
+												<option value="">- Tüüp -</option>
+												{% for type in articleTypes %}
+													<option value="{{ type }}" {% if type == article.data.type %}selected{% endif %}>{{ type }}</option>
+												{% endfor %}
+											</select>
+											{% comment %}
                         <input type="text" name="article[type]" placeholder="Kirjuta sisu tüüp siia" value="{{ article.data.type }}"/>
+											{% endcomment %}
                     </div>
                 {% else %}
                     {% if article.data.type.length > 1 %}
@@ -54,9 +77,27 @@
                     {% endif %}
                 {% endif %}
                 {% if editmode %}
-                    <div class="item article--topic">
-                        <input type="text" name="article[topic]" placeholder="Kirjuta teema siia" value="{{ article.data.topic }}"/>
-                    </div>
+										<div>
+											<div class="item article--topic">
+													<input type="text" name="article[topic]" placeholder="Kirjuta teema siia" value="{{ article.data.topic }}"/>
+													<select name="article[topicselect]">
+														<option value="">- Vali teema -</option>
+														{% assign topics = '' | split: ',' %}
+														{% for article in site.latest_60_articles %}
+														{% unless article.page.node_id == 2089647 %}
+														{% assign topicName = article.data.topic | split: ',' %}
+														{% assign topics = topics | concat: topicName %}
+														{% endunless %}
+														{% endfor %}
+														{% assign topics = topics | uniq | sort_natural %}
+														{% for topic in topics %}
+														{% assign topic = topic | strip %}
+														<option value="{{ topic }}" {% if topic==article.data.topic %}selected{% endif %}>{{ topic }}</option>
+														{% endfor %}
+													</select>
+											</div>
+
+										</div>
                 {% else %}
                     {% if article.data.topic.length > 1 %}
                         <a href="{{ article.page.url }}?topic={{ article.data.topic }}" class="item article--topic">{{ article.data.topic }}</a>
@@ -86,8 +127,7 @@
                 <div class="comments--list">
                     {% for comment in article.comments %}
                         <article class="comment">
-                            <div class="comment-author"><strong>{{ comment.author }}</strong><span
-                                        class="comment-date">{{ comment.created_at  | date: "%d.%m.%Y" }}</span>{% removebutton %}
+                            <div class="comment-author"><span class="comment-date">{{ comment.created_at  | date: "%d.%m.%Y" }}</span>{% removebutton %}
                             </div>
                             <div class="comment-body"><p>{{ comment.body }}</p></div>
                         </article>
@@ -100,9 +140,11 @@
             {% endif %}
             {% unless editmode %}
                 <div class="article-commentform u-content-styles">
+									
                     {% commentform %}
                         <div class="form_area">
                             <div class="form_fields">
+															<div class="d-none">
                                 <div class="form_field{% if comment_name_error %} form_field_with_errors{% endif %}">
                                     {% if comment_name_error %}
                                         <label class="form_field_error"
@@ -111,7 +153,7 @@
                                         <label for="comment-form-name">{{ "name" | lc }}</label>
                                     {% endif %}
                                     <input id="comment-form-name" class="form_field_textfield form_field_size_small"
-                                           name="comment[author]" value="{{ comment.author }}">
+                                           name="comment[author]" value="Külaline">
                                 </div>
                                 <div class="form_field{% if comment_email_error %} form_field_with_errors{% endif %}">
                                     {% if comment_email_error %}
@@ -121,8 +163,9 @@
                                         <label for="comment-form-name">{{ "email" | lc }}</label>
                                     {% endif %}
                                     <input id="comment-form-email" class="form_field_textfield form_field_size_small"
-                                           name="comment[author_email]" value="{{ comment.author_email }}">
+                                           name="comment[author_email]" value="kylaline@internet.ee">
                                 </div>
+															</div>
                                 <div class="form_field{% if comment_body_error %} form_field_with_errors{% endif %}">
                                     {% if comment_body_error %}
                                         <label class="form_field_error"
@@ -133,9 +176,11 @@
                                     <textarea id="comment-form-body" class="form_field_textarea form_field_size_medium"
                                               name="comment[body]" rows="4">{{ comment.body }}</textarea>
                                 </div>
+																{% comment %}
                                 <div class="form_field">
                                     <div class="g-recaptcha"></div>
                                 </div>
+																{% endcomment %}
                             </div>
                             <div class="form_submit">
                                 <input type="submit" value="{{ 'submit_comment' | lc }}">

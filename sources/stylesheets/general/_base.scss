@@ -293,3 +293,13 @@ ul, ol {
     @include btn02();
   }
 }
+
+.text {
+	&-error {
+		color: $error-color;
+	}
+
+	&-success {
+		color: $success-color;
+	}
+}

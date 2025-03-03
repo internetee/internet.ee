@@ -1,0 +1,127 @@
+@mixin grid($size: '') {
+	// @include columns($size);
+	@include spacing($size);
+	@include display($size);
+	// @include width($size);
+	// @include height($size);
+	// @include flex($size);
+	// @include position($size);
+	// @include item-spacing($size);
+	// @include border($size);
+}
+
+@mixin spacing($size: '') {
+	@if $size !='' {
+		$size: '-' + $size;
+	}
+
+	@for $i from 0 through 200 {
+		@if ($i % 5)==0 {
+			.p {
+				&t#{$size}-#{$i} {
+					padding-top: #{$i}px;
+				}
+
+				&r#{$size}-#{$i} {
+					padding-right: #{$i}px;
+				}
+
+				&b#{$size}-#{$i} {
+					padding-bottom: #{$i}px;
+				}
+
+				&l#{$size}-#{$i} {
+					padding-left: #{$i}px;
+				}
+
+				&x#{$size}-#{$i} {
+					padding-left: #{$i}px;
+					padding-right: #{$i}px;
+				}
+
+				&y#{$size}-#{$i} {
+					padding-top: #{$i}px;
+					padding-bottom: #{$i}px;
+				}
+			}
+
+			.m {
+				&t#{$size}-#{$i} {
+					margin-top: #{$i}px;
+				}
+
+				&r#{$size}-#{$i} {
+					margin-right: #{$i}px;
+				}
+
+				&b#{$size}-#{$i} {
+					margin-bottom: #{$i}px;
+				}
+
+				&l#{$size}-#{$i} {
+					margin-left: #{$i}px;
+				}
+			}
+		}
+	}
+}
+
+@mixin display($size: '') {
+	@if $size !='' {
+		$size: '-' + $size;
+	}
+
+	.d {
+		&#{$size}-flex {
+			display: flex !important;
+		}
+
+		&#{$size}-inline-flex {
+			display: inline-flex !important;
+		}
+
+		&#{$size}-block {
+			display: block !important;
+		}
+
+		&#{$size}-inline-block {
+			display: inline-block;
+		}
+
+		&#{$size}-inline {
+			display: inline;
+		}
+
+		&#{$size}-none {
+			display: none !important;
+		}
+	}
+}
+
+// $desktop-1: 1600px;
+// $tablet-1: 1024px;
+// $tablet-2: 768px;
+// $tablet-3: 640px;
+// $mobile-1: 480px;
+// $mobile-2: 320px;
+
+@include grid();
+
+@media (min-width: $mobile-2) {
+	@include grid('xs');
+}
+@media (min-width: $mobile-1) {
+	@include grid('sm');
+}
+@media (min-width: $tablet-3) {
+	@include grid('md');
+}
+@media (min-width: $tablet-2) {
+	@include grid('lg');
+}
+@media (min-width: $tablet-1) {
+	@include grid('xl');
+}
+@media (min-width: $desktop-1) {
+	@include grid('xxl');
+}
