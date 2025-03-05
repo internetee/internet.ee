@@ -1,3129 +1,3176 @@
 {
+  "description": "New design",
+  "name": "New design",
+  "preview_medium": "",
+  "preview_small": "",
+  "author": "",
   "layouts": [
     {
-      "title": "accordion-anchors",
+      "content_type": "component",
+      "component": true,
+      "file": "components/accordion-anchors.tpl",
       "layout_name": "accordion-anchors",
-      "content_type": "component",
-      "component": true,
-      "file": "components/accordion-anchors.tpl"
+      "title": "accordion-anchors"
     },
     {
-      "title": "accordion",
+      "content_type": "component",
+      "component": true,
+      "file": "components/accordion.tpl",
       "layout_name": "accordion",
-      "content_type": "component",
-      "component": true,
-      "file": "components/accordion.tpl"
+      "title": "accordion"
     },
     {
-      "title": "blog-article-single",
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-single.tpl",
       "layout_name": "blog-article-single",
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-article-single.tpl"
+      "title": "blog-article-single"
     },
     {
-      "title": "blog-article-template",
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-template.tpl",
       "layout_name": "blog-article-template",
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-article-template.tpl"
+      "title": "blog-article-template"
     },
     {
-      "title": "blog-post-types",
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-post-types.tpl",
       "layout_name": "blog-post-types",
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-post-types.tpl"
+      "title": "blog-post-types"
     },
     {
-      "title": "cookie-consent",
+      "content_type": "component",
+      "component": true,
+      "file": "components/cookie-consent.tpl",
       "layout_name": "cookie-consent",
-      "content_type": "component",
-      "component": true,
-      "file": "components/cookie-consent.tpl"
+      "title": "cookie-consent"
     },
     {
-      "title": "cookie-modal",
+      "content_type": "component",
+      "component": true,
+      "file": "components/cookie-modal.tpl",
       "layout_name": "cookie-modal",
-      "content_type": "component",
-      "component": true,
-      "file": "components/cookie-modal.tpl"
+      "title": "cookie-modal"
     },
     {
-      "title": "cta-three-col",
+      "content_type": "component",
+      "component": true,
+      "file": "components/cta-three-col.tpl",
       "layout_name": "cta-three-col",
-      "content_type": "component",
-      "component": true,
-      "file": "components/cta-three-col.tpl"
+      "title": "cta-three-col"
     },
     {
-      "title": "cta-two-col",
+      "content_type": "component",
+      "component": true,
+      "file": "components/cta-two-col.tpl",
       "layout_name": "cta-two-col",
-      "content_type": "component",
-      "component": true,
-      "file": "components/cta-two-col.tpl"
+      "title": "cta-two-col"
     },
     {
-      "title": "cta-type-2",
+      "content_type": "component",
+      "component": true,
+      "file": "components/cta-type-2.tpl",
       "layout_name": "cta-type-2",
-      "content_type": "component",
-      "component": true,
-      "file": "components/cta-type-2.tpl"
+      "title": "cta-type-2"
     },
     {
-      "title": "cta",
+      "content_type": "component",
+      "component": true,
+      "file": "components/cta.tpl",
       "layout_name": "cta",
-      "content_type": "component",
-      "component": true,
-      "file": "components/cta.tpl"
+      "title": "cta"
     },
     {
-      "title": "deletion-graph-data",
+      "content_type": "component",
+      "component": true,
+      "file": "components/deletion-graph-data.tpl",
       "layout_name": "deletion-graph-data",
-      "content_type": "component",
-      "component": true,
-      "file": "components/deletion-graph-data.tpl"
+      "title": "deletion-graph-data"
     },
     {
-      "title": "dnssec-graph-data",
+      "content_type": "component",
+      "component": true,
+      "file": "components/dnssec-graph-data.tpl",
       "layout_name": "dnssec-graph-data",
-      "content_type": "component",
-      "component": true,
-      "file": "components/dnssec-graph-data.tpl"
+      "title": "dnssec-graph-data"
     },
     {
-      "title": "document-selector-article",
+      "content_type": "component",
+      "component": true,
+      "file": "components/document-selector-article.tpl",
       "layout_name": "document-selector-article",
-      "content_type": "component",
-      "component": true,
-      "file": "components/document-selector-article.tpl"
+      "title": "document-selector-article"
     },
     {
-      "title": "document-selector",
+      "content_type": "component",
+      "component": true,
+      "file": "components/document-selector.tpl",
       "layout_name": "document-selector",
-      "content_type": "component",
-      "component": true,
-      "file": "components/document-selector.tpl"
+      "title": "document-selector"
     },
     {
-      "title": "documents-list",
+      "content_type": "component",
+      "component": true,
+      "file": "components/documents-list.tpl",
       "layout_name": "documents-list",
-      "content_type": "component",
-      "component": true,
-      "file": "components/documents-list.tpl"
+      "title": "documents-list"
     },
     {
-      "title": "domain-auctions-row",
+      "content_type": "component",
+      "component": true,
+      "file": "components/domain-auctions-row.tpl",
       "layout_name": "domain-auctions-row",
-      "content_type": "component",
-      "component": true,
-      "file": "components/domain-auctions-row.tpl"
+      "title": "domain-auctions-row"
     },
     {
-      "title": "domain-auctions",
+      "content_type": "component",
+      "component": true,
+      "file": "components/domain-auctions.tpl",
       "layout_name": "domain-auctions",
-      "content_type": "component",
-      "component": true,
-      "file": "components/domain-auctions.tpl"
+      "title": "domain-auctions"
     },
     {
-      "title": "domain-search-form",
+      "content_type": "component",
+      "component": true,
+      "file": "components/domain-search-form.tpl",
       "layout_name": "domain-search-form",
-      "content_type": "component",
-      "component": true,
-      "file": "components/domain-search-form.tpl"
+      "title": "domain-search-form"
     },
     {
-      "title": "domain-search-new",
+      "content_type": "component",
+      "component": true,
+      "file": "components/domain-search-new.tpl",
       "layout_name": "domain-search-new",
-      "content_type": "component",
-      "component": true,
-      "file": "components/domain-search-new.tpl"
+      "title": "domain-search-new"
     },
     {
-      "title": "domain-search",
+      "content_type": "component",
+      "component": true,
+      "file": "components/domain-search.tpl",
       "layout_name": "domain-search",
-      "content_type": "component",
-      "component": true,
-      "file": "components/domain-search.tpl"
+      "title": "domain-search"
     },
     {
-      "title": "extend-graph-data",
+      "content_type": "component",
+      "component": true,
+      "file": "components/extend-graph-data.tpl",
       "layout_name": "extend-graph-data",
-      "content_type": "component",
-      "component": true,
-      "file": "components/extend-graph-data.tpl"
+      "title": "extend-graph-data"
     },
     {
-      "title": "faq-block",
+      "content_type": "component",
+      "component": true,
+      "file": "components/faq-block.tpl",
       "layout_name": "faq-block",
-      "content_type": "component",
-      "component": true,
-      "file": "components/faq-block.tpl"
+      "title": "faq-block"
     },
     {
-      "title": "footer-logo",
+      "content_type": "component",
+      "component": true,
+      "file": "components/footer-logo.tpl",
       "layout_name": "footer-logo",
-      "content_type": "component",
-      "component": true,
-      "file": "components/footer-logo.tpl"
+      "title": "footer-logo"
     },
     {
-      "title": "footer-scripts",
+      "content_type": "component",
+      "component": true,
+      "file": "components/footer-scripts.tpl",
       "layout_name": "footer-scripts",
-      "content_type": "component",
-      "component": true,
-      "file": "components/footer-scripts.tpl"
+      "title": "footer-scripts"
     },
     {
-      "title": "footer",
+      "content_type": "component",
+      "component": true,
+      "file": "components/footer.tpl",
       "layout_name": "footer",
-      "content_type": "component",
-      "component": true,
-      "file": "components/footer.tpl"
+      "title": "footer"
     },
     {
-      "title": "front-page-posts",
+      "content_type": "component",
+      "component": true,
+      "file": "components/front-page-posts.tpl",
       "layout_name": "front-page-posts",
-      "content_type": "component",
-      "component": true,
-      "file": "components/front-page-posts.tpl"
+      "title": "front-page-posts"
     },
     {
-      "title": "front-page-slider",
+      "content_type": "component",
+      "component": true,
+      "file": "components/front-page-slider.tpl",
       "layout_name": "front-page-slider",
-      "content_type": "component",
-      "component": true,
-      "file": "components/front-page-slider.tpl"
+      "title": "front-page-slider"
     },
     {
-      "title": "header",
+      "content_type": "component",
+      "component": true,
+      "file": "components/header.tpl",
       "layout_name": "header",
-      "content_type": "component",
-      "component": true,
-      "file": "components/header.tpl"
+      "title": "header"
     },
     {
-      "title": "help-topics",
+      "content_type": "component",
+      "component": true,
+      "file": "components/help-topics.tpl",
       "layout_name": "help-topics",
-      "content_type": "component",
-      "component": true,
-      "file": "components/help-topics.tpl"
+      "title": "help-topics"
     },
     {
-      "title": "hero-logo",
+      "content_type": "component",
+      "component": true,
+      "file": "components/hero-logo.tpl",
       "layout_name": "hero-logo",
-      "content_type": "component",
-      "component": true,
-      "file": "components/hero-logo.tpl"
+      "title": "hero-logo"
     },
     {
-      "title": "hero",
+      "content_type": "component",
+      "component": true,
+      "file": "components/hero.tpl",
       "layout_name": "hero",
-      "content_type": "component",
-      "component": true,
-      "file": "components/hero.tpl"
+      "title": "hero"
     },
     {
-      "title": "html-head",
+      "content_type": "component",
+      "component": true,
+      "file": "components/html-head.tpl",
       "layout_name": "html-head",
-      "content_type": "component",
-      "component": true,
-      "file": "components/html-head.tpl"
+      "title": "html-head"
     },
     {
-      "title": "idn-graph-data",
+      "content_type": "component",
+      "component": true,
+      "file": "components/idn-graph-data.tpl",
       "layout_name": "idn-graph-data",
-      "content_type": "component",
-      "component": true,
-      "file": "components/idn-graph-data.tpl"
+      "title": "idn-graph-data"
     },
     {
-      "title": "lang-switch",
+      "content_type": "component",
+      "component": true,
+      "file": "components/lang-switch.tpl",
       "layout_name": "lang-switch",
-      "content_type": "component",
-      "component": true,
-      "file": "components/lang-switch.tpl"
+      "title": "lang-switch"
     },
     {
-      "title": "latest-news",
+      "content_type": "component",
+      "component": true,
+      "file": "components/latest-news.tpl",
       "layout_name": "latest-news",
-      "content_type": "component",
-      "component": true,
-      "file": "components/latest-news.tpl"
+      "title": "latest-news"
     },
     {
-      "title": "map-graph-data",
+      "content_type": "component",
+      "component": true,
+      "file": "components/map-graph-data.tpl",
       "layout_name": "map-graph-data",
-      "content_type": "component",
-      "component": true,
-      "file": "components/map-graph-data.tpl"
+      "title": "map-graph-data"
     },
     {
-      "title": "menu-language",
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-language.tpl",
       "layout_name": "menu-language",
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-language.tpl"
+      "title": "menu-language"
     },
     {
-      "title": "menu-main",
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-main.tpl",
       "layout_name": "menu-main",
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-main.tpl"
+      "title": "menu-main"
     },
     {
-      "title": "menu-sub",
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-sub.tpl",
       "layout_name": "menu-sub",
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-sub.tpl"
+      "title": "menu-sub"
     },
     {
-      "title": "new-footer",
+      "content_type": "component",
+      "component": true,
+      "file": "components/new-footer.tpl",
       "layout_name": "new-footer",
-      "content_type": "component",
-      "component": true,
-      "file": "components/new-footer.tpl"
+      "title": "new-footer"
     },
     {
-      "title": "new-header",
+      "content_type": "component",
+      "component": true,
+      "file": "components/new-header.tpl",
       "layout_name": "new-header",
-      "content_type": "component",
-      "component": true,
-      "file": "components/new-header.tpl"
+      "title": "new-header"
     },
     {
-      "title": "new-homepage",
+      "content_type": "component",
+      "component": true,
+      "file": "components/new-homepage.tpl",
       "layout_name": "new-homepage",
-      "content_type": "component",
-      "component": true,
-      "file": "components/new-homepage.tpl"
+      "title": "new-homepage"
     },
     {
-      "title": "news-sidebar",
+      "content_type": "component",
+      "component": true,
+      "file": "components/news-sidebar.tpl",
       "layout_name": "news-sidebar",
-      "content_type": "component",
-      "component": true,
-      "file": "components/news-sidebar.tpl"
+      "title": "news-sidebar"
     },
     {
-      "title": "old-homepage",
+      "content_type": "component",
+      "component": true,
+      "file": "components/old-homepage.tpl",
       "layout_name": "old-homepage",
-      "content_type": "component",
-      "component": true,
-      "file": "components/old-homepage.tpl"
+      "title": "old-homepage"
     },
     {
-      "title": "open-graph",
+      "content_type": "component",
+      "component": true,
+      "file": "components/open-graph.tpl",
       "layout_name": "open-graph",
-      "content_type": "component",
-      "component": true,
-      "file": "components/open-graph.tpl"
+      "title": "open-graph"
     },
     {
-      "title": "pagehead",
+      "content_type": "component",
+      "component": true,
+      "file": "components/pagehead.tpl",
       "layout_name": "pagehead",
-      "content_type": "component",
-      "component": true,
-      "file": "components/pagehead.tpl"
+      "title": "pagehead"
     },
     {
-      "title": "register-graph-data",
+      "content_type": "component",
+      "component": true,
+      "file": "components/register-graph-data.tpl",
       "layout_name": "register-graph-data",
-      "content_type": "component",
-      "component": true,
-      "file": "components/register-graph-data.tpl"
+      "title": "register-graph-data"
     },
     {
-      "title": "search-dialog",
+      "content_type": "component",
+      "component": true,
+      "file": "components/search-dialog.tpl",
       "layout_name": "search-dialog",
-      "content_type": "component",
-      "component": true,
-      "file": "components/search-dialog.tpl"
+      "title": "search-dialog"
     },
     {
-      "title": "search-form",
+      "content_type": "component",
+      "component": true,
+      "file": "components/search-form.tpl",
       "layout_name": "search-form",
-      "content_type": "component",
-      "component": true,
-      "file": "components/search-form.tpl"
+      "title": "search-form"
     },
     {
-      "title": "site-footer",
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-footer.tpl",
       "layout_name": "site-footer",
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-footer.tpl"
+      "title": "site-footer"
     },
     {
-      "title": "site-javascripts",
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-javascripts.tpl",
       "layout_name": "site-javascripts",
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-javascripts.tpl"
+      "title": "site-javascripts"
     },
     {
-      "title": "site-search",
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-search.tpl",
       "layout_name": "site-search",
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-search.tpl"
+      "title": "site-search"
     },
     {
-      "title": "site-translations",
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-translations.tpl",
       "layout_name": "site-translations",
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-translations.tpl"
+      "title": "site-translations"
     },
     {
-      "title": "socials",
+      "content_type": "component",
+      "component": true,
+      "file": "components/socials.tpl",
       "layout_name": "socials",
-      "content_type": "component",
-      "component": true,
-      "file": "components/socials.tpl"
+      "title": "socials"
     },
     {
-      "title": "spacer",
+      "content_type": "component",
+      "component": true,
+      "file": "components/spacer.tpl",
       "layout_name": "spacer",
-      "content_type": "component",
-      "component": true,
-      "file": "components/spacer.tpl"
+      "title": "spacer"
     },
     {
-      "title": "stats-script",
+      "content_type": "component",
+      "component": true,
+      "file": "components/stats-script.tpl",
       "layout_name": "stats-script",
-      "content_type": "component",
-      "component": true,
-      "file": "components/stats-script.tpl"
+      "title": "stats-script"
     },
     {
-      "title": "steps-block",
+      "content_type": "component",
+      "component": true,
+      "file": "components/steps-block.tpl",
       "layout_name": "steps-block",
-      "content_type": "component",
-      "component": true,
-      "file": "components/steps-block.tpl"
+      "title": "steps-block"
     },
     {
-      "title": "toolbar",
+      "content_type": "component",
+      "component": true,
+      "file": "components/toolbar.tpl",
       "layout_name": "toolbar",
-      "content_type": "component",
-      "component": true,
-      "file": "components/toolbar.tpl"
+      "title": "toolbar"
     },
     {
-      "title": "top-menu-translations",
+      "content_type": "component",
+      "component": true,
+      "file": "components/top-menu-translations.tpl",
       "layout_name": "top-menu-translations",
-      "content_type": "component",
-      "component": true,
-      "file": "components/top-menu-translations.tpl"
+      "title": "top-menu-translations"
     },
     {
-      "title": "total-graph-data",
+      "content_type": "component",
+      "component": true,
+      "file": "components/total-graph-data.tpl",
       "layout_name": "total-graph-data",
-      "content_type": "component",
-      "component": true,
-      "file": "components/total-graph-data.tpl"
+      "title": "total-graph-data"
     },
     {
-      "title": "voog-tools-styles",
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools-styles.tpl",
       "layout_name": "voog-tools-styles",
-      "content_type": "component",
-      "component": true,
-      "file": "components/voog-tools-styles.tpl"
+      "title": "voog-tools-styles"
     },
     {
-      "title": "voog-tools-variables",
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools-variables.tpl",
       "layout_name": "voog-tools-variables",
-      "content_type": "component",
-      "component": true,
-      "file": "components/voog-tools-variables.tpl"
+      "title": "voog-tools-variables"
     },
     {
-      "title": "voog-tools",
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools.tpl",
       "layout_name": "voog-tools",
-      "content_type": "component",
-      "component": true,
-      "file": "components/voog-tools.tpl"
+      "title": "voog-tools"
     },
     {
-      "title": "Abi & info leht",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/abi___info_leht.tpl",
       "layout_name": "abi___info_leht",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/abi___info_leht.tpl"
+      "title": "Abi & info leht"
     },
     {
-      "title": "Abi & info leht element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/abi___info_leht_element.tpl",
       "layout_name": "abi___info_leht_element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/abi___info_leht_element.tpl"
+      "title": "Abi & info leht element"
     },
     {
-      "title": "Ajalugu",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/ajalugu.tpl",
       "layout_name": "ajalugu",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/ajalugu.tpl"
+      "title": "Ajalugu"
     },
     {
-      "title": "Ajalugu element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/ajalugu_element.tpl",
       "layout_name": "ajalugu_element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/ajalugu_element.tpl"
+      "title": "Ajalugu element"
     },
     {
-      "title": "Avalehe (Ära kasuta) element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/avalehe___ra_kasuta__element.tpl",
       "layout_name": "avalehe___ra_kasuta__element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/avalehe___ra_kasuta__element.tpl"
+      "title": "Avalehe (Ära kasuta) element"
     },
     {
-      "title": "Avalehe element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/avalehe_element.tpl",
       "layout_name": "avalehe_element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/avalehe_element.tpl"
+      "title": "Avalehe element"
     },
     {
-      "title": "Avaleht",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/avaleht.tpl",
       "layout_name": "avaleht",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/avaleht.tpl"
+      "title": "Avaleht"
     },
     {
-      "title": "Avaleht (Ära kasuta)",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/avaleht___ra_kasuta_.tpl",
       "layout_name": "avaleht___ra_kasuta_",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/avaleht___ra_kasuta_.tpl"
+      "title": "Avaleht (Ära kasuta)"
     },
     {
-      "title": "Avaleht  avalik ",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/avaleht__avalik_.tpl",
       "layout_name": "avaleht__avalik_",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/avaleht__avalik_.tpl"
+      "title": "Avaleht  avalik "
     },
     {
-      "title": "Avaleht (Avalik) element",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/avaleht__avalik__element.tpl",
       "layout_name": "avaleht__avalik__element",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/avaleht__avalik__element.tpl"
+      "title": "Avaleht (Avalik) element"
     },
     {
-      "title": "Avaleht (registripidaja)",
-      "layout_name": "avaleht__registripidaja_",
       "content_type": "elements",
       "component": false,
-      "file": "layouts/avaleht__registripidaja_.tpl"
+      "file": "layouts/avaleht__registripidaja_.tpl",
+      "layout_name": "avaleht__registripidaja_",
+      "title": "Avaleht (registripidaja)"
     },
     {
-      "title": "Avaleht (registripidaja) element",
-      "layout_name": "avaleht__registripidaja__element",
       "content_type": "element",
       "component": false,
-      "file": "layouts/avaleht__registripidaja__element.tpl"
+      "file": "layouts/avaleht__registripidaja__element.tpl",
+      "layout_name": "avaleht__registripidaja__element",
+      "title": "Avaleht (registripidaja) element"
     },
     {
-      "title": "Blogi/Uudised (filtriga)",
-      "layout_name": "blogi_uudised__filtriga_",
       "content_type": "blog",
       "component": false,
-      "file": "layouts/blogi_uudised__filtriga_.tpl"
+      "file": "layouts/blogi_uudised__filtriga_.tpl",
+      "layout_name": "blogi_uudised__filtriga_",
+      "title": "Blogi/Uudised (filtriga)"
     },
     {
-      "title": "Blogi/Uudised detailvaade",
-      "layout_name": "blogi_uudised_detailvaade",
       "content_type": "blog_article",
       "component": false,
-      "file": "layouts/blogi_uudised_detailvaade.tpl"
+      "file": "layouts/blogi_uudised_detailvaade.tpl",
+      "layout_name": "blogi_uudised_detailvaade",
+      "title": "Blogi/Uudised detailvaade"
     },
     {
-      "title": "Common page with custom form",
-      "layout_name": "common_page_with_custom_form",
       "content_type": "page",
       "component": false,
-      "file": "layouts/common_page_with_custom_form.tpl"
+      "file": "layouts/common_page_with_custom_form.tpl",
+      "layout_name": "common_page_with_custom_form",
+      "title": "Common page with custom form"
     },
     {
-      "title": "cookie modal elements",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/cookie_modal_elements.tpl",
       "layout_name": "cookie_modal_elements",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/cookie_modal_elements.tpl"
+      "title": "cookie modal elements"
     },
     {
-      "title": "Document",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/document.tpl",
       "layout_name": "document",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/document.tpl"
+      "title": "Document"
     },
     {
-      "title": "Documents",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/documents.tpl",
       "layout_name": "documents",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/documents.tpl"
+      "title": "Documents"
     },
     {
-      "title": "Domeenioksjonid",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/domeenioksjonid.tpl",
       "layout_name": "domeenioksjonid",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/domeenioksjonid.tpl"
+      "title": "Domeenioksjonid"
     },
     {
-      "title": "Domeeniotsing",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/domeeniotsing.tpl",
       "layout_name": "domeeniotsing",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/domeeniotsing.tpl"
+      "title": "Domeeniotsing"
     },
     {
-      "title": "Domeeniotsing element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/domeeniotsing_element.tpl",
       "layout_name": "domeeniotsing_element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/domeeniotsing_element.tpl"
+      "title": "Domeeniotsing element"
     },
     {
-      "title": "EIS",
-      "layout_name": "eis",
       "content_type": "elements",
       "component": false,
-      "file": "layouts/eis.tpl"
+      "file": "layouts/eis.tpl",
+      "layout_name": "eis",
+      "title": "EIS"
     },
     {
-      "title": "EIS element",
-      "layout_name": "eis_element",
       "content_type": "element",
       "component": false,
-      "file": "layouts/eis_element.tpl"
+      "file": "layouts/eis_element.tpl",
+      "layout_name": "eis_element",
+      "title": "EIS element"
     },
     {
-      "title": "Error 401",
-      "layout_name": "error_401",
       "content_type": "error_401",
       "component": false,
-      "file": "layouts/error_401.tpl"
+      "file": "layouts/error_401.tpl",
+      "layout_name": "error_401",
+      "title": "Error 401"
     },
     {
-      "title": "Error 404",
-      "layout_name": "error_404",
       "content_type": "error_404",
       "component": false,
-      "file": "layouts/error_404.tpl"
+      "file": "layouts/error_404.tpl",
+      "layout_name": "error_404",
+      "title": "Error 404"
     },
     {
-      "title": "Forum",
+      "content_type": "blog",
+      "component": false,
+      "file": "layouts/forum.tpl",
       "layout_name": "forum",
-      "content_type": "blog",
-      "component": false,
-      "file": "layouts/forum.tpl"
+      "title": "Forum"
     },
     {
-      "title": "Forum topic",
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/forum_topic.tpl",
       "layout_name": "forum_topic",
-      "content_type": "blog_article",
-      "component": false,
-      "file": "layouts/forum_topic.tpl"
+      "title": "Forum topic"
     },
     {
-      "title": "Homepage-switch",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/homepage-switch.tpl",
       "layout_name": "homepage-switch",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/homepage-switch.tpl"
+      "title": "Homepage-switch"
     },
     {
-      "title": "Homepage",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/homepage.tpl",
       "layout_name": "homepage",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/homepage.tpl"
+      "title": "Homepage"
     },
     {
-      "title": "Ikooniplokid",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/ikooniplokid.tpl",
       "layout_name": "ikooniplokid",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/ikooniplokid.tpl"
+      "title": "Ikooniplokid"
     },
     {
-      "title": "Ikooniplokid element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/ikooniplokid_element.tpl",
       "layout_name": "ikooniplokid_element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/ikooniplokid_element.tpl"
+      "title": "Ikooniplokid element"
     },
     {
-      "title": "Kiirlingid",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/kiirlingid.tpl",
       "layout_name": "kiirlingid",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/kiirlingid.tpl"
+      "title": "Kiirlingid"
     },
     {
-      "title": "Kiirlingid element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/kiirlingid_element.tpl",
       "layout_name": "kiirlingid_element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/kiirlingid_element.tpl"
+      "title": "Kiirlingid element"
     },
     {
-      "title": "KKK",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/kkk.tpl",
       "layout_name": "kkk",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/kkk.tpl"
+      "title": "KKK"
     },
     {
-      "title": "KKK element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/kkk_element.tpl",
       "layout_name": "kkk_element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/kkk_element.tpl"
+      "title": "KKK element"
     },
     {
-      "title": "Landing  orange  campaign",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/landing__orange__campaign.tpl",
       "layout_name": "landing__orange__campaign",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/landing__orange__campaign.tpl"
+      "title": "Landing  orange  campaign"
     },
     {
-      "title": "Redirect",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/redirect.tpl",
       "layout_name": "redirect",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/redirect.tpl"
+      "title": "Redirect"
     },
     {
-      "title": "Registrar",
-      "layout_name": "registrar",
       "content_type": "element",
       "component": false,
-      "file": "layouts/registrar.tpl"
+      "file": "layouts/registrar.tpl",
+      "layout_name": "registrar",
+      "title": "Registrar"
     },
     {
-      "title": "Registripidajad",
-      "layout_name": "registripidajad",
       "content_type": "elements",
       "component": false,
-      "file": "layouts/registripidajad.tpl"
+      "file": "layouts/registripidajad.tpl",
+      "layout_name": "registripidajad",
+      "title": "Registripidajad"
     },
     {
-      "title": "Riigihanked",
-      "layout_name": "riigihanked",
       "content_type": "blog",
       "component": false,
-      "file": "layouts/riigihanked.tpl"
+      "file": "layouts/riigihanked.tpl",
+      "layout_name": "riigihanked",
+      "title": "Riigihanked"
     },
     {
-      "title": "Riigihankete detailvaade",
-      "layout_name": "riigihankete_detailvaade",
       "content_type": "blog_article",
       "component": false,
-      "file": "layouts/riigihankete_detailvaade.tpl"
+      "file": "layouts/riigihankete_detailvaade.tpl",
+      "layout_name": "riigihankete_detailvaade",
+      "title": "Riigihankete detailvaade"
     },
     {
-      "title": "Sõnaraamat",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/s_naraamat.tpl",
       "layout_name": "s_naraamat",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/s_naraamat.tpl"
+      "title": "Sõnaraamat"
     },
     {
-      "title": "Sõnaraamatu element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/s_naraamatu_element.tpl",
       "layout_name": "s_naraamatu_element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/s_naraamatu_element.tpl"
+      "title": "Sõnaraamatu element"
     },
     {
-      "title": "Sisuleht",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht.tpl",
       "layout_name": "sisuleht",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht.tpl"
+      "title": "Sisuleht"
     },
     {
-      "title": "Sisuleht (akkordion)",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_.tpl",
       "layout_name": "sisuleht__akkordion_",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/sisuleht__akkordion_.tpl"
+      "title": "Sisuleht (akkordion)"
     },
     {
-      "title": "Sisuleht  akkordion  element",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion__element.tpl",
       "layout_name": "sisuleht__akkordion__element",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht__akkordion__element.tpl"
+      "title": "Sisuleht  akkordion  element"
     },
     {
-      "title": "Sisuleht (akkordion, failid)",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion__failid_.tpl",
       "layout_name": "sisuleht__akkordion__failid_",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht__akkordion__failid_.tpl"
+      "title": "Sisuleht (akkordion, failid)"
     },
     {
-      "title": "Sisuleht (akkordion, failid) element",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion__failid__element.tpl",
       "layout_name": "sisuleht__akkordion__failid__element",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht__akkordion__failid__element.tpl"
+      "title": "Sisuleht (akkordion, failid) element"
     },
     {
-      "title": "Sisuleht (akkordion,failid)",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_failid_.tpl",
       "layout_name": "sisuleht__akkordion_failid_",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/sisuleht__akkordion_failid_.tpl"
+      "title": "Sisuleht (akkordion,failid)"
     },
     {
-      "title": "Sisuleht (akkordion,failid) element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_failid__element.tpl",
       "layout_name": "sisuleht__akkordion_failid__element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/sisuleht__akkordion_failid__element.tpl"
+      "title": "Sisuleht (akkordion,failid) element"
     },
     {
-      "title": "Sisuleht (akkordion külgmenüüga)",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_k_lgmen__ga_.tpl",
       "layout_name": "sisuleht__akkordion_k_lgmen__ga_",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/sisuleht__akkordion_k_lgmen__ga_.tpl"
+      "title": "Sisuleht (akkordion külgmenüüga)"
     },
     {
-      "title": "Sisuleht (akkordion külgmenüüga) element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/sisuleht__akkordion_k_lgmen__ga__element.tpl",
       "layout_name": "sisuleht__akkordion_k_lgmen__ga__element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/sisuleht__akkordion_k_lgmen__ga__element.tpl"
+      "title": "Sisuleht (akkordion külgmenüüga) element"
     },
     {
-      "title": "Sisuleht  domeeniotsinguga",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__domeeniotsinguga.tpl",
       "layout_name": "sisuleht__domeeniotsinguga",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht__domeeniotsinguga.tpl"
+      "title": "Sisuleht  domeeniotsinguga"
     },
     {
-      "title": "Sisuleht (domeeniotsinguga)",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__domeeniotsinguga_.tpl",
       "layout_name": "sisuleht__domeeniotsinguga_",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht__domeeniotsinguga_.tpl"
+      "title": "Sisuleht (domeeniotsinguga)"
     },
     {
-      "title": "Sisuleht (domeeniotsinguga 2022)",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__domeeniotsinguga_2022_.tpl",
       "layout_name": "sisuleht__domeeniotsinguga_2022_",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht__domeeniotsinguga_2022_.tpl"
+      "title": "Sisuleht (domeeniotsinguga 2022)"
     },
     {
-      "title": "Sisuleht  domeeniotsinguga 2022 test",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht__domeeniotsinguga_2022_test.tpl",
       "layout_name": "sisuleht__domeeniotsinguga_2022_test",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht__domeeniotsinguga_2022_test.tpl"
+      "title": "Sisuleht  domeeniotsinguga 2022 test"
     },
     {
-      "title": "Sisuleht (Steps, accordion, failid)",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/sisuleht__steps__accordion__failid_.tpl",
       "layout_name": "sisuleht__steps__accordion__failid_",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/sisuleht__steps__accordion__failid_.tpl"
+      "title": "Sisuleht (Steps, accordion, failid)"
     },
     {
-      "title": "Sisuleht (Steps, accordion, failid) element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/sisuleht__steps__accordion__failid__element.tpl",
       "layout_name": "sisuleht__steps__accordion__failid__element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/sisuleht__steps__accordion__failid__element.tpl"
+      "title": "Sisuleht (Steps, accordion, failid) element"
     },
     {
-      "title": "Sisuleht (Steps, külgmenüü, accordion, failid)",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/sisuleht__steps__k_lgmen____accordion__failid_.tpl",
       "layout_name": "sisuleht__steps__k_lgmen____accordion__failid_",
-      "content_type": "elements",
-      "component": false,
-      "file": "layouts/sisuleht__steps__k_lgmen____accordion__failid_.tpl"
+      "title": "Sisuleht (Steps, külgmenüü, accordion, failid)"
     },
     {
-      "title": "Sisuleht (Steps, külgmenüü, accordion, failid) element",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/sisuleht__steps__k_lgmen____accordion__failid__element.tpl",
       "layout_name": "sisuleht__steps__k_lgmen____accordion__failid__element",
-      "content_type": "element",
-      "component": false,
-      "file": "layouts/sisuleht__steps__k_lgmen____accordion__failid__element.tpl"
+      "title": "Sisuleht (Steps, külgmenüü, accordion, failid) element"
     },
     {
-      "title": "Sisuleht no cookie",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht_no_cookie.tpl",
       "layout_name": "sisuleht_no_cookie",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht_no_cookie.tpl"
+      "title": "Sisuleht no cookie"
     },
     {
-      "title": "Sisuleht otsinguga 2022 ",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/sisuleht_otsinguga_2022_.tpl",
       "layout_name": "sisuleht_otsinguga_2022_",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/sisuleht_otsinguga_2022_.tpl"
+      "title": "Sisuleht otsinguga 2022 "
     },
     {
-      "title": "Statistika",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/statistika.tpl",
       "layout_name": "statistika",
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/statistika.tpl"
+      "title": "Statistika"
     },
     {
-      "title": "Tööpakkumised",
-      "layout_name": "t__pakkumised",
       "content_type": "elements",
       "component": false,
-      "file": "layouts/t__pakkumised.tpl"
+      "file": "layouts/t__pakkumised.tpl",
+      "layout_name": "t__pakkumised",
+      "title": "Tööpakkumised"
     },
     {
-      "title": "Tööpakkumised element",
-      "layout_name": "t__pakkumised_element",
       "content_type": "element",
       "component": false,
-      "file": "layouts/t__pakkumised_element.tpl"
+      "file": "layouts/t__pakkumised_element.tpl",
+      "layout_name": "t__pakkumised_element",
+      "title": "Tööpakkumised element"
     }
   ],
   "assets": [
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Black.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Black.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Black.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Black.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Black.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Black.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-BlackItalic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-BlackItalic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-BlackItalic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-BlackItalic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-BlackItalic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-BlackItalic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Bold.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Bold.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Bold.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Bold.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Bold.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Bold.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-BoldItalic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-BoldItalic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-BoldItalic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-BoldItalic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-BoldItalic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-BoldItalic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ExtraBold.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ExtraBold.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraBold.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ExtraBold.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ExtraBold.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraBold.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ExtraBoldItalic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ExtraBoldItalic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraBoldItalic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ExtraBoldItalic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ExtraBoldItalic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraBoldItalic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ExtraLight.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ExtraLight.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraLight.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ExtraLight.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ExtraLight.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraLight.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ExtraLightItalic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ExtraLightItalic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraLightItalic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ExtraLightItalic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ExtraLightItalic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ExtraLightItalic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Italic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Italic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Italic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Italic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Italic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Italic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Light.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Light.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Light.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Light.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Light.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Light.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-LightItalic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-LightItalic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-LightItalic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-LightItalic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-LightItalic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-LightItalic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Medium.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Medium.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Medium.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Medium.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Medium.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Medium.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-MediumItalic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-MediumItalic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-MediumItalic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-MediumItalic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-MediumItalic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-MediumItalic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Regular.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Regular.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Regular.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Regular.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Regular.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Regular.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-SemiBold.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-SemiBold.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-SemiBold.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-SemiBold.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-SemiBold.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-SemiBold.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-SemiBoldItalic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-SemiBoldItalic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-SemiBoldItalic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-SemiBoldItalic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-SemiBoldItalic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-SemiBoldItalic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Thin.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Thin.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Thin.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-Thin.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-Thin.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-Thin.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ThinItalic.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ThinItalic.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ThinItalic.woff"
     },
     {
-      "kind": "asset",
-      "filename": "Raleway-v4020-ThinItalic.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/Raleway-v4020-ThinItalic.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Raleway-v4020-ThinItalic.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "Ring.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/Ring.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Ring.svg"
     },
     {
-      "kind": "asset",
-      "filename": "Vector Smart Object-1.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/Vector Smart Object-1.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Vector Smart Object-1.svg"
     },
     {
-      "kind": "asset",
-      "filename": "Vector Smart Object.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/Vector Smart Object.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "Vector Smart Object.svg"
     },
     {
-      "kind": "asset",
-      "filename": "android-chrome-192x192.png",
+      "content_type": "unknown/unknown",
       "file": "assets/android-chrome-192x192.png",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "android-chrome-192x192.png"
     },
     {
-      "kind": "asset",
-      "filename": "android-chrome-512x512.png",
+      "content_type": "unknown/unknown",
       "file": "assets/android-chrome-512x512.png",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "android-chrome-512x512.png"
     },
     {
-      "kind": "asset",
-      "filename": "apple-touch-icon.png",
+      "content_type": "unknown/unknown",
       "file": "assets/apple-touch-icon.png",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "apple-touch-icon.png"
     },
     {
-      "kind": "asset",
-      "filename": "arrow-dwn.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/arrow-dwn.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "arrow-dwn.svg"
     },
     {
-      "kind": "asset",
-      "filename": "arrow-go.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/arrow-go.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "arrow-go.svg"
     },
     {
-      "kind": "asset",
-      "filename": "browserconfig.xml",
+      "content_type": "unknown/unknown",
       "file": "assets/browserconfig.xml",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "browserconfig.xml"
     },
     {
-      "kind": "asset",
-      "filename": "business.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/business.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "business.svg"
     },
     {
-      "kind": "asset",
-      "filename": "cookie",
+      "content_type": "text/unknown",
       "file": "assets/cookie",
-      "content_type": "text/unknown"
+      "kind": "asset",
+      "filename": "cookie"
     },
     {
-      "kind": "asset",
-      "filename": "cta1.png",
+      "content_type": "unknown/unknown",
       "file": "assets/cta1.png",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "cta1.png"
     },
     {
-      "kind": "asset",
-      "filename": "cta2.png",
+      "content_type": "unknown/unknown",
       "file": "assets/cta2.png",
-      "content_type": "unknown/unknown"
-    },
-    {
       "kind": "asset",
-      "filename": "dns-white.svg",
-      "file": "assets/dns-white.svg",
-      "content_type": "image/svg+xml"
-    },
-    {
-      "kind": "asset",
-      "filename": "dns.svg",
-      "file": "assets/dns.svg",
-      "content_type": "unknown/unknown"
-    },
-    {
-      "kind": "asset",
-      "filename": "domain-actions-bg.svg",
-      "file": "assets/domain-actions-bg.svg",
-      "content_type": "unknown/unknown"
-    },
-    {
-      "kind": "asset",
-      "filename": "domain-fish.svg",
-      "file": "assets/domain-fish.svg",
-      "content_type": "unknown/unknown"
-    },
-    {
-      "kind": "asset",
-      "filename": "domain-spider.svg",
-      "file": "assets/domain-spider.svg",
-      "content_type": "unknown/unknown"
-    },
-    {
-      "kind": "asset",
-      "filename": "ee-domain.svg",
-      "file": "assets/ee-domain.svg",
-      "content_type": "unknown/unknown"
+      "filename": "cta2.png"
     },
     {
       "content_type": "image/svg+xml",
-      "kind": "assets",
+      "file": "assets/dns-white.svg",
+      "kind": "asset",
+      "filename": "dns-white.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/dns.svg",
+      "kind": "asset",
+      "filename": "dns.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/domain-actions-bg.svg",
+      "kind": "asset",
+      "filename": "domain-actions-bg.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/domain-fish.svg",
+      "kind": "asset",
+      "filename": "domain-fish.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/domain-spider.svg",
+      "kind": "asset",
+      "filename": "domain-spider.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
+      "file": "assets/ee-domain.svg",
+      "kind": "asset",
+      "filename": "ee-domain.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
       "file": "assets/eis-logo-eng.svg",
+      "kind": "assets",
       "filename": "eis-logo-eng.svg"
     },
     {
-      "kind": "asset",
-      "filename": "eis-logo-et.svg",
+      "content_type": "image/svg",
       "file": "assets/eis-logo-et.svg",
-      "content_type": "image/svg"
+      "kind": "asset",
+      "filename": "eis-logo-et.svg"
     },
     {
       "content_type": "image/svg+xml",
-      "kind": "assets",
       "file": "assets/eis-logo-white-eng.svg",
+      "kind": "assets",
       "filename": "eis-logo-white-eng.svg"
     },
     {
-      "kind": "asset",
-      "filename": "eis-logo-white.svg",
+      "content_type": "image/svg+xml",
       "file": "assets/eis-logo-white.svg",
-      "content_type": "image/svg+xml"
+      "kind": "asset",
+      "filename": "eis-logo-white.svg"
     },
     {
-      "kind": "asset",
-      "filename": "eis-logo.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/eis-logo.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "eis-logo.svg"
     },
     {
-      "kind": "asset",
-      "filename": "email.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/email.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "email.svg"
     },
     {
-      "kind": "asset",
-      "filename": "entrepreneur.jpg",
+      "content_type": "unknown/unknown",
       "file": "assets/entrepreneur.jpg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "entrepreneur.jpg"
     },
     {
-      "kind": "asset",
-      "filename": "ep-white.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/ep-white.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "ep-white.svg"
     },
     {
-      "kind": "asset",
-      "filename": "ep2.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/ep2.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "ep2.svg"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalight-webfont.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalight-webfont.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalight-webfont.eot"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalight-webfont.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalight-webfont.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalight-webfont.svg"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalight-webfont.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalight-webfont.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalight-webfont.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalight-webfont.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalight-webfont.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalight-webfont.woff"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalight-webfont.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalight-webfont.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalight-webfont.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightbold-webfont.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightbold-webfont.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.eot"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightbold-webfont.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightbold-webfont.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.svg"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightbold-webfont.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightbold-webfont.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightbold-webfont.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightbold-webfont.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.woff"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightbold-webfont.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightbold-webfont.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightbold-webfont.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightitalic-webfont.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightitalic-webfont.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.eot"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightitalic-webfont.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightitalic-webfont.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.svg"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightitalic-webfont.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightitalic-webfont.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightitalic-webfont.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightitalic-webfont.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.woff"
     },
     {
-      "kind": "asset",
-      "filename": "etelkalightitalic-webfont.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/etelkalightitalic-webfont.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "etelkalightitalic-webfont.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "fa-brands-400.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-brands-400.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-brands-400.eot"
     },
     {
-      "kind": "asset",
-      "filename": "fa-brands-400.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-brands-400.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-brands-400.svg"
     },
     {
-      "kind": "asset",
-      "filename": "fa-brands-400.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-brands-400.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-brands-400.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "fa-brands-400.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-brands-400.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-brands-400.woff"
     },
     {
-      "kind": "asset",
-      "filename": "fa-brands-400.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-brands-400.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-brands-400.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "fa-regular-400.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-regular-400.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-regular-400.eot"
     },
     {
-      "kind": "asset",
-      "filename": "fa-regular-400.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-regular-400.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-regular-400.svg"
     },
     {
-      "kind": "asset",
-      "filename": "fa-regular-400.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-regular-400.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-regular-400.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "fa-regular-400.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-regular-400.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-regular-400.woff"
     },
     {
-      "kind": "asset",
-      "filename": "fa-regular-400.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-regular-400.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-regular-400.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "fa-solid-900.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-solid-900.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-solid-900.eot"
     },
     {
-      "kind": "asset",
-      "filename": "fa-solid-900.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-solid-900.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-solid-900.svg"
     },
     {
-      "kind": "asset",
-      "filename": "fa-solid-900.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-solid-900.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-solid-900.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "fa-solid-900.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-solid-900.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-solid-900.woff"
     },
     {
-      "kind": "asset",
-      "filename": "fa-solid-900.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/fa-solid-900.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fa-solid-900.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "favicon.ico",
+      "content_type": "image/vnd.microsoft.icon",
       "file": "assets/favicon.ico",
-      "content_type": "image/vnd.microsoft.icon"
+      "kind": "asset",
+      "filename": "favicon.ico"
     },
     {
-      "kind": "asset",
-      "filename": "fb.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/fb.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fb.svg"
     },
     {
-      "kind": "asset",
-      "filename": "fish-gray-200x61.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/fish-gray-200x61.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fish-gray-200x61.svg"
     },
     {
-      "kind": "asset",
-      "filename": "fish-white-100x31.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/fish-white-100x31.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fish-white-100x31.svg"
     },
     {
-      "kind": "asset",
-      "filename": "fish-white-200x61.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/fish-white-200x61.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fish-white-200x61.svg"
     },
     {
-      "kind": "asset",
-      "filename": "fish.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/fish.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "fish.svg"
     },
     {
-      "kind": "asset",
-      "filename": "hero.png",
+      "content_type": "unknown/unknown",
       "file": "assets/hero.png",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "hero.png"
     },
     {
-      "kind": "asset",
-      "filename": "infotexb-webfont.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/infotexb-webfont.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "infotexb-webfont.woff"
     },
     {
-      "kind": "asset",
-      "filename": "infotexm-webfont.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/infotexm-webfont.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "infotexm-webfont.woff"
     },
     {
-      "kind": "asset",
-      "filename": "io-icon.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/io-icon.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "io-icon.svg"
     },
     {
-      "kind": "asset",
-      "filename": "linkedin.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/linkedin.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "linkedin.svg"
     },
     {
-      "kind": "asset",
-      "filename": "logo-m-black.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/logo-m-black.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "logo-m-black.svg"
     },
     {
-      "kind": "asset",
-      "filename": "logo-m.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/logo-m.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "logo-m.svg"
     },
     {
-      "kind": "asset",
-      "filename": "logo-white.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/logo-white.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "logo-white.svg"
     },
     {
-      "kind": "asset",
-      "filename": "logo.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/logo.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "logo.svg"
     },
     {
-      "kind": "asset",
-      "filename": "marker.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/marker.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "marker.svg"
     },
     {
-      "kind": "asset",
-      "filename": "mstile-150x150.png",
+      "content_type": "unknown/unknown",
       "file": "assets/mstile-150x150.png",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "mstile-150x150.png"
     },
     {
-      "kind": "asset",
-      "filename": "pencil.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/pencil.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "pencil.svg"
     },
     {
-      "kind": "asset",
-      "filename": "phone.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/phone.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "phone.svg"
     },
     {
-      "kind": "asset",
-      "filename": "po-icon.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/po-icon.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "po-icon.svg"
     },
     {
-      "kind": "asset",
-      "filename": "private-person.jpg",
+      "content_type": "unknown/unknown",
       "file": "assets/private-person.jpg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "private-person.jpg"
     },
     {
-      "kind": "asset",
-      "filename": "private-person.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/private-person.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "private-person.svg"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-500.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-500.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-500.eot"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-500.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-500.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-500.svg"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-500.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-500.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-500.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-500.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-500.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-500.woff"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-500.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-500.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-500.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-800.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-800.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-800.eot"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-800.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-800.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-800.svg"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-800.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-800.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-800.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-800.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-800.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-800.woff"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-800.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-800.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-800.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-900.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-900.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-900.eot"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-900.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-900.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-900.svg"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-900.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-900.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-900.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-900.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-900.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-900.woff"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-900.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-900.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-900.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-regular.eot",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-regular.eot",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-regular.eot"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-regular.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-regular.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-regular.svg"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-regular.ttf",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-regular.ttf",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-regular.ttf"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-regular.woff",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-regular.woff",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-regular.woff"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v28-latin-regular.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v28-latin-regular.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v28-latin-regular.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v34-latin_latin-ext-500.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v34-latin_latin-ext-500.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v34-latin_latin-ext-500.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v34-latin_latin-ext-600.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v34-latin_latin-ext-600.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v34-latin_latin-ext-600.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v34-latin_latin-ext-700.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v34-latin_latin-ext-700.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v34-latin_latin-ext-700.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v34-latin_latin-ext-800.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v34-latin_latin-ext-800.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v34-latin_latin-ext-800.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v34-latin_latin-ext-900.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v34-latin_latin-ext-900.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v34-latin_latin-ext-900.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "raleway-v34-latin_latin-ext-regular.woff2",
+      "content_type": "unknown/unknown",
       "file": "assets/raleway-v34-latin_latin-ext-regular.woff2",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "raleway-v34-latin_latin-ext-regular.woff2"
     },
     {
-      "kind": "asset",
-      "filename": "right-arrow.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/right-arrow.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "right-arrow.svg"
     },
     {
-      "kind": "asset",
-      "filename": "rod.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/rod.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "rod.svg"
     },
     {
-      "kind": "asset",
-      "filename": "rss.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/rss.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "rss.svg"
     },
     {
-      "kind": "asset",
-      "filename": "safari-pinned-tab.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/safari-pinned-tab.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "safari-pinned-tab.svg"
     },
     {
-      "kind": "asset",
-      "filename": "search-btn.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/search-btn.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "search-btn.svg"
     },
     {
-      "kind": "asset",
-      "filename": "search.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/search.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "search.svg"
     },
     {
-      "kind": "asset",
-      "filename": "short-url-white.svg",
+      "content_type": "image/svg+xml",
       "file": "assets/short-url-white.svg",
-      "content_type": "image/svg+xml"
+      "kind": "asset",
+      "filename": "short-url-white.svg"
     },
     {
-      "kind": "asset",
-      "filename": "short-url.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/short-url.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "short-url.svg"
     },
     {
-      "kind": "asset",
-      "filename": "site.webmanifest",
+      "content_type": "unknown/unknown",
       "file": "assets/site.webmanifest",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "site.webmanifest"
     },
     {
-      "kind": "asset",
-      "filename": "spider-bg.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/spider-bg.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "spider-bg.svg"
     },
     {
-      "kind": "asset",
-      "filename": "spider-white-61x50.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/spider-white-61x50.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "spider-white-61x50.svg"
     },
     {
-      "kind": "asset",
-      "filename": "spider-white.svg",
+      "content_type": "image/svg+xml",
       "file": "assets/spider-white.svg",
-      "content_type": "image/svg+xml"
+      "kind": "asset",
+      "filename": "spider-white.svg"
     },
     {
-      "kind": "asset",
-      "filename": "spider.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/spider.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "spider.svg"
     },
     {
-      "kind": "asset",
-      "filename": "sviiter.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/sviiter.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "sviiter.svg"
     },
     {
-      "kind": "asset",
-      "filename": "twitter.svg",
+      "content_type": "unknown/unknown",
       "file": "assets/twitter.svg",
-      "content_type": "unknown/unknown"
-    },
-    {
       "kind": "asset",
-      "filename": "utube.svg",
+      "filename": "twitter.svg"
+    },
+    {
+      "content_type": "unknown/unknown",
       "file": "assets/utube.svg",
-      "content_type": "unknown/unknown"
+      "kind": "asset",
+      "filename": "utube.svg"
     },
     {
-      "kind": "image",
-      "filename": "active-item-arrow-lighter.png",
+      "content_type": "image/png",
       "file": "images/active-item-arrow-lighter.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "active-item-arrow-lighter.png"
     },
     {
-      "kind": "image",
-      "filename": "active-item-arrow.png",
+      "content_type": "image/png",
       "file": "images/active-item-arrow.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "active-item-arrow.png"
     },
     {
-      "kind": "image",
-      "filename": "active-menu-arrow.png",
+      "content_type": "image/png",
       "file": "images/active-menu-arrow.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "active-menu-arrow.png"
     },
     {
-      "kind": "image",
-      "filename": "android-chrome-256x256.png",
+      "content_type": "image/png",
       "file": "images/android-chrome-256x256.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "android-chrome-256x256.png"
     },
     {
+      "content_type": "image/png",
+      "file": "images/android-chrome-256x256.png",
       "kind": "image",
-      "filename": "arrow-down.png",
+      "filename": "android-chrome-256x256.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/arrow-down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "arrow-down.png"
     },
     {
-      "kind": "image",
-      "filename": "arrow-right.png",
+      "content_type": "image/png",
       "file": "images/arrow-right.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "arrow-right.png"
     },
     {
-      "kind": "image",
-      "filename": "bg-banner-slider.png",
+      "content_type": "image/png",
       "file": "images/bg-banner-slider.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "bg-banner-slider.png"
     },
     {
-      "kind": "image",
-      "filename": "bg-domain-search-btn-hover.png",
+      "content_type": "image/png",
       "file": "images/bg-domain-search-btn-hover.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "bg-domain-search-btn-hover.png"
     },
     {
-      "kind": "image",
-      "filename": "bg-domain-search-btn.png",
+      "content_type": "image/png",
       "file": "images/bg-domain-search-btn.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "bg-domain-search-btn.png"
     },
     {
-      "kind": "image",
-      "filename": "bg-domain-search-ee.jpg",
+      "content_type": "image/jpg",
       "file": "images/bg-domain-search-ee.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "bg-domain-search-ee.jpg"
     },
     {
-      "kind": "image",
-      "filename": "bg-domain-stats-line.png",
+      "content_type": "image/png",
       "file": "images/bg-domain-stats-line.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "bg-domain-stats-line.png"
     },
     {
-      "kind": "image",
-      "filename": "bg-stats-shadows.jpg",
+      "content_type": "image/jpg",
       "file": "images/bg-stats-shadows.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "bg-stats-shadows.jpg"
     },
     {
-      "kind": "image",
-      "filename": "bg-twitter-bird.png",
+      "content_type": "image/png",
       "file": "images/bg-twitter-bird.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "bg-twitter-bird.png"
     },
     {
-      "kind": "image",
-      "filename": "blue-btn.png",
+      "content_type": "image/png",
       "file": "images/blue-btn.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "blue-btn.png"
     },
     {
-      "kind": "image",
-      "filename": "body-bg.jpg",
+      "content_type": "image/jpg",
       "file": "images/body-bg.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "body-bg.jpg"
     },
     {
-      "kind": "image",
-      "filename": "btn-close.png",
+      "content_type": "image/png",
       "file": "images/btn-close.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "btn-close.png"
     },
     {
-      "kind": "image",
-      "filename": "dnssec.png",
+      "content_type": "image/png",
       "file": "images/dnssec.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "dnssec.png"
     },
     {
-      "kind": "image",
-      "filename": "domain-auctions-bg.png",
+      "content_type": "image/png",
       "file": "images/domain-auctions-bg.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "domain-auctions-bg.png"
     },
     {
-      "kind": "image",
-      "filename": "ds-taustablokk1.png",
+      "content_type": "image/png",
       "file": "images/ds-taustablokk1.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ds-taustablokk1.png"
     },
     {
-      "kind": "image",
-      "filename": "ds-taustablokk2-clean.png",
+      "content_type": "image/png",
       "file": "images/ds-taustablokk2-clean.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ds-taustablokk2-clean.png"
     },
     {
-      "kind": "image",
-      "filename": "ds-taustablokk2-pius.png",
+      "content_type": "image/png",
       "file": "images/ds-taustablokk2-pius.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ds-taustablokk2-pius.png"
     },
     {
-      "kind": "image",
-      "filename": "ds-taustablokk3-clean.png",
+      "content_type": "image/png",
       "file": "images/ds-taustablokk3-clean.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ds-taustablokk3-clean.png"
     },
     {
-      "kind": "image",
-      "filename": "ds-taustablokk3-pius-s.png",
+      "content_type": "image/png",
       "file": "images/ds-taustablokk3-pius-s.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ds-taustablokk3-pius-s.png"
     },
     {
-      "kind": "image",
-      "filename": "ds-taustablokk3-pius.png",
+      "content_type": "image/png",
       "file": "images/ds-taustablokk3-pius.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ds-taustablokk3-pius.png"
     },
     {
-      "kind": "image",
-      "filename": "ds-taustablokk4-pius.png",
+      "content_type": "image/png",
       "file": "images/ds-taustablokk4-pius.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ds-taustablokk4-pius.png"
     },
     {
-      "kind": "image",
-      "filename": "edicy.png",
+      "content_type": "image/png",
       "file": "images/edicy.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "edicy.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-banner.png",
+      "content_type": "image/png",
       "file": "images/ee-banner.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-banner.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-domeenikaart_n.jpg",
+      "content_type": "image/jpg",
       "file": "images/ee-domeenikaart_n.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "ee-domeenikaart_n.jpg"
     },
     {
-      "kind": "image",
-      "filename": "ee-dude.png",
+      "content_type": "image/png",
       "file": "images/ee-dude.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-dude.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-fail.png",
+      "content_type": "image/png",
       "file": "images/ee-fail.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-fail.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-illustration-1.png",
+      "content_type": "image/png",
       "file": "images/ee-illustration-1.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-illustration-1.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-illustration-2.png",
+      "content_type": "image/png",
       "file": "images/ee-illustration-2.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-illustration-2.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-illustration-3.png",
+      "content_type": "image/png",
       "file": "images/ee-illustration-3.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-illustration-3.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-illustration-4.png",
+      "content_type": "image/png",
       "file": "images/ee-illustration-4.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-illustration-4.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-illustration-5.png",
+      "content_type": "image/png",
       "file": "images/ee-illustration-5.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-illustration-5.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-illustration-7.png",
+      "content_type": "image/png",
       "file": "images/ee-illustration-7.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-illustration-7.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-illustration-8.png",
+      "content_type": "image/png",
       "file": "images/ee-illustration-8.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-illustration-8.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-mobile-game.jpg",
+      "content_type": "image/jpg",
       "file": "images/ee-mobile-game.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "ee-mobile-game.jpg"
     },
     {
-      "kind": "image",
-      "filename": "ee-shadow.png",
+      "content_type": "image/png",
       "file": "images/ee-shadow.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-shadow.png"
     },
     {
-      "kind": "image",
-      "filename": "ee-success.png",
+      "content_type": "image/png",
       "file": "images/ee-success.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ee-success.png"
     },
     {
-      "kind": "image",
-      "filename": "eis-logo-et.png",
+      "content_type": "image/png",
       "file": "images/eis-logo-et.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "eis-logo-et.png"
     },
     {
-      "kind": "image",
-      "filename": "eis-page-bg.jpg",
+      "content_type": "image/jpg",
       "file": "images/eis-page-bg.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "eis-page-bg.jpg"
     },
     {
-      "kind": "image",
-      "filename": "ep.png",
+      "content_type": "image/png",
       "file": "images/ep.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ep.png"
     },
     {
-      "kind": "image",
-      "filename": "favicon-16x16.png",
+      "content_type": "image/png",
       "file": "images/favicon-16x16.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "favicon-16x16.png"
     },
     {
+      "content_type": "image/png",
+      "file": "images/favicon-16x16.png",
       "kind": "image",
-      "filename": "favicon-32x32.png",
+      "filename": "favicon-16x16.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/favicon-32x32.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "favicon-32x32.png"
     },
     {
+      "content_type": "image/png",
+      "file": "images/favicon-32x32.png",
       "kind": "image",
-      "filename": "game.buttonRun.png",
+      "filename": "favicon-32x32.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/game.buttonRun.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.buttonRun.png"
     },
     {
-      "kind": "image",
-      "filename": "game.cta.png",
+      "content_type": "image/png",
       "file": "images/game.cta.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.cta.png"
     },
     {
-      "kind": "image",
-      "filename": "game.kesees.png",
+      "content_type": "image/png",
       "file": "images/game.kesees.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.kesees.png"
     },
     {
-      "kind": "image",
-      "filename": "game.loser.badLoserArm1.png",
+      "content_type": "image/png",
       "file": "images/game.loser.badLoserArm1.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.loser.badLoserArm1.png"
     },
     {
-      "kind": "image",
-      "filename": "game.loser.badLoserArm2.png",
+      "content_type": "image/png",
       "file": "images/game.loser.badLoserArm2.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.loser.badLoserArm2.png"
     },
     {
-      "kind": "image",
-      "filename": "game.loser.badLoserBody.png",
+      "content_type": "image/png",
       "file": "images/game.loser.badLoserBody.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.loser.badLoserBody.png"
     },
     {
-      "kind": "image",
-      "filename": "game.loser.badLoserHead.png",
+      "content_type": "image/png",
       "file": "images/game.loser.badLoserHead.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.loser.badLoserHead.png"
     },
     {
-      "kind": "image",
-      "filename": "game.loser.goodLoserArm1.png",
+      "content_type": "image/png",
       "file": "images/game.loser.goodLoserArm1.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.loser.goodLoserArm1.png"
     },
     {
-      "kind": "image",
-      "filename": "game.loser.goodLoserArm2.png",
+      "content_type": "image/png",
       "file": "images/game.loser.goodLoserArm2.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.loser.goodLoserArm2.png"
     },
     {
-      "kind": "image",
-      "filename": "game.loser.goodLoserBody.png",
+      "content_type": "image/png",
       "file": "images/game.loser.goodLoserBody.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.loser.goodLoserBody.png"
     },
     {
-      "kind": "image",
-      "filename": "game.loser.goodLoserHead.png",
+      "content_type": "image/png",
       "file": "images/game.loser.goodLoserHead.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.loser.goodLoserHead.png"
     },
     {
-      "kind": "image",
-      "filename": "game.road.png",
+      "content_type": "image/png",
       "file": "images/game.road.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.road.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badArm1down.png",
+      "content_type": "image/png",
       "file": "images/game.run.badArm1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badArm1down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badArm1up.png",
+      "content_type": "image/png",
       "file": "images/game.run.badArm1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badArm1up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badArm2down.png",
+      "content_type": "image/png",
       "file": "images/game.run.badArm2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badArm2down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badArm2up.png",
+      "content_type": "image/png",
       "file": "images/game.run.badArm2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badArm2up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badBody.png",
+      "content_type": "image/png",
       "file": "images/game.run.badBody.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badBody.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badLeg1down.png",
+      "content_type": "image/png",
       "file": "images/game.run.badLeg1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badLeg1down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badLeg1up.png",
+      "content_type": "image/png",
       "file": "images/game.run.badLeg1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badLeg1up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badLeg2down.png",
+      "content_type": "image/png",
       "file": "images/game.run.badLeg2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badLeg2down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badLeg2up.png",
+      "content_type": "image/png",
       "file": "images/game.run.badLeg2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badLeg2up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badShadow.png",
+      "content_type": "image/png",
       "file": "images/game.run.badShadow.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badShadow.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.badTie.png",
+      "content_type": "image/png",
       "file": "images/game.run.badTie.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.badTie.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodArm1down.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodArm1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodArm1down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodArm1up.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodArm1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodArm1up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodArm2down.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodArm2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodArm2down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodArm2up.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodArm2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodArm2up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodBody.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodBody.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodBody.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodLeg1down.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodLeg1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodLeg1down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodLeg1up.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodLeg1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodLeg1up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodLeg2down.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodLeg2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodLeg2down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodLeg2up.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodLeg2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodLeg2up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodShadow.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodShadow.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodShadow.png"
     },
     {
-      "kind": "image",
-      "filename": "game.run.goodTie.png",
+      "content_type": "image/png",
       "file": "images/game.run.goodTie.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.run.goodTie.png"
     },
     {
-      "kind": "image",
-      "filename": "game.text1.png",
+      "content_type": "image/png",
       "file": "images/game.text1.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.text1.png"
     },
     {
-      "kind": "image",
-      "filename": "game.text2.png",
+      "content_type": "image/png",
       "file": "images/game.text2.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.text2.png"
     },
     {
-      "kind": "image",
-      "filename": "game.textChoose.png",
+      "content_type": "image/png",
       "file": "images/game.textChoose.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.textChoose.png"
     },
     {
-      "kind": "image",
-      "filename": "game.textLose1.png",
+      "content_type": "image/png",
       "file": "images/game.textLose1.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.textLose1.png"
     },
     {
-      "kind": "image",
-      "filename": "game.textLose2.png",
+      "content_type": "image/png",
       "file": "images/game.textLose2.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.textLose2.png"
     },
     {
-      "kind": "image",
-      "filename": "game.textWin1.png",
+      "content_type": "image/png",
       "file": "images/game.textWin1.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.textWin1.png"
     },
     {
-      "kind": "image",
-      "filename": "game.textWin2.png",
+      "content_type": "image/png",
       "file": "images/game.textWin2.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.textWin2.png"
     },
     {
-      "kind": "image",
-      "filename": "game.url.png",
+      "content_type": "image/png",
       "file": "images/game.url.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.url.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryArm1down.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryArm1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryArm1down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryArm1up.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryArm1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryArm1up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryArm2down.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryArm2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryArm2down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryArm2up.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryArm2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryArm2up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryBody.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryBody.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryBody.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryLeg1down.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryLeg1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryLeg1down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryLeg1up.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryLeg1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryLeg1up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryLeg2down.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryLeg2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryLeg2down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryLeg2up.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryLeg2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryLeg2up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.badVictoryShadow.png",
+      "content_type": "image/png",
       "file": "images/game.victory.badVictoryShadow.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.badVictoryShadow.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryArm1down.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryArm1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryArm1down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryArm1up.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryArm1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryArm1up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryArm2down.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryArm2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryArm2down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryArm2up.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryArm2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryArm2up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryBody.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryBody.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryBody.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryLeg1down.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryLeg1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryLeg1down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryLeg1up.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryLeg1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryLeg1up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryLeg2down.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryLeg2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryLeg2down.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryLeg2up.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryLeg2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryLeg2up.png"
     },
     {
-      "kind": "image",
-      "filename": "game.victory.goodVictoryShadow.png",
+      "content_type": "image/png",
       "file": "images/game.victory.goodVictoryShadow.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "game.victory.goodVictoryShadow.png"
     },
     {
-      "kind": "image",
-      "filename": "goodVictoryShadow.png",
+      "content_type": "image/png",
       "file": "images/goodVictoryShadow.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "goodVictoryShadow.png"
     },
     {
-      "kind": "image",
-      "filename": "heikidemo.png",
+      "content_type": "image/png",
       "file": "images/heikidemo.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "heikidemo.png"
     },
     {
-      "kind": "image",
-      "filename": "hero-documents.jpg",
+      "content_type": "image/jpg",
       "file": "images/hero-documents.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "hero-documents.jpg"
     },
     {
-      "kind": "image",
-      "filename": "hero-eis.jpg",
+      "content_type": "image/jpg",
       "file": "images/hero-eis.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "hero-eis.jpg"
     },
     {
-      "kind": "image",
-      "filename": "html-pattern.png",
+      "content_type": "image/png",
       "file": "images/html-pattern.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "html-pattern.png"
     },
     {
-      "kind": "image",
-      "filename": "ico-info.png",
+      "content_type": "image/png",
       "file": "images/ico-info.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ico-info.png"
     },
     {
-      "kind": "image",
-      "filename": "ico-round-search-clear.png",
+      "content_type": "image/png",
       "file": "images/ico-round-search-clear.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ico-round-search-clear.png"
     },
     {
-      "kind": "image",
-      "filename": "ico-round-search.png",
+      "content_type": "image/png",
       "file": "images/ico-round-search.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ico-round-search.png"
     },
     {
-      "kind": "image",
-      "filename": "ico-rss.png",
+      "content_type": "image/png",
       "file": "images/ico-rss.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ico-rss.png"
     },
     {
-      "kind": "image",
-      "filename": "ico-twitter.png",
+      "content_type": "image/png",
       "file": "images/ico-twitter.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "ico-twitter.png"
     },
     {
-      "kind": "image",
-      "filename": "konnkurent_kaart.webp",
+      "content_type": "image/webp",
       "file": "images/konnkurent_kaart.webp",
-      "content_type": "image/webp"
+      "kind": "image",
+      "filename": "konnkurent_kaart.webp"
     },
     {
-      "kind": "image",
-      "filename": "lines-hor-bottom.png",
+      "content_type": "image/png",
       "file": "images/lines-hor-bottom.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "lines-hor-bottom.png"
     },
     {
-      "kind": "image",
-      "filename": "list-image-blue-dot.png",
+      "content_type": "image/png",
       "file": "images/list-image-blue-dot.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "list-image-blue-dot.png"
     },
     {
-      "kind": "image",
-      "filename": "lose-badLoserArm1.png",
+      "content_type": "image/png",
       "file": "images/lose-badLoserArm1.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "lose-badLoserArm1.png"
     },
     {
-      "kind": "image",
-      "filename": "lose-badLoserArm2.png",
+      "content_type": "image/png",
       "file": "images/lose-badLoserArm2.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "lose-badLoserArm2.png"
     },
     {
-      "kind": "image",
-      "filename": "lose-badLoserBody.png",
+      "content_type": "image/png",
       "file": "images/lose-badLoserBody.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "lose-badLoserBody.png"
     },
     {
-      "kind": "image",
-      "filename": "lose-badLoserHead.png",
+      "content_type": "image/png",
       "file": "images/lose-badLoserHead.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "lose-badLoserHead.png"
     },
     {
-      "kind": "image",
-      "filename": "lyhikesed-16x16.png",
+      "content_type": "image/png",
       "file": "images/lyhikesed-16x16.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "lyhikesed-16x16.png"
     },
     {
-      "kind": "image",
-      "filename": "mstile-144x144.png",
+      "content_type": "image/png",
       "file": "images/mstile-144x144.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "mstile-144x144.png"
     },
     {
+      "content_type": "image/png",
+      "file": "images/mstile-144x144.png",
       "kind": "image",
-      "filename": "mstile-310x150.png",
+      "filename": "mstile-144x144.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/mstile-310x150.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "mstile-310x150.png"
     },
     {
+      "content_type": "image/png",
+      "file": "images/mstile-310x150.png",
       "kind": "image",
-      "filename": "mstile-310x310.png",
+      "filename": "mstile-310x150.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/mstile-310x310.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "mstile-310x310.png"
     },
     {
+      "content_type": "image/png",
+      "file": "images/mstile-310x310.png",
       "kind": "image",
-      "filename": "mstile-70x70.png",
+      "filename": "mstile-310x310.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/mstile-70x70.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "mstile-70x70.png"
     },
     {
+      "content_type": "image/png",
+      "file": "images/mstile-70x70.png",
       "kind": "image",
-      "filename": "orange-btn.png",
+      "filename": "mstile-70x70.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/orange-btn.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "orange-btn.png"
     },
     {
-      "kind": "image",
-      "filename": "pagehead.png",
+      "content_type": "image/png",
       "file": "images/pagehead.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "pagehead.png"
     },
     {
-      "kind": "image",
-      "filename": "placeholder.jpg",
+      "content_type": "image/jpg",
       "file": "images/placeholder.jpg",
-      "content_type": "image/jpg"
+      "kind": "image",
+      "filename": "placeholder.jpg"
     },
     {
-      "kind": "image",
-      "filename": "plus.png",
+      "content_type": "image/png",
       "file": "images/plus.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "plus.png"
     },
     {
-      "kind": "image",
-      "filename": "punane.png",
+      "content_type": "image/png",
       "file": "images/punane.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "punane.png"
     },
     {
-      "kind": "image",
-      "filename": "q-mark.png",
+      "content_type": "image/png",
       "file": "images/q-mark.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "q-mark.png"
     },
     {
-      "kind": "image",
-      "filename": "roheline.png",
+      "content_type": "image/png",
       "file": "images/roheline.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "roheline.png"
     },
     {
-      "kind": "image",
-      "filename": "sprite.png",
+      "content_type": "image/png",
       "file": "images/sprite.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "sprite.png"
     },
     {
-      "kind": "image",
-      "filename": "wavecom_logo.png",
+      "content_type": "image/png",
       "file": "images/wavecom_logo.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "wavecom_logo.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryArm1down.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryArm1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryArm1down.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryArm1up.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryArm1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryArm1up.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryArm2down.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryArm2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryArm2down.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryArm2up.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryArm2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryArm2up.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryBody.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryBody.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryBody.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryLeg1down.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryLeg1down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryLeg1down.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryLeg1up.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryLeg1up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryLeg1up.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryLeg2down.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryLeg2down.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryLeg2down.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryLeg2up.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryLeg2up.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "win-goodVictoryLeg2up.png"
     },
     {
-      "kind": "image",
-      "filename": "win-goodVictoryShadow.png",
+      "content_type": "image/png",
       "file": "images/win-goodVictoryShadow.png",
-      "content_type": "image/png"
-    },
-    {
       "kind": "image",
-      "filename": "zone_ee.png",
+      "filename": "win-goodVictoryShadow.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/zone_ee.png",
-      "content_type": "image/png"
+      "kind": "image",
+      "filename": "zone_ee.png"
     },
     {
-      "kind": "javascript",
-      "filename": "anima.konva_prototypes.js",
+      "content_type": "text/javascript",
       "file": "javascripts/anima.konva_prototypes.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "anima.konva_prototypes.js"
     },
     {
-      "kind": "javascript",
-      "filename": "anima.loader.js",
+      "content_type": "text/javascript",
       "file": "javascripts/anima.loader.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "anima.loader.js"
     },
     {
-      "kind": "javascript",
-      "filename": "anima.lose.js",
+      "content_type": "text/javascript",
       "file": "javascripts/anima.lose.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "anima.lose.js"
     },
     {
-      "kind": "javascript",
-      "filename": "anima.tech.js",
+      "content_type": "text/javascript",
       "file": "javascripts/anima.tech.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "anima.tech.js"
     },
     {
-      "kind": "javascript",
-      "filename": "anima.win.js",
+      "content_type": "text/javascript",
       "file": "javascripts/anima.win.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "anima.win.js"
     },
     {
-      "kind": "javascript",
-      "filename": "ceiro.js",
+      "content_type": "text/javascript",
       "file": "javascripts/ceiro.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "ceiro.js"
     },
     {
-      "kind": "javascript",
-      "filename": "ceiro.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/ceiro.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "ceiro.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "charts.js",
+      "content_type": "text/javascript",
       "file": "javascripts/charts.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "charts.js"
     },
     {
-      "kind": "javascript",
-      "filename": "charts.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/charts.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "charts.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "cookie.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/cookie.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "cookie.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "custom-form.js",
+      "content_type": "text/javascript",
       "file": "javascripts/custom-form.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "custom-form.js"
     },
     {
-      "kind": "javascript",
-      "filename": "game.badGuy.js",
+      "content_type": "text/javascript",
       "file": "javascripts/game.badGuy.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "game.badGuy.js"
     },
     {
-      "kind": "javascript",
-      "filename": "game.badLoser.js",
+      "content_type": "text/javascript",
       "file": "javascripts/game.badLoser.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "game.badLoser.js"
     },
     {
-      "kind": "javascript",
-      "filename": "game.badVictory.js",
+      "content_type": "text/javascript",
       "file": "javascripts/game.badVictory.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "game.badVictory.js"
     },
     {
-      "kind": "javascript",
-      "filename": "game.goodGuy.js",
+      "content_type": "text/javascript",
       "file": "javascripts/game.goodGuy.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "game.goodGuy.js"
     },
     {
-      "kind": "javascript",
-      "filename": "game.goodLoser.js",
+      "content_type": "text/javascript",
       "file": "javascripts/game.goodLoser.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "game.goodLoser.js"
     },
     {
-      "kind": "javascript",
-      "filename": "game.goodVictory.js",
+      "content_type": "text/javascript",
       "file": "javascripts/game.goodVictory.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "game.goodVictory.js"
     },
     {
-      "kind": "javascript",
-      "filename": "game.main.js",
+      "content_type": "text/javascript",
       "file": "javascripts/game.main.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "game.main.js"
     },
     {
-      "kind": "javascript",
-      "filename": "game.tech.js",
+      "content_type": "text/javascript",
       "file": "javascripts/game.tech.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "game.tech.js"
     },
     {
-      "kind": "javascript",
-      "filename": "highcharts.js",
+      "content_type": "text/javascript",
       "file": "javascripts/highcharts.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "highcharts.js"
     },
     {
-      "kind": "javascript",
-      "filename": "highcharts.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/highcharts.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "highcharts.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "jquery-3.3.1.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/jquery-3.3.1.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "jquery-3.3.1.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "jquery-tools.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/jquery-tools.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "jquery-tools.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "main.js",
+      "content_type": "text/javascript",
       "file": "javascripts/main.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "main.js"
     },
     {
-      "kind": "javascript",
-      "filename": "main.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/main.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "main.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "map.js",
+      "content_type": "text/javascript",
       "file": "javascripts/map.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "map.js"
     },
     {
-      "kind": "javascript",
-      "filename": "map.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/map.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "map.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "mark.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/mark.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "mark.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "martin.js",
+      "content_type": "text/javascript",
       "file": "javascripts/martin.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "martin.js"
     },
     {
-      "kind": "javascript",
-      "filename": "martin.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/martin.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "martin.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "modernizr.js",
+      "content_type": "text/javascript",
       "file": "javascripts/modernizr.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "modernizr.js"
     },
     {
-      "kind": "javascript",
-      "filename": "modernizr.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/modernizr.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "modernizr.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "multi.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/multi.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "multi.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "new-main.js",
+      "content_type": "text/javascript",
       "file": "javascripts/new-main.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "new-main.js"
     },
     {
-      "kind": "javascript",
-      "filename": "owl.carousel.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/owl.carousel.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "owl.carousel.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "repeater.js",
+      "content_type": "text/javascript",
       "file": "javascripts/repeater.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "repeater.js"
     },
     {
-      "kind": "javascript",
-      "filename": "slick.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/slick.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "slick.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "statistics.js",
+      "content_type": "text/javascript",
       "file": "javascripts/statistics.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "statistics.js"
     },
     {
-      "kind": "javascript",
-      "filename": "statistics.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/statistics.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "statistics.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "voog-main.js",
+      "content_type": "text/javascript",
       "file": "javascripts/voog-main.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "voog-main.js"
     },
     {
-      "kind": "javascript",
-      "filename": "wattie.js",
+      "content_type": "text/javascript",
       "file": "javascripts/wattie.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "wattie.js"
     },
     {
-      "kind": "javascript",
-      "filename": "wattie.min.js",
+      "content_type": "text/javascript",
       "file": "javascripts/wattie.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "wattie.min.js"
     },
     {
-      "kind": "javascript",
-      "filename": "world-map.js",
+      "content_type": "text/javascript",
       "file": "javascripts/world-map.js",
-      "content_type": "text/javascript"
-    },
-    {
       "kind": "javascript",
-      "filename": "world-map.min.js",
+      "filename": "world-map.js"
+    },
+    {
+      "content_type": "text/javascript",
       "file": "javascripts/world-map.min.js",
-      "content_type": "text/javascript"
+      "kind": "javascript",
+      "filename": "world-map.min.js"
     },
     {
-      "kind": "stylesheet",
-      "filename": "ceiro.css",
+      "content_type": "text/css",
       "file": "stylesheets/ceiro.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "ceiro.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "ceiro.min.css",
+      "content_type": "text/css",
       "file": "stylesheets/ceiro.min.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "ceiro.min.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "cookie.css",
+      "content_type": "text/css",
       "file": "stylesheets/cookie.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "cookie.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "custom-2022.css",
+      "content_type": "text/css",
       "file": "stylesheets/custom-2022.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "custom-2022.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "custom-pages.css",
+      "content_type": "text/css",
       "file": "stylesheets/custom-pages.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "custom-pages.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "fontawesome-all.min.css",
+      "content_type": "text/css",
       "file": "stylesheets/fontawesome-all.min.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "fontawesome-all.min.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "main.css",
+      "content_type": "text/css",
       "file": "stylesheets/main.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "main.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "main.min.css",
+      "content_type": "text/css",
       "file": "stylesheets/main.min.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "main.min.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "martin.css",
+      "content_type": "text/css",
       "file": "stylesheets/martin.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "martin.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "martin.min.css",
+      "content_type": "text/css",
       "file": "stylesheets/martin.min.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "martin.min.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "new.css",
+      "content_type": "text/css",
       "file": "stylesheets/new.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "new.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "new.min.css",
+      "content_type": "text/css",
       "file": "stylesheets/new.min.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "new.min.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "owl.carousel.min.css",
+      "content_type": "text/css",
       "file": "stylesheets/owl.carousel.min.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "owl.carousel.min.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "print-domains.css",
+      "content_type": "text/css",
       "file": "stylesheets/print-domains.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "print-domains.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "print.css",
+      "content_type": "text/css",
       "file": "stylesheets/print.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "print.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "print.min.css",
+      "content_type": "text/css",
       "file": "stylesheets/print.min.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "print.min.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "styles.css",
+      "content_type": "text/css",
       "file": "stylesheets/styles.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "styles.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "wattie.css",
+      "content_type": "text/css",
       "file": "stylesheets/wattie.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "wattie.css"
     },
     {
-      "kind": "stylesheet",
-      "filename": "wattie.min.css",
+      "content_type": "text/css",
       "file": "stylesheets/wattie.min.css",
-      "content_type": "text/css"
+      "kind": "stylesheet",
+      "filename": "wattie.min.css"
     }
   ]
 }
