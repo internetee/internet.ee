@@ -229,6 +229,7 @@
       {% assign show_more = "Show more" %}
       {% assign loading = "Loading..." %}
       {% assign icon = "Icon" %}
+			{% assign identification_methods = "Identification methods" %}
       {% assign available_icons = "Available Icons" %}
       {% assign element_added = "Element added" %}
       {% assign menu_footer_title = "Quick links" %}

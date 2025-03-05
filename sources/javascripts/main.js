@@ -457,38 +457,38 @@
       });
 
       var aLink = $("[data-accordion-item]");
-      aLink.on("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var urlHash = encodeURI($(this).attr("href"));
-        var item = $($(this).data("accordion-item"));
+      // aLink.on("click", function (e) {
+      //   e.preventDefault();
+      //   e.stopPropagation();
+      //   var urlHash = encodeURI($(this).attr("href"));
+      //   var item = $($(this).data("accordion-item"));
 
-        if ($(item).hasClass("accordion__item--active")) {
-          e.preventDefault();
-          hideAccordionItem(item);
-          history.replaceState("", document.title, window.location.pathname);
-        } else {
-          showAccordionItem(item);
-          if (e.target.nodeName !== "SPAN") {
-            if (
-              location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
-              location.hostname == this.hostname
-            ) {
-              var target = $(this.hash);
-              if (target.length) {
-                $("html, body").animate(
-                  {
-                    scrollTop: target.offset().top,
-                  },
-                  500
-                );
-                window.location.hash = $(target).attr("id");
-              }
-            }
-          }
-        }
-      });
+      //   if ($(item).hasClass("accordion__item--active")) {
+      //     e.preventDefault();
+      //     hideAccordionItem(item);
+      //     history.replaceState("", document.title, window.location.pathname);
+      //   } else {
+      //     showAccordionItem(item);
+      //     if (e.target.nodeName !== "SPAN") {
+      //       if (
+      //         location.pathname.replace(/^\//, "") ==
+      //           this.pathname.replace(/^\//, "") &&
+      //         location.hostname == this.hostname
+      //       ) {
+      //         var target = $(this.hash);
+      //         if (target.length) {
+      //           $("html, body").animate(
+      //             {
+      //               scrollTop: target.offset().top,
+      //             },
+      //             500
+      //           );
+      //           window.location.hash = $(target).attr("id");
+      //         }
+      //       }
+      //     }
+      //   }
+      // });
     }
     var anchorBlock = $(".anchor-block"),
       anchorBlockContainer = $(".article--sidebar, .page--sidebar"),

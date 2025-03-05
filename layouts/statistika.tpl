@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="content-tabs--items">
                                         <div class="content-tabs--item u-active">
-                                            <div class="chart-item" id="total-chart"></div>
+                                            <div class="chart-item" id="totalchart"></div>
                                         </div>
                                         <div class="content-tabs--item">
                                             <div class="chart-item" id="countrychart"></div>
