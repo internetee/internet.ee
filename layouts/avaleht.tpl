@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main" data-search-indexing-allowed="true">
     <div class="page-hero">
@@ -41,13 +40,13 @@
                     </div>
                     <div class="domain-auctions--status" v-show="!auctions.length && requestDone">
                         {% contentblock name="domain_auctions_no_results_block" publish_default_content="true" %}
-                        <p>Hetkel ühtegi domeeni oksjonil ei ole</p>
+                        <p>Hetkel domeene oksjonil ei ole.</p>
                         {% endcontentblock %}
                     </div>
                 </div>
                 {% if editmode %}
                     <br>
-                    <label for="">"Vaata kõiki" lingi url</label>
+                    <label for="">Sisesta siia lingi url</label>
                     <input type="text" name="auctions_link" value="{{ page.data.auctionsLink }}" placeholder="Sisesta domeenioksjonite link" style="width: 100%;">
                 {% endif %}
             </div>
@@ -102,10 +101,11 @@
 {% if editmode %}
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 {% else %}
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 {% endif %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 <script>
+Vue.config.productionTip = false;
   new Vue({
     el: '#auctions',
     delimiters: ['${', '}'],
@@ -166,5 +166,6 @@
     }
   });
 </script>
+{% include "footer-scripts" %}
 </body>
 </html>

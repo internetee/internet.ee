@@ -6,7 +6,6 @@
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main">
   <article class="article--detail">
@@ -51,5 +50,6 @@
       site.initArticlePage();
   </script>
 {% endeditorjsblock %}
+{% include "footer-scripts" %}
 </body>
 </html>

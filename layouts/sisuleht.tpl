@@ -21,7 +21,6 @@
   </script>
 </head>
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main">
   <article class="page--detail" data-search-indexing-allowed="true">
@@ -42,12 +41,13 @@
       <div class="page--body u-content-styles">
         {% content %}
         <div class="columns">
-          <div class="col file-col">
+          <div class="col file-col file-col-with-icon">
             {% content name="files" %}
           </div>
-          <div class="col file-col">
+          <div class="col file-col file-col-with-icon">
             {% content name="files2" %}
           </div>
+          {% include "document-selector" %}
         </div>
       </div>
     </div>
@@ -55,5 +55,6 @@
 </main>
 {% include "footer" %}
 {% include "site-javascripts" %}
+{% include "footer-scripts" %}
 </body>
 </html>

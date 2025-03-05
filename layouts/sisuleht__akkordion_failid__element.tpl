@@ -28,5 +28,6 @@
     url = url.substring(0, url.lastIndexOf("/"));
     window.location.href = url;
 </script>
+{% include "footer-scripts" %}
 </body>
 </html>

@@ -7,8 +7,6 @@
 
 <body class="page-help">
 <div class="site-container">
-
-    {% include "cookie-modal" %}
     {% include "header" %}
     <main class="page-content" role="main">
         {% include 'pagehead' %}
@@ -30,5 +28,6 @@
     url = url.substring(0, url.lastIndexOf("/"));
     window.location.href = url;
 </script>
+{% include "footer-scripts" %}
 </body>
 </html>

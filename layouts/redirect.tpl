@@ -16,7 +16,6 @@
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% if editmode %}
 {% include "header" %}
 <main class="page-content" role="main">
@@ -74,5 +73,6 @@
     </script>
     {% endeditorjsblock %}
 {% endif %}
+{% include "footer-scripts" %}
 </body>
 </html>

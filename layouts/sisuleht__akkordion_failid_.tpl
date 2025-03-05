@@ -42,5 +42,6 @@
     </main>
     {% include "footer" %}
 {% include "site-javascripts" %}
+{% include "footer-scripts" %}
 </body>
 </html>

@@ -69,6 +69,7 @@
       {% assign label_detail_info = "detailne info" %}
       {% assign label_back = "Tagasi" %}
       {% assign label_edit = "Muuda" %}
+			{% assign label_languages = "Keeled" %}
       {% assign label_more_options = "Rohkem valikuid" %}
       {% assign label_less_options = "Vähem valikuid" %}
       {% assign label_show_dns_keys = "Kuva DNS võtmed" %}
@@ -250,6 +251,7 @@
       {% assign label_search_registrar = "Search for registrar" %}
       {% assign label_date_from = "Date from" %}
       {% assign label_date_to = "Date to" %}
+			{% assign label_languages = "Languages" %}
       {% assign label_reset = "Reset" %}
       {% assign label_public_portal = "Public portal" %}
       {% assign label_sign_in = "Log in" %}

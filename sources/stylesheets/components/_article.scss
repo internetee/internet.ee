@@ -31,6 +31,14 @@
   }
 }
 
+.article--image {
+	figcaption {
+		color: #717c8e;
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+
 .article {
   &--teaser {
     .article--image {

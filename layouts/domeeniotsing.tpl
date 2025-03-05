@@ -3,22 +3,21 @@
 <html class="domain-search-page common-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
-  <script src="//www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+  {% stylesheet_link "print-domains.css" media="print" %}
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcvvDoeAAAAAJig46j3KoOMcXDaCYAGvIb9f12v"></script>
   <script type="text/javascript">
-    var onloadCallback = function () {
-      setTimeout(function () {
-        window.captchaID = grecaptcha.render('domain-recaptcha', {
-          'sitekey': '6Ld-ARETAAAAAPN1pcTy9oYsUrbKm9_c9VDMvl6X'
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LcvvDoeAAAAAJig46j3KoOMcXDaCYAGvIb9f12v', {action: 'check'}).then(function(token) {
+          window.captchaID = token;
         });
-        
-      }, 500);
-      
-      
-    };
+
+      });
   </script>
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 </head>
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main id="app-domain-search" class="page-domain-search page-content" role="main">
   <article class="page--detail" data-search-indexing-allowed="false">
@@ -29,7 +28,7 @@
             <div class="form-item type-search">
               <input type="text" name="domain" class="inline-label" id="searchw" value=""
                      placeholder="{{ domain_search }}" autocomplete="off" v-model="queryString"
-                     maxlength="63" minlength="2">
+                     maxlength="63" minlength="1">
               <button class="btn btn--primary btn-submit" type="submit" title="{{ label_search }}" aria-label="{{ label_search }}">
                 <i class="fas fa-arrow-right"></i>
                 <i class="fas fa-spinner fa-spin"></i>
@@ -100,6 +99,15 @@
       </div>
     </div>
     <div class="mdl mdl--domain" data-modal="domain" id="printDomainData">
+      {% if page.language_code == "et" %}
+      {% assign private_person_label  = "Eraisik" %}
+      {% endif %}
+      {% if page.language_code == "en" %}
+      {% assign private_person_label  = "Private person" %}
+      {% endif %}
+      {% if page.language_code == "ru" %}
+      {% assign private_person_label  = "Частное лицо" %}
+      {% endif %}
       <div class="mdl--container">
         <header class="mdl--header">
           <h2>${ domain.name }</h2>
@@ -153,7 +161,7 @@
                     </template>
                   </td>
                 </tr>
-                <tr v-if="domain.dnssec_keys">
+                <tr class="dns-indicator" v-if="domain.dnssec_keys">
                   <th>{{ domain_dnssec }}:</th>
                   <td class="dnssec">
                     ${ signedLabel }
@@ -179,14 +187,37 @@
               </table>
             </div>
             <transition name="fadeIn">
+              <div class="domain--extra-info" v-show="!showExtraDomainInfo">
+                <div class="domain--registrant" v-show="!pendingRegistrationStatus">
+                  <div class="registrant-type">
+                    <img v-if="domain.registrant_kind === 'org'" src="{{ assets_path }}/business.svg" alt="">
+                    <img v-if="domain.registrant_kind !== 'org'" src="{{ assets_path }}/private-person.svg" alt="">
+                  </div>
+                  <h3>{{ domain_registrant }}</h3>
+                  <p v-if="domain.registrant === 'Not Disclosed'">
+                    <strong>{{ private_person_label }}</strong>
+                  </p>
+                  <p v-else>
+                    <strong>${ domain.registrant }</strong>
+                  </p>
+                  <p v-if="domain.registrant_reg_no">
+                    Reg nr: ${ domain.registrant_reg_no } (${ domain.registrant_ident_country_code })
+                  </p>
+                  <div id="domain-recaptcha" class="g-recaptcha"></div>
+                  <button class="btn btn--primary"
+                          @click="fetchExtraDomainInfo">{{ show_more }}</button>
+                </div>
+              </div>
+            </transition>
+            <transition name="fadeIn">
               <div class="domain--extra-info" v-show="showExtraDomainInfo">
                 <table class="table">
                   <tbody>
                   <tr>
                     <th>{{ domain_registrant }}:</th>
                     <td>
-                      <template v-if="domain.registrant === 'Private Person'">
-                        {{ label_private_person }}<br>
+                      <template v-if="domain.registrant === 'Not Disclosed'">
+                        {{ private_person_label }}<br>
                       </template>
                       <template v-else>
                         ${ domain.registrant }<br>
@@ -240,32 +271,14 @@
                   </tr>
                   </tbody>
                 </table>
-                <div class="domain--extra-actions" v-if="domain.registrant === 'Private Person'">
+                <br>
+
+                <div class="domain--extra-actions" v-if="domain.registrant_kind !== 'org'">
+                    <a :href="'https://rwhois.internet.ee/contact_requests/new?domain_name='+ domain.name + '&locale={{ page.language_code }}'" class="btn btn--default" target="_blank">{{ label_contact_registrant }}</a>
+                </div>
+                <!-- <div class="domain--extra-actions" v-if="domain.registrant === 'Private Person'">
                   <a :href="'https://rwhois.internet.ee/contact_requests/new?domain_name='+ domain.name + '&locale={{ page.language_code }}'" class="btn btn--default" target="_blank">{{ label_contact_registrant }}</a>
-                </div>
-              </div>
-            </transition>
-            <transition name="fadeIn">
-              <div class="domain--extra-info" v-show="!showExtraDomainInfo">
-                <div class="domain--registrant" v-show="!pendingRegistrationStatus">
-                  <div class="registrant-type">
-                    <img v-if="domain.registrant_kind === 'org'" src="{{ assets_path }}/business.svg" alt="">
-                    <img v-if="domain.registrant === 'Private Person'" src="{{ assets_path }}/private-person.svg" alt="">
-                  </div>
-                  <h3>{{ domain_registrant }}</h3>
-                  <p v-if="domain.registrant === 'Private Person'">
-                    <strong>{{ label_private_person }}</strong>
-                  </p>
-                  <p v-else>
-                    <strong>${ domain.registrant }</strong>
-                  </p>
-                  <p v-if="domain.registrant_reg_no">
-                    Reg nr: ${ domain.registrant_reg_no } (${ domain.registrant_ident_country_code })
-                  </p>
-                  <div id="domain-recaptcha" class="g-recaptcha"></div>
-                  <button class="btn btn--primary"
-                          @click="fetchExtraDomainInfo">{{ show_more }}</button>
-                </div>
+                </div> -->
               </div>
             </transition>
             <p class="print-date">${ printDate }</p>
@@ -280,6 +293,9 @@
 </main>
 {% include "footer" %}
 {% include "site-javascripts" %}
+
+{% include "footer-scripts" %}
+<script src=" https://cdn.jsdelivr.net/npm/punycode@2.3.1/punycode.min.js "></script>
 {% if editmode %}
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 {% else %}
@@ -330,7 +346,7 @@
     },
     mounted: function () {
       document.querySelector('.domain-info .btn').removeAttribute('style');
-      window.site.initAccordion();
+      //window.site.initAccordion();
     },
     methods: {
       print: function() {
@@ -394,7 +410,7 @@
           this.showDomainInfo = false;
         }
       },
-      
+
       addMissingTld: function (query) {
         var domain,
             regex = new RegExp(/\.ee/);
@@ -405,7 +421,7 @@
         }
         return domain;
       },
-      
+
       removeDomainEnding: function (query) {
         var domain,
             regex = new RegExp(/\.ee/);
@@ -416,20 +432,19 @@
         }
         return domain;
       },
-      
+
       isValid: function (domain) {
-        var pattern = /^[a-zA-Z0-9õöäüšž][a-zA-Z0-9õöäüšž-]{0,61}[a-zA-Z0-9õöäüšž](\.pri\.ee|\.com\.ee|\.fie\.ee|\.med\.ee|\.ee)$/;
+        var pattern = /^[a-zA-Z0-9õöäüšž-]{0,61}[a-zA-Z0-9õöäüšž](\.pri\.ee|\.com\.ee|\.fie\.ee|\.med\.ee|\.ee)$/;
         var regex = new RegExp(pattern);
         return !!(regex.exec(domain));
       },
-      
+
       resetCaptcha: function () {
-        grecaptcha.reset(window.captchaID);
-        setTimeout(function () {
-          console.log($("body > div").last().addClass("newChallengeBox"));
-        }, 1000);
+        grecaptcha.execute('6LcvvDoeAAAAAJig46j3KoOMcXDaCYAGvIb9f12v', {action: 'check'}).then(function(token) {
+          window.captchaID = token;
+        });
       },
-      
+
       updateQueryString: function (key, value) {
         var baseUrl = [location.protocol, '//', location.host, location.pathname].join(''),
             urlQueryString = document.location.search,
@@ -438,14 +453,14 @@
         if (urlQueryString) {
           var updateRegex = new RegExp('([\?&])' + key + '[^&]*');
           var removeRegex = new RegExp('([\?&])' + key + '=[^&;]+[&;]?');
-          
+
           if (typeof value == 'undefined' || value == null || value == '') {
             params = urlQueryString.replace(removeRegex, "$1");
             params = params.replace(/[&;]$/, "");
-            
+
           } else if (urlQueryString.match(updateRegex) !== null) {
             params = urlQueryString.replace(updateRegex, "$1" + newParam);
-            
+
           } else {
             params = urlQueryString + '&' + newParam;
           }
@@ -453,9 +468,9 @@
         params = params == '?' ? '' : params;
         window.history.replaceState({}, "", baseUrl + params);
       },
-      
+
       addDomainLookupHandlers: function () {
-        if (this.queryString.length > 1) {
+        if (this.queryString.length > 0) {
           var domain = this.addMissingTld(this.queryString);
           if (domain === this.domain.name) {
             return false;
@@ -544,25 +559,25 @@
           this.message = '';
         }
       },
-      
+
       hideModal: function () {
         document.title = this.cachedTitle;
         $('body').removeClass('u-modal-open');
         $('.mdl.u-open').removeClass('u-open');
       },
-      
+
       showDomainInfoModal: function () {
         if (this.domain) {
           this.showDomainModal = true;
           $('body').addClass('u-modal-open');
           $('.mdl--domain').addClass('u-open');
           this.resetCaptcha();
-          
+
         }
       },
-      
+
       fetchExtraDomainInfo: function () {
-        var g_recaptcha_response = grecaptcha.getResponse(window.captchaID);
+        var g_recaptcha_response = window.captchaID;
         if (g_recaptcha_response === "") {
           $('.g-recaptcha').addClass('error');
         } else {
@@ -593,7 +608,7 @@
           });
         }
       },
-      
+
       chunkSuggestions: function (arr, size) {
         var index = 0;
         var arrayLength = arr.length;
@@ -604,7 +619,7 @@
         }
         return tempArray;
       },
-      
+
       fetchDomainSuggestions: function () {
         if (this.queryString.length > 1) {
           const domain = this.removeDomainEnding(this.queryString);
@@ -625,7 +640,7 @@
           }.bind(this));
         }
       },
-      
+
       toggleDNSKey: function () {
         this.showDNSKey = !this.showDNSKey;
       }
@@ -637,7 +652,7 @@
         const results = regex.exec(location.search);
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
       }
-      
+
       if (getUrlParameter('domain')) {
         this.queryString = getUrlParameter('domain');
         this.addDomainLookupHandlers();

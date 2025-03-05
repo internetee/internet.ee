@@ -6,7 +6,6 @@
     {{ blog.rss_link }}
   </head>
   <body>
-    {% include "cookie-modal" %}
     {% include "header" %}
     <div class="site-container">
       <main class="page-content" role="main">
@@ -29,5 +28,6 @@
     </div>
     {% include "footer" %}
     {% include "site-javascripts" %}
-  </body>
+  {% include "footer-scripts" %}
+</body>
 </html>

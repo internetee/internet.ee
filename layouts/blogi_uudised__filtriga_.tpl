@@ -7,7 +7,6 @@
 </head>
 
 <body>
-{% include "cookie-modal" %}
 {% include "header" %}
 <main class="page-content" role="main">
     <section class="page--detail" data-search-indexing-allowed="true" id="app">
@@ -21,6 +20,16 @@
         </header>
         <form class="blog-filter" action="#" method="get" @submit.prevent="submitForm">
             <div class="blog-filter--topics">
+								<div class="items">
+									{% include 'blog-post-types' %}
+										{% for type in articleTypes %}
+										{% assign type = type | strip %}
+										<a href="#" @click.self.prevent="getTypes('{{ type }}')" data-type="{{ type }}"><i class="fas fa-check"></i>{{ type
+											}}</a>
+									{% endfor %}
+								</div>
+
+								{% comment %}
                 <div class="items">
                     {% assign types = '' | split: ',' %}
                     {% for article in site.latest_1500_articles %}
@@ -35,15 +44,17 @@
                         <a href="#" @click.self.prevent="getTypes('{{ type }}')" data-type="{{ type }}"><i class="fas fa-check"></i>{{ type }}</a>
                     {% endfor %}
                 </div>
+								{% endcomment %}
+
                 <div class="items">
                   {% assign topics = '' | split: ',' %}
-                  {% for article in site.latest_1500_articles %}
+                  {% for article in site.latest_60_articles %}
                     {% unless article.page.node_id == 2089647 %}
                     {% assign topicName = article.data.topic | split: ',' %}
                     {% assign topics = topics | concat: topicName %}
                     {% endunless %}
                   {% endfor %}
-                  {% assign topics = topics | uniq %}
+                  {% assign topics = topics | uniq | sort_natural %}
                   {% for topic in topics %}
                     {% assign topic = topic | strip %}
                       <a href="#" @click.self.prevent="getTopics('{{ topic }}')" data-topic="{{ topic }}"><i class="fas fa-check"></i>{{ topic }}</a>
@@ -86,7 +97,7 @@
             <transition name="fade">
                 <div class="article--tags" v-show="showAdvOptions">
                     {% assign tags = '' | split: ',' %}
-                    {% for article in site.latest_1500_articles %}
+                    {% for article in site.latest_60_articles %}
                         {% unless article.page.node_id == 2293891 %}
                             {% assign tagName = article.tag_names_str | split: ', ' %}
                             {% assign tags = tags | concat: tagName %}
@@ -306,8 +317,16 @@
                   this.queryTypes = this.queryTypes.filter(function(item) {
                     return item.indexOf(type) === -1;
                   });
+									if (type == 'Uudised') {
+										this.queryTypes = this.queryTypes.filter(function(item) {
+											return !['uudis', 'uudised', 'UUDIS', 'Uudis'].includes(item);
+										});
+									}
                 } else {
                   this.queryTypes.push(type);
+									if (type == 'Uudised') {
+										this.queryTypes.push('uudis', 'uudised', 'UUDIS', 'Uudis');
+									}
                   document.querySelector('[data-type="' + type + '"]').classList.add('u-active');
                 }
               if (this.$refs.paginator) {
@@ -436,5 +455,6 @@
         }
     });
 </script>
+{% include "footer-scripts" %}
 </body>
 </html>
