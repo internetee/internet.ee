@@ -52,6 +52,7 @@
             auctionsCount: 0,
             loading: true,
             requestDone: false,
+						countHost: '//data.internet.ee/'
         },
         mounted() {
             this.getAuctions();
@@ -61,6 +62,7 @@
                     clearInterval(intvl)
                 }
             }, 1000);
+						this.loadDomainStats();
         },
         created() {
             document.querySelector('html').classList.remove('page-loading');
@@ -102,6 +104,13 @@
                         self.auctionsCount = self.auctions.length < 11 ? 0 : self.auctions.length - 10
                     });
             },
+						loadDomainStats() {
+							const url = this.countHost + "count.json";
+							$.get(url, function (response) {
+								$(".domain-stats .all > span").text(response.total);
+								$(".domain-stats .today > span").text(response.total_today);
+							});
+						}
         }
     });
 </script>
