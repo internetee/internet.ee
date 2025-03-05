@@ -2024,6 +2024,7 @@
 
   var initFrontPage = function initFrontPage() {
     loadDomainData();
+
     $(".hero-slider-slides").owlCarousel({
       items: 1,
       loop: true,
