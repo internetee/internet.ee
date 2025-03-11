@@ -22,7 +22,7 @@
 </header>
 
 <div class="c-search-wrapper-mobile js-search-mobile">
-
+	
 </div>
 
 <div class="site-wrapper">

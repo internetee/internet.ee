@@ -2076,6 +2076,71 @@
     }
   };
 
+  // header search
+  const initHeaderSearch = () => {
+    const $searchForm = $(".js-search-form");
+    if ($searchForm.length > 0) {
+      const $searchResultsModal = $(".js-voog-search-modal");
+      const $searchResults = $(".js-voog-search-result");
+      const $searchInput = $searchForm.find(".js-search-form-input");
+
+      $searchInput.on("focus", function () {
+        if ($searchResultsModal.hasClass("has-results")) {
+          $searchResultsModal.show();
+        }
+      });
+
+      $searchForm.on("submit", function (e) {
+        e.preventDefault();
+        const query = $searchInput.val();
+        $searchResultsModal.removeClass("has-results");
+        $searchResultsModal.show();
+        $searchResults.html(
+          '<div class="search-loader-wrap"><div class="search-loader"></div></div>'
+        );
+
+        $.ajax({
+          url: "/admin/api/search",
+          method: "GET",
+          data: {
+            q: query,
+            type: "page,article",
+            per_page: 200,
+            order: "updated_at asc",
+            lang: window.pageLanguage,
+          },
+          success: function (data) {
+            console.log(data);
+            $searchResults.html("");
+            if (data.result.length === 0) {
+              const noResultsText = $searchResultsModal.data("noresults");
+              $searchResults.html(
+                `<div style="color: #212224">${noResultsText}</div>`
+              );
+            } else {
+              $searchResultsModal.addClass("has-results");
+              data.result.forEach((item) => {
+                $searchResults.append(`
+									<div class="voog-search-modal-result"><h3><a href="${item.path}">${item.title}</a></h3></div>
+								`);
+              });
+            }
+          },
+        });
+      });
+
+      $("body").on("click", function (e) {
+        if (!$(e.target).closest(".js-search-toolbar").length) {
+          $searchResultsModal.hide();
+        }
+      });
+
+      $(".js-search-toggle").on("click", function (e) {
+        $(".js-search").toggleClass("is-open");
+      });
+    }
+  };
+
   $(window).resize(function () {
     initResponsive();
   });
@@ -2091,4 +2156,5 @@
   initAccordion();
   initTabs();
   initResponsive();
+  initHeaderSearch();
 })(jQuery);

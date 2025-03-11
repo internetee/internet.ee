@@ -1,4 +1,5 @@
 {% if site.search.enabled %}
+<script src="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.js"></script>
 <div class="js-search-wrapper desktop-search-wrap">
     <button class="c-header__search__toggle c-header__search__toggle--desktop-toggle js-search-toggle">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +19,7 @@
                 </button>
             </form>
         </div>
-        <div class="voog-search-modal js-voog-search-modal">
+        <div class="voog-search-modal js-voog-search-modal" data-noresults="{{ search_noresults }}">
             <div class="voog-search-modal-inner">
                 <div class="js-voog-search-result">
 

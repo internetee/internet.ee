@@ -98,6 +98,7 @@
       {% assign abbr_hours = "t" %}
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
+			{% assign search_noresults = "Tulemusi ei leitud" %}
     {% comment %}Russian{% endcomment %}
     {% when "ru" %}
       {% assign registrant_link = "Портал для регистрантов" %}
@@ -271,6 +272,7 @@
       {% assign abbr_hours = "h" %}
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
+			{% assign search_noresults = "No results" %}
   {% endcase %}
 {% endcapture %}
 
