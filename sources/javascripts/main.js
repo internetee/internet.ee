@@ -2106,7 +2106,7 @@
             q: query,
             type: "page,article",
             per_page: 200,
-            order: "updated_at asc",
+            order: "updated_at desc",
             lang: window.pageLanguage,
           },
           success: function (data) {
@@ -2119,7 +2119,16 @@
               );
             } else {
               $searchResultsModal.addClass("has-results");
-              data.result.forEach((item) => {
+              const orderedResults = data.result.sort((a, b) => {
+                if (a.updated_at > b.updated_at) {
+                  return -1;
+                }
+                if (a.updated_at < b.updated_at) {
+                  return 1;
+                }
+                return 0;
+              });
+              orderedResults.forEach((item) => {
                 $searchResults.append(`
 									<div class="voog-search-modal-result"><h3><a href="${item.path}">${item.title}</a></h3></div>
 								`);

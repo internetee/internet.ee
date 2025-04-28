@@ -53,11 +53,11 @@
             <div class="eis-contacts">
                 {% contentblock name="eis-contacts" publish_default_content="true" %}
                     <h3>Eesti Interneti Sihtasutus</h3>
-                    <p><strong>Registrikood:</strong> 90010019 </p>
+                    <p><strong>Registrikood:</strong> 90010019</p>
                     <p><strong>Aadress:</strong> Paldiski mnt 80, 10617 Tallinn</p><br>
-                    <p><strong>Telefon:</strong> 727 1000 </p>
-                    <p><strong>E-post:</strong> info@internet.ee </p>
-                    <p><strong>a/a</strong> LHV 000000000000000000 </p>
+                    <p><strong>Telefon:</strong> 727 1000</p>
+                    <p><strong>E-post:</strong> info@internet.ee</p>
+                    <p><strong>a/a</strong> LHV 000000000000000000</p>
                     <p><strong>KMKR:</strong> EE000000000</p>
                 {% endcontentblock %}
             </div>
