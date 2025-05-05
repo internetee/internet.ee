@@ -24,7 +24,7 @@
 {% include "header" %}
 <main class="page-content" role="main">
   <article class="page--detail" data-search-indexing-allowed="true">
-    <header class="page--header" {% if page.image? %}style="background-image: url({{ page.image.schemeless_url }})"{% endif %}>
+    <header class="page--header" {% if page.image? %}style="background-image: url({{ assets_path }}/hero.png)"{% endif %}>
       <div class="u-container">
         <h1>{{ page.title }}</h1>
         {% if page.description != "" %}

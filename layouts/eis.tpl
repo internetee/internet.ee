@@ -9,7 +9,7 @@
 {% include "header" %}
 <main class="page-content" role="main">
     <article class="about-page article--detail" data-search-indexing-allowed="true">
-        <header class="article--header" style="background-image:url({{ page.image.schemeless_url }})">
+        <header class="article--header" style="background-image:url({{ assets_path }}/hero.png)">
             <div class="u-container">
                 <h1>{% contentblock name="about-page-title" single="plaintext" escape="false" xpage="true" %}EIS tegeleb .ee tippdomeeni haldusega{% endcontentblock %}</h1>
                 <p>{{ page.description }}</p>
