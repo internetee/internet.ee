@@ -41,6 +41,13 @@
       "title": "blog-post-types"
     },
     {
+      "title": "campaign-block-settings",
+      "layout_name": "campaign-block-settings",
+      "content_type": "component",
+      "component": true,
+      "file": "components/campaign-block-settings.tpl"
+    },
+    {
       "content_type": "component",
       "component": true,
       "file": "components/cookie-consent.tpl",
@@ -697,6 +704,13 @@
       "file": "layouts/kkk_element.tpl",
       "layout_name": "kkk_element",
       "title": "KKK element"
+    },
+    {
+      "title": "Landing  dynamic  campaign",
+      "layout_name": "landing__dynamic__campaign",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/landing__dynamic__campaign.tpl"
     },
     {
       "content_type": "page",
