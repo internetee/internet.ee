@@ -30,38 +30,63 @@
   <article class="page--detail" data-search-indexing-allowed="true">
     
     {% if editmode or page.data.show_page_header %}
-      <header class="page--header">
+
+			{% capture headerContent %}{% content name="page_header_content" %}{% endcapture %}
+			{% assign headerContent = headerContent | strip %}
+
+			{% assign headerGraphicOnly = true %}
+			{% if editmode or headerContent != "" %}
+			{% assign headerGraphicOnly = false %}
+			{% endif %}
+
+			{% unless headerGraphicOnly %}
+				<header class="page--header">
+					{% assign heroBg = page.data.hero_image %}
+					{% assign heroBgImage = 'none' %}
+					{% if heroBg and heroBg.url %}
+					{% assign heroBgImage = page.data.hero_image.url %}
+					{% endif %}
+				
+					<div class="header-bg js-header-bg" style="background-image: url('{{ heroBgImage }}');"></div>
+				
+					{% if editmode %}
+					<div class="c-switch-field">
+						<span>Off/On</span>
+						<label class="switch">
+							<input {% if page.data.show_page_header %} checked {% endif %} name="switch-page-header" type="checkbox">
+							<span class="slider round"></span>
+						</label>
+					</div>
+					<div class="c-header-image">
+						<div style="width: 200px; height: 200px;" class="js-hero-image-area"
+							data-image-object="{{ page.data.hero_image | json | escape }}" data-key="hero_image"></div>
+					</div>
+					{% endif %}
+					<div class="u-container">
+						<div>
+							{% content name="page_header_content" single="text" placeholder="Päisebänner. Mille võimalusel vahetaksime
+							kampaaniavisuali vastu" %}
+						</div>
+					</div>
+				</header>
+			{% else %}
 				{% assign heroBg = page.data.hero_image %}
 				{% assign heroBgImage = 'none' %}
 				{% if heroBg and heroBg.url %}
-					{% assign heroBgImage = page.data.hero_image.url %}
+				{% assign heroBgImage = page.data.hero_image.url %}
 				{% endif %}
-				<div class="header-bg js-header-bg" style="background-image: url('{{ heroBgImage }}');"></div>
-      {% if editmode %}
-        <div class="c-switch-field">
-          <span>Off/On</span>
-          <label class="switch">
-          <input 
-            {% if page.data.show_page_header %}
-            checked
-            {% endif %}
-           name="switch-page-header" type="checkbox">
-          <span class="slider round"></span>
-        </label>
-        </div>
-				<div class="c-header-image">
-					<div style="width: 200px; height: 200px;" class="js-hero-image-area"
-						data-image-object="{{ page.data.hero_image | json | escape }}" data-key="hero_image"></div>
-				</div>
-      {% endif %}
-        <div class="u-container">
-          <div>
-						{% content name="page_header_content" single="text" placeholder="Päisebänner. Mille võimalusel vahetaksime
-						kampaaniavisuali vastu" %}
-					</div>
-        </div>
-      </header>
+
+				{% if heroBgImage != 'none' %}
+				<header class="page--header graphic-only">
+					<img src="{{ heroBgImage }}" alt="">
+				</header>
+				{% endif %}
+			{% endunless %}
+
+
     {% endif %}
+
+
     <div class="anchors js-anchors">
       <div class="keywords-list">
       
@@ -230,7 +255,7 @@
 				{% include "campaign-block-settings" %}
 				
 				{% if displayBlock or editmode %}
-        <div class="dsearch-graph {{ blockTarget }}" style="background-color: {{ blockBgColor }};">
+        <div class="dsearch-graph {{ blockTarget }} block6" style="background-color: {{ blockBgColor }};">
           <div class="dsearch-container">
             <div class="dsearch-graph__graph1">
               {% content name="info-1" %}

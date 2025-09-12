@@ -27,6 +27,21 @@
 					background-size: cover;
 					background-position: center;
 				}
+
+				&.graphic-only {
+					padding: 0;
+
+					img {
+						display: block;
+						width: 100%;
+						height: auto;
+						max-height: none;
+					}
+
+					&:before {
+						display: none;
+					}
+				}
 			}
 		}
 	}
@@ -48,6 +63,14 @@
 			label {
 				line-height: 1;
 			}
+		}
+	}
+
+	.dsearch-graph {
+		&.block6 {
+			margin: 0;
+			padding-bottom: 4em;
+			margin-bottom: 4em;
 		}
 	}
 }
