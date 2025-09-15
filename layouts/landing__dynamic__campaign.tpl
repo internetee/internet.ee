@@ -59,7 +59,7 @@
 					</div>
 					<div class="c-header-image">
 						<div style="width: 200px; height: 200px;" class="js-hero-image-area"
-							data-image-object="{{ page.data.hero_image | json | escape }}" data-key="hero_image"></div>
+							data-image-object="{{ page.data.hero_image | json | escape }}" target_width="2000" data-key="hero_image"></div>
 					</div>
 					{% endif %}
 					<div class="u-container">
@@ -73,7 +73,8 @@
 				{% assign heroBg = page.data.hero_image %}
 				{% assign heroBgImage = 'none' %}
 				{% if heroBg and heroBg.url %}
-				{% assign heroBgImage = page.data.hero_image.url %}
+					{% assign imgSizes = heroBg.imageSizes %}
+					{% assign heroBgImage = imgSizes[0].url %}
 				{% endif %}
 
 				{% if heroBgImage != 'none' %}
