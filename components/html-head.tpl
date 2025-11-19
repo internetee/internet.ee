@@ -60,7 +60,7 @@
 
 {% stylesheet_link "fontawesome-all.min.css" %}
 
-{% stylesheet_link "main.css?v=1.1" %}
+{% stylesheet_link "main.css?v=1.2" %}
 
 {% stylesheet_link "styles.css" %}
 
