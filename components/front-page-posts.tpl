@@ -16,7 +16,7 @@
     <h2>{% content single="plaintext" name="blog_posts_block" xpage="true" placeholder="Uudiseid, sündmused ja blogi" %}</h2>
     {% blogcontext blogUrl %}
       <div class="section--actions">
-        <a href="{{ blog.page.path }}" class="btn btn-view-more"><span>{{ label_view_all }}</span><i class="fas fa-arrow-right"></i></a>
+        <a href="{{ site.blogs[0].page.path }}" class="btn btn-view-more"><span>{{ label_view_all }}</span><i class="fas fa-arrow-right"></i></a>
       </div>
     {% endblogcontext %}
   </header>

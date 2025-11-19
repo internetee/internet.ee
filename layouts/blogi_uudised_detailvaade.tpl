@@ -24,7 +24,11 @@
     <header class="section--header">
       <h2>{% content single="plaintext" name="more_posts_block" xpage="true" placeholder="Veel uudiseid, sündmusi ja blogipostitusi" %}</h2>
       <div class="section--actions">
-        <a href="/{{ blog.page.path }}" class="btn btn-view-more"><span>{{ label_view_all }}</span><i class="fas fa-arrow-right"></i></a>
+				{% assign blogPath = '/eis/uudised' %}
+				{% if page.language_code == "en" %}
+				{% assign blogPath = '/eif/news' %}
+				{% endif %}
+        <a href="{{ blogPath }}" class="btn btn-view-more"><span>{{ label_view_all }}</span><i class="fas fa-arrow-right"></i></a>
       </div>
     </header>
     <div class="articles--list">
