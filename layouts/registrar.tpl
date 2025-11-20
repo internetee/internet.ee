@@ -44,7 +44,7 @@
 													{% endif %}
 												</p>
 
-                        <div style="margin-top: 1rem">
+                        <div style="margin-top: 1rem; padding-left: 1rem; padding-right: 1rem;">
                             <div style="display: flex; gap: 1rem; align-items: center;">
                                 <span title="Elite Partner"
                                       style="display: block; height: 24px; width: 24px; background: none no-repeat 50%/cover; background-image: none; background-image: url(/assets/ep2.svg);"></span>
@@ -98,6 +98,12 @@
                                 <label style="font-weight: bold;" for="">{{ identification_methods }}:</label>
                                 {% editable element.identification_methods %}
                             </div>
+														<div style="margin-top: 1rem">
+															{% if editmode %}
+															<label style="font-weight: bold;" for="">Description</label>
+															{% endif %}
+															{% editable element.description %}
+														</div>
                         </div>
                 </div>
         </section>
@@ -124,7 +130,7 @@
 <div class="mdl mdl--registrar" data-modal="elite-partner">
     <div class="mdl--container">
         <header class="mdl--header">
-            <h2>Elite partner</h2>
+            <h2>{{ label_elite_partner }}</h2>
             <a href="#" role="button" class="btn btn--close" data-close-modal>
                 <i class="fas fa-times"></i>
             </a>

@@ -65,8 +65,9 @@
       return false;
     });
 
-    $("[data-close-modal]").click(function (e) {
+    $("body").on("click", "[data-close-modal]", function (e) {
       e.preventDefault();
+      console.log("close modal");
       $(".mdl.u-open").removeClass("u-open");
     });
 
@@ -314,6 +315,14 @@
       }
     }
 
+    $(".registrar-filter [data-open-modal]").on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var modal = $(this).data("open-modal");
+      $("body").addClass("u-modal-open");
+      $("[data-modal=" + modal + "]").addClass("u-open");
+    });
+
     // START Mark search results
     const pageSearchParams = new URL(document.location).searchParams;
     if (pageSearchParams.get("mark-keys")) {
@@ -457,38 +466,38 @@
       });
 
       var aLink = $("[data-accordion-item]");
-      // aLink.on("click", function (e) {
-      //   e.preventDefault();
-      //   e.stopPropagation();
-      //   var urlHash = encodeURI($(this).attr("href"));
-      //   var item = $($(this).data("accordion-item"));
+      aLink.on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var urlHash = encodeURI($(this).attr("href"));
+        var item = $($(this).data("accordion-item"));
 
-      //   if ($(item).hasClass("accordion__item--active")) {
-      //     e.preventDefault();
-      //     hideAccordionItem(item);
-      //     history.replaceState("", document.title, window.location.pathname);
-      //   } else {
-      //     showAccordionItem(item);
-      //     if (e.target.nodeName !== "SPAN") {
-      //       if (
-      //         location.pathname.replace(/^\//, "") ==
-      //           this.pathname.replace(/^\//, "") &&
-      //         location.hostname == this.hostname
-      //       ) {
-      //         var target = $(this.hash);
-      //         if (target.length) {
-      //           $("html, body").animate(
-      //             {
-      //               scrollTop: target.offset().top,
-      //             },
-      //             500
-      //           );
-      //           window.location.hash = $(target).attr("id");
-      //         }
-      //       }
-      //     }
-      //   }
-      // });
+        if ($(item).hasClass("accordion__item--active")) {
+          e.preventDefault();
+          hideAccordionItem(item);
+          history.replaceState("", document.title, window.location.pathname);
+        } else {
+          showAccordionItem(item);
+          if (e.target.nodeName !== "SPAN") {
+            if (
+              location.pathname.replace(/^\//, "") ==
+                this.pathname.replace(/^\//, "") &&
+              location.hostname == this.hostname
+            ) {
+              var target = $(this.hash);
+              if (target.length) {
+                $("html, body").animate(
+                  {
+                    scrollTop: target.offset().top,
+                  },
+                  500
+                );
+                window.location.hash = $(target).attr("id");
+              }
+            }
+          }
+        }
+      });
     }
     var anchorBlock = $(".anchor-block"),
       anchorBlockContainer = $(".article--sidebar, .page--sidebar"),

@@ -99,6 +99,7 @@
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
 			{% assign search_noresults = "Tulemusi ei leitud" %}
+			{% assign label_elite_partner = "Eliitpartner" %}
     {% comment %}Russian{% endcomment %}
     {% when "ru" %}
       {% assign registrant_link = "Портал для регистрантов" %}
@@ -183,6 +184,7 @@
       {% assign abbr_hours = "h" %}
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
+			{% assign label_elite_partner = "Elite partner" %}
       {% comment %}Every other language{% endcomment %}
     {% else %}
       {% assign registrant_link = "registrant's portal" %}
@@ -273,6 +275,7 @@
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
 			{% assign search_noresults = "No results" %}
+			{% assign label_elite_partner = "Elite partner" %}
   {% endcase %}
 {% endcapture %}
 

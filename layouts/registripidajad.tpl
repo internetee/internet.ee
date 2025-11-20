@@ -34,7 +34,7 @@
                         <input type="checkbox" class="filter-checkbox" id="ep" data-filter=".ep" value="ep">
                         <label for="ep">
                             <span class="icon-ep"></span>
-                            Elite partner
+                            {{ label_elite_partner }}
                             <i class="fas fa-question-circle" data-open-modal="elite-partner"></i>
                         </label>
                     </div>
@@ -86,7 +86,7 @@
                                 <span class="item" title="DNSSEC" style="background-image:url({{ assets_path }}/dns.svg)"></span>
                             {% endif %}
                             {% if element.ep == true %}
-                            <span class="item" title="Elite Partner" style="background-image:url({{ assets_path }}/ep2.svg)"></span>
+                            <span class="item" title="{{ label_elite_partner }}" style="background-image:url({{ assets_path }}/ep2.svg)"></span>
                             {% endif %}
                             {% if element.short_url == true %}
                             <span class="item" title="Short URL" style="background-image:url({{ assets_path }}/short-url.svg)"></span>
@@ -301,6 +301,66 @@
         }
     }); */
 </script>
+<div class="mdl mdl--registrar" data-modal="dnssec">
+    <div class="mdl--container">
+        <header class="mdl--header">
+            <h2>DNSSEC</h2>
+            <a href="#" role="button" class="btn btn--close" data-close-modal>
+                <i class="fas fa-times"></i>
+            </a>
+        </header>
+        <div class="mdl--content">
+            <article class="u-content-styles">
+                {% contentblock name="dnssec-desc" publish_default_content="true" %}
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu tortor, ac
+                    lobortis metus luctus ac. Donec ornare mi a orci consectetur.</p>
+                {% endcontentblock %}
+            </article>
+        </div>
+    </div>
+</div>
+<div class="mdl mdl--registrar" data-modal="elite-partner">
+    <div class="mdl--container">
+        <header class="mdl--header">
+            <h2>{{ label_elite_partner }}</h2>
+            <a href="#" role="button" class="btn btn--close" data-close-modal>
+                <i class="fas fa-times"></i>
+            </a>
+        </header>
+        <div class="mdl--content">
+            <article class="u-content-styles">
+                {% contentblock name="elite-partner-desc" publish_default_content="true" %}
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu tortor, ac
+                    lobortis metus luctus ac. Donec ornare mi a orci consectetur.</p>
+                {% endcontentblock %}
+            </article>
+            <div class="mdl--actions">
+                <button class="btn btn--primary" data-close-modal>{{ label_close }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mdl mdl--registrar" data-modal="short_url">
+    <div class="mdl--container">
+        <header class="mdl--header">
+            <h2>{{ label_short_periods }}</h2>
+            <a href="#" role="button" class="btn btn--close" data-close-modal>
+                <i class="fas fa-times"></i>
+            </a>
+        </header>
+        <div class="mdl--content">
+            <article class="u-content-styles">
+                {% contentblock name="short_url-desc" publish_default_content="true" %}
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum arcu tortor, ac
+                    lobortis metus luctus ac. Donec ornare mi a orci consectetur.</p>
+                {% endcontentblock %}
+            </article>
+            <div class="mdl--actions">
+                <button class="btn btn--primary" data-close-modal>{{ label_close }}</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% include "footer-scripts" %}
 </body>
 </html>
