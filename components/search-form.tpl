@@ -24,6 +24,13 @@
                 <div class="js-voog-search-result">
 
                 </div>
+								<div>
+									{% assign searchUrl = "/otsing" %}
+									{% if page.language_code == 'en' %}
+									{% assign searchUrl = "/en/search" %}
+									{% endif %}
+									<a href="{{ searchUrl }}" data-url="{{ searchUrl }}" class="voog-search-modal-viewall js-voog-search-modal-viewall">{{ label_view_all }}</a>
+								</div>
             </div>
         </div>
     </div>

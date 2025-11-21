@@ -769,6 +769,13 @@
       "title": "Sõnaraamatu element"
     },
     {
+      "title": "Search page",
+      "layout_name": "search_page",
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/search_page.tpl"
+    },
+    {
       "content_type": "page",
       "component": false,
       "file": "layouts/sisuleht.tpl",

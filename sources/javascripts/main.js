@@ -2114,12 +2114,11 @@
           data: {
             q: query,
             type: "page,article",
-            per_page: 200,
+            per_page: 5,
             order: "updated_at desc",
             lang: window.pageLanguage,
           },
           success: function (data) {
-            console.log(data);
             $searchResults.html("");
             if (data.result.length === 0) {
               const noResultsText = $searchResultsModal.data("noresults");
@@ -2128,20 +2127,26 @@
               );
             } else {
               $searchResultsModal.addClass("has-results");
-              const orderedResults = data.result.sort((a, b) => {
-                if (a.updated_at > b.updated_at) {
-                  return -1;
-                }
-                if (a.updated_at < b.updated_at) {
-                  return 1;
-                }
-                return 0;
-              });
+              // const orderedResults = data.result.sort((a, b) => {
+              //   if (a.updated_at > b.updated_at) {
+              //     return -1;
+              //   }
+              //   if (a.updated_at < b.updated_at) {
+              //     return 1;
+              //   }
+              //   return 0;
+              // });
+              const orderedResults = data.result;
               orderedResults.forEach((item) => {
                 $searchResults.append(`
 									<div class="voog-search-modal-result"><h3><a href="${item.path}">${item.title}</a></h3></div>
 								`);
               });
+              const searchPageUrl =
+                $(".js-voog-search-modal-viewall").data("url") +
+                "?keys=" +
+                encodeURIComponent(query);
+              $(".js-voog-search-modal-viewall").attr("href", searchPageUrl);
             }
           },
         });
