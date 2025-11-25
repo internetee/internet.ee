@@ -55,7 +55,7 @@
 				</transition>
 				<div class="search-page page--content">
 					<div class="search-page--results page--body">
-						<h2 v-if="pages.length > 0 && !loading"><span v-html="totalEntries"></span> tulemust</h2>
+						<h2 v-if="pages.length > 0 && !loading"><span v-html="totalEntries"></span> {{ label_search_results }}</h2>
 						<transition name="fadeIn">
 							<div v-if="articles.length">
 								<paginate name="resultsPagination" :list="pages" :per="1" ref="paginator" tag="div">
@@ -74,7 +74,7 @@
 						</transition>
 						<div class="pagination" v-if="showResults && !loading">
 							<div class="mx-auto">
-								<paginate-links :async="true" :show-step-links="true" :limit="5" :step-links="{ next: 'Järgmised', prev: 'Eelmised' }"
+								<paginate-links :async="true" :show-step-links="true" :limit="5" :step-links="{ next: '{{ label_next_plural }}', prev: '{{ label_previous_plural }}' }"
 									:hide-single-page="true" @change="pageChange" for="resultsPagination"></paginate-links>
 							</div>
 						</div>
@@ -82,8 +82,8 @@
 				</div>
 			</article>
 		</main>
-		{% include "footer" %}
 	</div>
+	{% include "footer" %}
 	{% if editmode %}
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 	{% else %}

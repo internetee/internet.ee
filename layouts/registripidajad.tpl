@@ -316,6 +316,9 @@
                     lobortis metus luctus ac. Donec ornare mi a orci consectetur.</p>
                 {% endcontentblock %}
             </article>
+						<div class="mdl--actions">
+							<button class="btn btn--primary" data-close-modal>{{ label_close }}</button>
+						</div>
         </div>
     </div>
 </div>

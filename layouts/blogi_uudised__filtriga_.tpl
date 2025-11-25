@@ -140,15 +140,15 @@
             </paginate>
         </div>
         <div class="pagination" v-if="filterResults.length > 0 && !loading">
-            <paginate-links :show-step-links="true" :limit="5" :step-links="{ next: 'Järgmised', prev: 'Eelmised' }" :hide-single-page="true" @change="pageChange" for="resultsPagination"></paginate-links>
+            <paginate-links :show-step-links="true" :limit="5" :step-links="{ next: '{{ label_next_plural }}', prev: '{{ label_previous_plural }}' }" :hide-single-page="true" @change="pageChange" for="resultsPagination"></paginate-links>
             <div class="results-per-page">
-                <label>Tulemusi lehel</label>
+                <label>{{ label_results_per_page }}</label>
                 <div class="select">
                     <select v-model.number="resultsPerPage">
                         <option value="9">9</option>
                         <option value="18">18</option>
                         <option value="54">54</option>
-                        <option value="9999">Kõik</option>
+                        <option value="9999">{{ label_all }}</option>
                     </select>
                 </div>
             </div>

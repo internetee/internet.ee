@@ -56,7 +56,7 @@
             </paginate>
         </div>
         <div class="pagination" v-if="results.length && !loading">
-            <paginate-links :async="true" :show-step-links="true" :limit="5" :step-links="{ next: 'Järgmised', prev: 'Eelmised' }" :hide-single-page="true" @change="pageChange" for="resultsPagination"></paginate-links>
+            <paginate-links :async="true" :show-step-links="true" :limit="5" :step-links="{ next: '{{ label_next_plural }}', prev: '{{ label_previous_plural }}' }" :hide-single-page="true" @change="pageChange" for="resultsPagination"></paginate-links>
             <div class="results-per-page" v-if="results.length > 20">
                 <label>{{ label_results_per_page }}</label>
                 <div class="select">

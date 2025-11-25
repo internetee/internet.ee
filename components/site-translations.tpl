@@ -100,6 +100,9 @@
       {% assign abbr_seconds = "s" %}
 			{% assign search_noresults = "Tulemusi ei leitud" %}
 			{% assign label_elite_partner = "Eliitpartner" %}
+			{% assign label_previous_plural = "Eelmised" %}
+			{% assign label_next_plural = "Järgmised" %}
+			{% assign label_search_results = "tulemust" %}
     {% comment %}Russian{% endcomment %}
     {% when "ru" %}
       {% assign registrant_link = "Портал для регистрантов" %}
@@ -185,6 +188,9 @@
       {% assign abbr_minutes = "m" %}
       {% assign abbr_seconds = "s" %}
 			{% assign label_elite_partner = "Elite partner" %}
+			{% assign label_previous_plural = "Eelmised" %}
+			{% assign label_next_plural = "Järgmised" %}
+			{% assign label_search_results = "tulemust" %}
       {% comment %}Every other language{% endcomment %}
     {% else %}
       {% assign registrant_link = "registrant's portal" %}
@@ -276,6 +282,9 @@
       {% assign abbr_seconds = "s" %}
 			{% assign search_noresults = "No results" %}
 			{% assign label_elite_partner = "Elite partner" %}
+			{% assign label_previous_plural = "Previous" %}
+			{% assign label_next_plural = "Next" %}
+			{% assign label_search_results = "results" %}
   {% endcase %}
 {% endcapture %}
 
