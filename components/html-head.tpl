@@ -42,7 +42,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-{% unless editmode %}
+{% comment %}
 <!-- ClickDesk Live Chat Service for websites -->
 <script type='text/javascript'>
   var _glc =_glc || []; _glc.push('all_ag9zfmNsaWNrZGVza2NoYXRyEgsSBXVzZXJzGICAiIOzkIUKDA');
@@ -54,7 +54,7 @@
   var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(glcspt, s);
 </script>
 <!-- End of ClickDesk -->
-{% endunless %}
+{% endcomment %}
 
 {% comment %}STYLESHEETS{% endcomment %}
 

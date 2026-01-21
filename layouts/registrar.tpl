@@ -68,7 +68,7 @@
                             </div>
                             <div style="margin-top: 1rem">
                                 <div style="display: flex; gap: 1rem; align-items: center;">
-                                    <span title="DNSSEC" class="item"
+                                    <span title="Short periods" class="item"
                                           style="display: block; height: 24px; width: 24px; background: none no-repeat 50%/cover; background-image: url('/assets/short-url.svg');"></span>
 																		{% if editmode %}
 	                                    {% editable element.short_url %}
