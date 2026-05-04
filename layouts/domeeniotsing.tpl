@@ -402,7 +402,8 @@
             "Reserved",
             "inactive",
             "deleteCandidate",
-            "serverReleaseProhibited"
+            "serverReleaseProhibited",
+            "disputed"
           ].includes(item);
         })) {
           this.showDomainInfo = !(type.length === 1 && (type.includes('Blocked') || type.includes('Reserved')));
