@@ -74,15 +74,33 @@
     </div>
 
     <div class="c-cookie-modal__actions">
+        {% if editmode %}
+        <div class="c-cookie-modal__btn c-cookie-modal__btn--ghost">
+            {% xcontent name="cookie-consent-accept-text" placeholder="Accept all" single="plaintext" %}
+        </div>
+        <div class="c-cookie-modal__btn c-cookie-modal__btn--ghost">
+            {% xcontent name="cookie-consent-reject-text" placeholder="Reject all" single="plaintext" %}
+        </div>
+        <div class="c-cookie-modal__btn c-cookie-modal__btn--ghost">
+            {% xcontent name="cookie-consent-accept-manage" placeholder="Manage" single="plaintext" %}
+        </div>
+        <div class="c-cookie-modal__btn c-cookie-modal__btn--highlighted">
+            {% xcontent name="cookie-consent-accept-apply" placeholder="Save and Apply" single="plaintext" %}
+        </div>
+        {% else %}
         <button class="c-cookie-modal__btn c-cookie-modal__btn--ghost js-cookie-consent-accept">
             {% xcontent name="cookie-consent-accept-text" placeholder="Accept all" single="plaintext" %}
+        </button>
+        <button class="c-cookie-modal__btn c-cookie-modal__btn--ghost js-cookie-consent-reject">
+            {% xcontent name="cookie-consent-reject-text" placeholder="Reject all" single="plaintext" %}
         </button>
         <button class="c-cookie-modal__btn c-cookie-modal__btn--ghost js-cookie-consent-manage">
             {% xcontent name="cookie-consent-accept-manage" placeholder="Manage" single="plaintext" %}
         </button>
-        <button class="c-cookie-modal__btn c-cookie-modal__btn--highlighted js-cookie-consent-apply {% unless editmode %}is-hidden{% endunless %}">
+        <button class="c-cookie-modal__btn c-cookie-modal__btn--highlighted js-cookie-consent-apply is-hidden">
             {% xcontent name="cookie-consent-accept-apply" placeholder="Save and Apply" single="plaintext" %}
         </button>
+        {% endif %}
     </div>
 </div>
 <div class="c-cookie-modal-bg js-cookie-consent-overlay is-hidden"></div>
@@ -106,6 +124,7 @@
         const cookieOverlay = document.querySelector('.js-cookie-consent-overlay')
         const cookieAcceptBtn = document.querySelector('.js-cookie-consent-accept')
         const cookieManageBtn = document.querySelector('.js-cookie-consent-manage')
+        const cookieRejectBtn = document.querySelector('.js-cookie-consent-reject')
         const cookieApplyBtn = document.querySelector('.js-cookie-consent-apply')
         const cookieManageOptions = document.querySelector('.js-cookie-consent-manage-options')
         const cookieAnlInp = document.querySelector('.js-anl-cookie-inp')
@@ -115,16 +134,12 @@
         cookieSettings = {{ site.data.cookie_settings | json }}
         {% endif %}
 
-    cookieCloseBtn.addEventListener('click', closeCookieModal)
-
     function closeCookieModal() {
         cookieModal.classList.add('is-hidden')
         cookieOverlay.classList.add('is-hidden')
     }
 
     function openCookieModal() {
-        if (isEditMode) return null
-
         cookieModal.classList.remove('is-hidden')
         cookieOverlay.classList.remove('is-hidden')
     }
@@ -135,40 +150,42 @@
         cookieManageBtn.classList.add('is-hidden')
     }
 
-    if (!isEditMode) {
-        cookieManageBtn.addEventListener('click', openManageCookie)
-    }
-
     function createEISCookies() {
-        if (isEditMode) return null
-
         const adsCookie = cookieAdsInp.checked
         const anlCookie = cookieAnlInp.checked
         const dateExpCookie = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
-
         setEISCookies(adsCookie, anlCookie, dateExpCookie)
+        closeCookieModal()
+    }
 
+    function rejectAllCookies() {
+        const dateExpCookie = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+        setEISCookies(false, false, dateExpCookie)
         closeCookieModal()
     }
 
     function acceptAllCookies() {
-        if (isEditMode) return null
-
         const dateExpCookie = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
         setEISCookies(true, true, dateExpCookie)
         closeCookieModal()
     }
 
     function setEISCookies(adsCookie, anlCookie, dateExpCookie) {
-        if (isEditMode) return null
-
         document.cookie = `eis_general=true; expires=${dateExpCookie}; path=/`
         document.cookie = `eis_ads=${adsCookie}; expires=${dateExpCookie}; path=/`
         document.cookie = `eis_analytics=${anlCookie}; expires=${dateExpCookie}; path=/`
     }
 
-    cookieAcceptBtn.addEventListener('click', acceptAllCookies)
-    cookieApplyBtn.addEventListener('click', createEISCookies)
+    if (isEditMode) {
+        cookieModal.addEventListener('click', function(e) { e.stopPropagation() })
+        cookieCloseBtn.addEventListener('click', closeCookieModal)
+    } else {
+        cookieCloseBtn.addEventListener('click', closeCookieModal)
+        cookieManageBtn.addEventListener('click', openManageCookie)
+        cookieAcceptBtn.addEventListener('click', acceptAllCookies)
+        cookieRejectBtn.addEventListener('click', rejectAllCookies)
+        cookieApplyBtn.addEventListener('click', createEISCookies)
+    }
 
     const eisCookies = document.cookie;
     if (!eisCookies.includes('eis_general') && !isEditMode && cookieSettings && cookieSettings.enable_cookie && !document.querySelector('html.sisuleht-template-cookie')) {
@@ -181,10 +198,10 @@
 
                     openCookieModal()
                     if (getCookie('eis_analytics') !== "true") {
-                        cookieAdsInp.checked = false
+                        cookieAnlInp.checked = false
                     }
                     if (getCookie('eis_ads') !== "true") {
-                        cookieAnlInp.checked = false
+                        cookieAdsInp.checked = false
                     }
                 }
             )
