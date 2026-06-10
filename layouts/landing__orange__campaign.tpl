@@ -82,7 +82,7 @@
                   </div>
                 </div>
                 <div class="domain-info">
-                  <h3 v-if="message != ''" :class="[{ 'u-visible': message, 'domain--is-available': isAvailable }]"><span class="d-info-icon"></span><span>${ message }!</span></h3>
+                  <h3 v-if="message != ''" :class="[{ 'u-visible': message, 'domain--is-available': isAvailable }, 'word-break-all']"><span class="d-info-icon"></span><span>${ message }!</span></h3>
                   <a v-if="message != '' && isAvailable" href="https://www.internet.ee/domeenid/kuidas-registreerida-ee-domeeni" class="btn btn--default">Registreeri domeen</a>
                 </div>
               </div>              

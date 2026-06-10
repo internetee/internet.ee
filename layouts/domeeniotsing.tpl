@@ -37,7 +37,7 @@
           </form>
         </div>
         <div class="domain-info">
-          <h1 :class="[{ 'u-visible': message }]">${ message }</h1>
+          <h1 :class="[{ 'u-visible': message }]" class="word-break-all">${ message }</h1>
           <a style="display: none;" href="#" data-open-modal="domain" @click.prevent="showDomainInfoModal"
              :class="[{ 'u-visible': showDomainInfo }, 'btn', 'btn--default']">{{ click_here }}</a>
         </div>

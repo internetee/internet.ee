@@ -65,7 +65,7 @@
                   </div>
                 </div>
                 <div class="domain-info">
-                  <h3 v-if="message != ''" :class="[{ 'u-visible': message, 'domain--is-available': isAvailable }]"><span class="d-info-icon"></span><span>${ message }!</span></h3>
+                  <h3 v-if="message != ''" :class="[{ 'u-visible': message, 'domain--is-available': isAvailable }, 'word-break-all']"><span class="d-info-icon"></span><span>${ message }!</span></h3>
                   <a v-if="message != '' && isAvailable" href="#how-to-buy" @click.prevent="document.getElementById('how-to-buy').scrollIntoView({behavior: 'smooth'});" class="btn btn--default">Osta domeen</a>
                 </div>
               </div>              
