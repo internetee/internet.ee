@@ -578,36 +578,34 @@
       },
 
       fetchExtraDomainInfo: function () {
-        var g_recaptcha_response = window.captchaID;
-        if (g_recaptcha_response === "") {
-          $('.g-recaptcha').addClass('error');
-        } else {
-          $('.g-recaptcha').removeClass('error');
-          this.loadingDomain = true;
-          this.$http.get(this.WHOIS_HOST + punycode.toASCII(this.domain.name.split(" ")[0]) + '.json?g-recaptcha-response=' + g_recaptcha_response).then(function (response) {
+        var self = this;
+        $('.g-recaptcha').removeClass('error');
+        self.loadingDomain = true;
+        grecaptcha.execute('6LcvvDoeAAAAAJig46j3KoOMcXDaCYAGvIb9f12v', {action: 'check'}).then(function (token) {
+          self.$http.get(self.WHOIS_HOST + punycode.toASCII(self.domain.name.split(" ")[0]) + '.json?g-recaptcha-response=' + token).then(function (response) {
             var data = response.body;
             if (data) {
-              this.domain = data;
-              this.domain.registered = moment(this.domain.registered).format('DD.MM.Y HH:mm');
-              this.domain.changed = moment(this.domain.changed).format('DD.MM.Y HH:mm');
-              this.domain.expire = moment(this.domain.expire, 'Y-MM-DD').format('DD.MM.Y');
-              if (this.domain.outzone) {
-                this.domain.outzone = moment(this.domain.outzone).format('DD.MM.Y');
+              self.domain = data;
+              self.domain.registered = moment(self.domain.registered).format('DD.MM.Y HH:mm');
+              self.domain.changed = moment(self.domain.changed).format('DD.MM.Y HH:mm');
+              self.domain.expire = moment(self.domain.expire, 'Y-MM-DD').format('DD.MM.Y');
+              if (self.domain.outzone) {
+                self.domain.outzone = moment(self.domain.outzone).format('DD.MM.Y');
               }
-              if (this.domain.delete) {
-                this.domain.delete = moment(this.domain.delete).format('DD.MM.Y');
+              if (self.domain.delete) {
+                self.domain.delete = moment(self.domain.delete).format('DD.MM.Y');
               }
             }
-            if (!this.domain.registrar_website.match(/^[a-zA-Z]+:\/\//)) {
-              this.domain.registrar_website = 'http://' + this.domain.registrar_website;
+            if (!self.domain.registrar_website.match(/^[a-zA-Z]+:\/\//)) {
+              self.domain.registrar_website = 'http://' + self.domain.registrar_website;
             }
-            this.showExtraDomainInfo = true;
-            this.showDomainInfoModal();
-            this.loadingDomain = false;
+            self.showExtraDomainInfo = true;
+            self.showDomainInfoModal();
+            self.loadingDomain = false;
           }, function (response) {
-            this.loadingDomain = false;
+            self.loadingDomain = false;
           });
-        }
+        });
       },
 
       chunkSuggestions: function (arr, size) {
