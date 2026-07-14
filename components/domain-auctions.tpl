@@ -42,27 +42,37 @@
                         <ul class="c-auctions__list s-auctions-list">
                             <li v-for="item in auctions.slice(0,12)" :key="item.id">
 
+																{% comment %}
                                 <strong><span class="o-po-icon"></span>${ item.domain_name }</strong>
+																{% endcomment %}
+																<strong>${ item.domain_name }</strong>
                             </li>
                         </ul>
                     </div>
                     <div class="c-slider__slide">
                         <ul class="c-auctions__list s-auctions-list">
                             <li v-for="item in auctions.slice(12,24)" :key="item.id">
-                                <strong><span class="o-po-icon"></span>${ item.domain_name }</strong>
+                                {% comment %}
+																<strong><span class="o-po-icon"></span>${ item.domain_name }</strong>
+																{% endcomment %}
+																<strong>${ item.domain_name }</strong>
                             </li>
                         </ul>
                     </div>
                     <div class="c-slider__slide">
                         <ul class="c-auctions__list s-auctions-list">
                             <li v-for="item in auctions.slice(24,36)" :key="item.id">
+																{% comment %}
                                 <strong><span class="o-po-icon"></span>${ item.domain_name }</strong>
+																{% endcomment %}
+																<strong>${ item.domain_name }</strong>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <footer class="c-auctions__footer">
-                    <div class="c-auctions__legend">
+									<div class="c-auctions__legend">
+											{% comment %}
                         <div>
                             <span class="o-io-icon o-icon--sm"></span>
                             {{autions_en}}
@@ -71,6 +81,7 @@
                             <span class="o-po-icon o-icon--sm"></span>
                             {{autions_blind}}
                         </div>
+												{% endcomment %}
                     </div>
                     <div class="c-auctions__info">
                         <p class="c-auctions__all-count" v-show="auctions.length > 12"><strong>${ auctionsCount }</strong> {{ label_more_domains }}</p>
